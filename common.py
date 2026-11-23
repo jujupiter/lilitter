@@ -11,6 +11,7 @@ from pathlib import Path
 import pandas as pd
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from PIL import Image
 from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
@@ -38,6 +39,8 @@ ARCHS = {
     # DINOv2 (Apache 2.0) from Hugging Face, weights in safetensors only: self-supervised, strong on unfamiliar photos
     "dinov2_small": "facebook/dinov2-small",                                        # 22M params
     "dinov2_base": "facebook/dinov2-base",                                          # 86M params
+    # SigLIP's image encoder (Apache 2.0): its own preprocessing (SIGLIP_TF). probe_siglip.py trains its head only
+    "siglip_base": "google/siglip-base-patch16-224",                                # 93M params
 }
 DEFAULT_ARCH = "resnet50"
 
@@ -60,6 +63,18 @@ EVAL_TF = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
 ])
+
+# SigLIP's own preprocessing: a 224 x 224 resize with no crop, pixel values scaled to [-1, 1]
+SIGLIP_TF = transforms.Compose([
+    transforms.Resize((224, 224), interpolation=transforms.InterpolationMode.BICUBIC),
+    transforms.ToTensor(),
+    transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
+])
+
+
+def eval_transform(model):
+    """The preprocessing a model expects: EVAL_TF unless it carries its own."""
+    return getattr(model, "transform", EVAL_TF)
 
 
 class TrashDataset(Dataset):
@@ -92,10 +107,29 @@ class DinoClassifier(nn.Module):
         return self.head(self.backbone(pixel_values=x).pooler_output)
 
 
+class SiglipClassifier(nn.Module):
+    """SigLIP's image encoder with a 6-class head on its image embedding, scaled to length 1 as in zero_shot.py."""
+    transform = SIGLIP_TF
+
+    def __init__(self, name, pretrained=True):
+        super().__init__()
+        from transformers import SiglipVisionConfig, SiglipVisionModel
+        self.backbone = (SiglipVisionModel.from_pretrained(name, use_safetensors=True) if pretrained
+                         else SiglipVisionModel(SiglipVisionConfig.from_pretrained(name)))
+        self.head = nn.Linear(self.backbone.config.hidden_size, len(CLASSES))
+
+    def features(self, x):
+        return F.normalize(self.backbone(pixel_values=x).pooler_output, dim=-1)
+
+    def forward(self, x):
+        return self.head(self.features(x))
+
+
 def build_model(arch, pretrained=True):
     """`arch` from ARCHS, with pretrained weights (unless pretrained=False) and a new 6-class head."""
     if isinstance(ARCHS[arch], str):  # Hugging Face backbone
-        return DinoClassifier(ARCHS[arch], pretrained).to(DEVICE)
+        cls = SiglipClassifier if arch.startswith("siglip") else DinoClassifier
+        return cls(ARCHS[arch], pretrained).to(DEVICE)
     constructor, weights = ARCHS[arch]
     model = constructor(weights=weights if pretrained else None)
     if hasattr(model, "fc"):  # ResNets
@@ -146,7 +180,7 @@ def load_splits():
 def predict_all(model, df):
     """Add pred, conf and ok columns to a dataframe of images."""
     model.eval()
-    loader = DataLoader(TrashDataset(df, EVAL_TF), batch_size=64, num_workers=NUM_WORKERS)
+    loader = DataLoader(TrashDataset(df, eval_transform(model)), batch_size=64, num_workers=NUM_WORKERS)
     preds, confs = [], []
     with torch.no_grad():
         for images, _ in loader:

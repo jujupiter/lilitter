@@ -25,7 +25,13 @@ are marked "CC".
 
 ## Model weights
 
-The models start from ImageNet weights provided by [torchvision](https://github.com/pytorch/vision) (BSD 3-Clause).
+The models start from ImageNet weights provided by [torchvision](https://github.com/pytorch/vision) (BSD 3-Clause), or
+from these pretrained models on Hugging Face (licence from each model's own page):
+
+| Model | Licence | Credit |
+|---|---|---|
+| [DINOv2](https://huggingface.co/facebook/dinov2-small) (`dinov2_small`, `dinov2_base`) | Apache 2.0 | Oquab, M. et al. (2023). DINOv2: Learning Robust Visual Features without Supervision. https://arxiv.org/abs/2304.07193 |
+| [SigLIP](https://huggingface.co/google/siglip-base-patch16-224) (`siglip_base`, `zero_shot.py`) | Apache 2.0 | Zhai, X., Mustafa, B., Kolesnikov, A., Beyer, L. (2023). Sigmoid Loss for Language Image Pre-Training. https://arxiv.org/abs/2303.15343 |
 
 ## Datasets mapped to J-codes but not used yet
 
