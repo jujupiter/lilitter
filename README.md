@@ -97,7 +97,12 @@ whether to keep each one, and on every class where both accepted it; most of the
 now in the page (several items of one material are accepted; several materials are kept for detection).
 
 `benchmark.py` scores the exported set as two benchmarks, `commons large studio` and `commons large outdoor`.
-Its 16 photos with no class (drink cartons, food waste) have a J-code only and are left out until phase 2.
+Its 3 photos with no class (food waste) have a J-code only and are left out until phase 2.
+
+Classes are by material, with one exception: **trash** also takes what would contaminate its material's recycling.
+Foam, plastic film and wrappers go to trash rather than plastic, and so do paper cups (J244), drink cartons
+(J150, J151) and cigarette packets (J152): paper lined with plastic or foil, which councils treat differently (#40).
+The J-code keeps them apart for phase 2. `benchmark.py` scores saved results against the current labels.
 
 The **development set** (`data/commons_dev/`, #40) chooses settings that the validation sets cannot: they come from
 the training sources, while the settings in question are about unfamiliar photos (e.g. the zero-shot weight of
@@ -193,7 +198,8 @@ work out the model to build by themselves.
 is trained by `probe_siglip.py` rather than `train_mixed.py`: the encoder stays frozen and only its head learns. The
 probe encodes each image once and caches the features in `models/features_siglip_base.pt`, so a second run only
 encodes new images. `--zero-shot-weight W` blends the trained head with the zero-shot one of `zero_shot.py` (also a
-linear head on the same features): W is fixed beforehand, never tuned on the test sets. `--limit N` checks that the
+linear head on the same features): W is fixed beforehand, or chosen on the development set with
+`--zero-shot-weight dev`, never tuned on the test sets. `--limit N` checks that the
 script runs on N images per source and split. The first ResNet-18 checkpoints (`models/best_model*.pth`, saved
 before this) are plain weights and load as ResNet-18.
 

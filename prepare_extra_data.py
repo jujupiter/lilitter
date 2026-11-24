@@ -25,7 +25,8 @@ TACO_ANNOTATIONS_URL = "https://raw.githubusercontent.com/pedropro/TACO/master/d
 REALWASTE_CLASSES = {"Cardboard": "cardboard", "Glass": "glass", "Metal": "metal",
                      "Paper": "paper", "Plastic": "plastic", "Miscellaneous Trash": "trash"}
 
-# TACO category name -> trashnet class, by material. Ambiguous categories (paper cups, drink cartons, ...) are left out.
+# TACO category name -> trashnet class, by material. Paper cups, drink cartons and cigarette packets are "trash" by our
+# rule (paper lined with plastic or foil, #40) but are not in training yet: adding them changes splits_extra.csv.
 TACO_CLASSES = {
     "metal": ["Aluminium foil", "Aerosol", "Drink can", "Food Can", "Metal bottle cap", "Metal lid", "Pop tab", "Scrap metal"],
     "glass": ["Glass bottle", "Broken glass", "Glass cup", "Glass jar"],

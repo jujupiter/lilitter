@@ -155,6 +155,9 @@ def export_set(cands, labels, folder):
                          processing="original"))
     out = pd.DataFrame(rows)
     out.to_csv(folder / "sources.csv", index=False)
+    # a relabelled photo moved to its new class folder: remove the copy left in the old one
+    for old in set(folder.glob("*/*.jpg")) - {Path(p) for p in out.path}:
+        old.unlink()
     print(f"{len(out)} photos exported to {folder}/sources.csv")
     print(out.groupby(["setting", "label"]).size().unstack(fill_value=0).to_string())
 

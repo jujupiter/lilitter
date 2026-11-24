@@ -8,6 +8,8 @@ and a confusion matrix per benchmark: rows are the true class, columns the predi
 
 A results CSV can be given instead of a checkpoint, to print its report again without running the model:
 python benchmark.py results/benchmark_resnet50_mixed.csv
+Its predictions are scored against the current labels, so a relabelled photo counts as relabelled (#40). Photos
+added to a test set after the run have no prediction: the report says how many and leaves them out.
 """
 import sys
 from pathlib import Path
@@ -33,6 +35,20 @@ def benchmarks():
     return df[present].reset_index(drop=True)
 
 
+def rescore(res):
+    """A results CSV against the current labels and test sets."""
+    # matched on test set and file name: a relabelled Commons photo moves to its new class folder, keeping its name
+    key = lambda d: d.assign(name=d.path.map(lambda p: Path(p).name))
+    current, res = key(benchmarks()[["path", "label", "benchmark"]]), key(res)
+    assert not current.duplicated(["benchmark", "name"]).any(), "two photos share a file name in one test set"
+    res = current.merge(res[["benchmark", "name", "pred", "conf"]], on=["benchmark", "name"], how="left").drop(columns="name")
+    missing = res.pred.isna()
+    if missing.any():
+        print("No prediction (photos added since this run), left out:",
+              res[missing].groupby("benchmark", sort=False).size().to_dict())
+    return res[~missing].assign(ok=lambda d: d.pred == d.label).reset_index(drop=True)
+
+
 def confusion(res):
     """One confusion matrix per benchmark: how many images of each true class (rows) got each prediction (columns)."""
     for name, d in res.groupby("benchmark", sort=False):
@@ -48,7 +64,7 @@ def main():
     pd.set_option("display.width", 200)
     for arg in sys.argv[1:]:
         if arg.endswith(".csv"):
-            res = pd.read_csv(arg)
+            res = rescore(pd.read_csv(arg))
         else:
             with measured_run("benchmark.py", arg):
                 res = predict_all(load_model(arg), benchmarks())

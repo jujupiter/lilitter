@@ -44,12 +44,12 @@ SKIP_TITLE = re.compile(r"logo|icon|diagram|map\b|poster|advert|label|chart|draw
 MIN_SIDE = 400  # px, original size
 
 # Suggested trashnet class for a J-code, consistent with TACO_CLASSES in prepare_extra_data.py: foam, film,
-# wrappers, cigarettes, hygiene items, textiles, rubber, wood and food are "trash"; paper cups, drink cartons
-# and cigarette packets are ambiguous and get no class.
+# wrappers, cigarettes, hygiene items, textiles, rubber, wood and food are "trash". So are paper cups, drink cartons
+# and cigarette packets (MIXED): paper with a plastic or foil lining, which would contaminate paper recycling (#40).
 TRASH_PLASTIC = {"J25", "J27", "J30", "J40", "J41", "J49", "J58", "J82", "J83", "J95", "J96", "J98", "J101", "J144",
                  "J211", "J224", "J226", "J236", "J237", "J239", "J240", "J242", "J252", "J253", "J256", "J257"}
 CARDBOARD = {"J148", "J245", "J247"}
-NO_CLASS = {"J150", "J151", "J152", "J244"}
+MIXED = {"J150", "J151", "J152", "J244"}
 MATERIAL_CLASS = {"plastic": "plastic", "metal": "metal", "glass/ceramics": "glass", "paper": "paper"}
 
 
@@ -58,9 +58,7 @@ def suggested_label(jcodes, materials):
         return ""
     labels = set()
     for code in jcodes.split():
-        if code in NO_CLASS:
-            return ""
-        if code in TRASH_PLASTIC:
+        if code in TRASH_PLASTIC or code in MIXED:
             labels.add("trash")
         elif code in CARDBOARD:
             labels.add("cardboard")
