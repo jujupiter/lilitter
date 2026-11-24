@@ -33,7 +33,7 @@ with no class far below the others. Every test set is still reported, including 
 | `probe_siglip.py` | Train a 6-class head on SigLIP's frozen image encoder (linear probe), then score every test set from the cached features | splits files, `data/commons_*` | `models/features_siglip_base.pt` (cache), `models/siglip_base_probe.pth`, `results/benchmark_siglip_base_probe.csv` |
 | `zero_shot.py` | Score a CLIP or SigLIP model on every test set with no training: it picks the class whose description fits best | splits files, `data/commons_*` | `results/benchmark_zeroshot_<model>.csv` |
 | `predict.py` | Classify your own images (top 3) | a checkpoint | |
-| `collect_commons.py` | Collect candidate photos from Commons for a large test set, by J-code | `data/commons_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
+| `collect_commons.py` | Collect candidate photos from Commons by J-code: product categories for the test set, litter searches (`--queries`) for the development set | `data/commons_queries.csv` or `data/commons_litter_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
 | `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/`, `data/commons_dev/` |
 | `.github/workflows/photo-reminder.yml` | Comment on #15 every morning, as a reminder to photograph litter | | a comment on #15 |
 
@@ -73,10 +73,22 @@ The 20-photo Commons sets are too small to compare models (one photo = 5 points)
 ```bash
 python collect_commons.py      # ~2,000 candidates from Commons categories listed per J-code, freely licensed only
 python review_commons.py       # check each photo in the browser, ~3 s per photo; stop and resume any time
-python review_commons.py --export   # accepted photos -> data/commons_large/sources.csv
+python review_commons.py --export   # accepted photos -> data/commons_large/ (test) and data/commons_dev/ (development)
 python review_commons.py --multiple # confirm the photos suggested as several materials (for detection, #10)
-python review_commons.py --dev      # review the photos never shown (Claude suggested rejecting them) for the development set
+python review_commons.py --dev      # review every photo not reviewed yet, for the development set
+python review_commons.py --rejected # look through the rejected photos again, to mark scenes with several materials (m)
+
+# development set: litter searches rather than product categories
+python collect_commons.py --queries data/commons_litter_queries.csv
+python review_commons.py --dev
+python review_commons.py --export
 ```
+
+`data/commons_queries.csv` lists Commons categories by product ("Beverage cans"): Commons files a photo there for
+what it shows, not because it is litter, so many candidates were products in shops. `data/commons_litter_queries.csv`
+searches for litter instead (`"discarded can"`, `"plastic bottle" litter`), plus the "Littering by country" categories.
+A row has either a `category` or a `search`. Searches match words in a photo's title and description; keep each one
+a plain query (words and "phrases"), as `OR` does not combine with other words the way one would expect.
 
 `data/commons_candidates/suggestions.csv` holds a first pass by Claude (accept or reject, class, J-code, setting,
 reason). When it exists, the review page only shows the photos it suggests accepting, pre-filled (`a` shows them all).

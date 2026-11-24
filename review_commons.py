@@ -23,14 +23,19 @@ Keys:  Enter      accept as pre-filled (class, J-code, studio or outdoor), go to
 With --multiple, the page shows only the photos Claude suggested as several materials (kept for the detection
 test set, #10), and Enter confirms them as such.
 
-With --dev, the page shows the photos never reviewed that Claude suggested rejecting, for a development set (#40):
+With --dev, the page shows every photo never reviewed, for a development set (#40): first those Claude suggested
+rejecting, then new candidates from collect_commons.py --queries data/commons_litter_queries.csv. The set holds
 photos used to choose settings, such as the zero-shot weight of probe_siglip.py, and never to test. Each photo
 belongs to the set it was first reviewed for (the `set` column of labels.csv: dev, or empty for the test set), so
 the test set never changes.
 
+With --rejected, the page shows the photos already rejected, to mark the litter scenes with several materials
+(m) for the detection phase (#10): many were rejected as x before m was used for them. Each keeps its set.
+
 usage: python review_commons.py            open the review page on http://127.0.0.1:8765
        python review_commons.py --multiple confirm the photos suggested as several materials
        python review_commons.py --dev      review photos for the development set
+       python review_commons.py --rejected look through the rejected photos again for several materials
        python review_commons.py --export   write the accepted photos to data/commons_large/ (test set) and
                                            data/commons_dev/ (development set)
 """
@@ -160,11 +165,12 @@ def main():
     mode.add_argument("--export", action="store_true", help="write the accepted photos to data/commons_large/")
     mode.add_argument("--multiple", action="store_true", help="only show the photos suggested as several materials")
     mode.add_argument("--dev", action="store_true", help="review photos for the development set")
+    mode.add_argument("--rejected", action="store_true", help="look through the rejected photos again")
     args = parser.parse_args()
     if args.export:
         return export()
     global FOCUS
-    FOCUS = "multiple" if args.multiple else "dev" if args.dev else ""
+    FOCUS = "multiple" if args.multiple else "dev" if args.dev else "rejected" if args.rejected else ""
     server = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     url = f"http://127.0.0.1:{PORT}"
     print(f"Review page on {url} (Ctrl+C to stop; labels are saved as you go)")
@@ -250,11 +256,12 @@ async function load() {
 }
 // with suggestions, only show what Claude would accept (and what you already reviewed), unless showAll;
 // with --multiple (D.focus), only the photos Claude suggested as several materials; with --dev, the development
-// set: photos already reviewed for it, and those never reviewed that Claude suggested rejecting
+// set: photos already reviewed for it, and every photo never reviewed
 let showAll = false;
 const visible = c => { const l = D.labels[c.id], s = D.suggestions[c.id] || {};
   if (showAll) return true;
-  if (D.focus === "dev") return l ? l.set === "dev" : s.status === "rejected";
+  if (D.focus === "dev") return l ? l.set === "dev" : true;
+  if (D.focus === "rejected") return !!l && l.status === "rejected";
   return D.focus ? s.status === D.focus : !!l || s.status === "accepted"; };
 const waiting = () => D.candidates.filter(c => !D.labels[c.id] && visible(c)).length;
 function step(from, dir) {
