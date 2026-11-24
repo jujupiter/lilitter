@@ -54,7 +54,8 @@ def evaluate(model, df):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--arch", default=DEFAULT_ARCH, choices=ARCHS)
+    # SigLIP needs its own preprocessing here too: probe_siglip.py trains its head, with the encoder frozen
+    parser.add_argument("--arch", default=DEFAULT_ARCH, choices=[a for a in ARCHS if not a.startswith("siglip")])
     parser.add_argument("--epochs", type=int, default=20, help="maximum number of epochs")
     parser.add_argument("--patience", type=int, default=4, help="stop after this many epochs without improvement")
     parser.add_argument("--lr", type=float, default=LR, help="learning rate")

@@ -27,6 +27,17 @@ DESCRIPTIONS = {
     "trash": "a photo of non-recyclable trash, such as a cigarette butt, a snack wrapper, polystyrene foam or a wet wipe",
 }
 BATCH = 32
+SCALE = 100  # cosine similarity -> class score. SigLIP learned 117; any value near it gives the same predictions
+
+
+def text_head(model, processor):
+    """The zero-shot classifier as a linear head: one row per class, the class description's text embedding,
+    scaled to length 1. Scores are SCALE * image_embedding @ head.T, with image embeddings of length 1 too."""
+    texts = [DESCRIPTIONS[c] for c in CLASSES]
+    text_in = processor(text=texts, padding="max_length", return_tensors="pt").to(model.device)
+    with torch.no_grad():
+        text = model.get_text_features(**text_in)
+    return text / text.norm(dim=-1, keepdim=True)
 
 
 def main():
@@ -40,17 +51,14 @@ def main():
     with measured_run("zero_shot.py", args.model):
         model = AutoModel.from_pretrained(args.model, use_safetensors=True).to(DEVICE).eval()
         processor = AutoProcessor.from_pretrained(args.model)
-        texts = [DESCRIPTIONS[c] for c in CLASSES]
+        text = text_head(model, processor)
         preds, confs = [], []
         with torch.no_grad():
-            text_in = processor(text=texts, padding="max_length", return_tensors="pt").to(DEVICE)
-            text = model.get_text_features(**text_in)
-            text = text / text.norm(dim=-1, keepdim=True)
             for start in range(0, len(df), BATCH):
                 images = [Image.open(p).convert("RGB") for p in df.path[start:start + BATCH]]
                 image = model.get_image_features(**processor(images=images, return_tensors="pt").to(DEVICE))
                 image = image / image.norm(dim=-1, keepdim=True)
-                probs = (100 * image @ text.T).softmax(1)  # cosine similarity; the scale only affects the confidence
+                probs = (SCALE * image @ text.T).softmax(1)  # the scale only affects the confidence
                 conf, idx = probs.max(1)
                 preds += [CLASSES[i] for i in idx.cpu().tolist()]
                 confs += conf.cpu().tolist()

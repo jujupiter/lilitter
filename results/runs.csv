@@ -9,3 +9,8 @@ date,script,model,outcome,duration_s,hardware,energy_kwh,emissions_gco2e,locatio
 2026-11-20T12:02:28Z,zero_shot.py,google/siglip-base-patch16-224,done,371,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.001674,0.918,AUS
 2026-11-20T12:11:56Z,train_mixed.py,models/dinov2_small_mixed.pth,done,931,2 x Tesla T4,0.025761,12.236,world average
 2026-11-20T12:12:23Z,benchmark.py,models/dinov2_small_mixed.pth,done,19,2 x Tesla T4,0.000433,0.206,world average
+2026-11-23T10:15:26Z,probe_siglip.py,models/siglip_base_probe_limit20.pth,failed,0,i386,,,
+2026-11-23T10:17:19Z,probe_siglip.py,models/siglip_base_probe_limit20.pth,discarded,84,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000422,0.231,AUS
+2026-11-23T22:11:38Z,probe_siglip.py,models/siglip_base_probe.pth,done,2123,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.011890,6.524,AUS
+2026-11-24T06:44:37Z,probe_siglip.py,models/siglip_base_probe_zs100.pth,discarded,25,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000085,0.046,AUS
+2026-11-24T06:45:15Z,probe_siglip.py,models/siglip_base_probe_zs50.pth,done,23,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000080,0.044,AUS

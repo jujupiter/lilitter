@@ -7,13 +7,13 @@ import argparse
 import torch
 from PIL import Image
 
-from common import CLASSES, DEFAULT_ARCH, DEVICE, EVAL_TF, load_model, mixed_checkpoint
+from common import CLASSES, DEFAULT_ARCH, DEVICE, eval_transform, load_model, mixed_checkpoint
 
 TOP_K = 3
 
 
 def predict(model, path):
-    image = EVAL_TF(Image.open(path).convert("RGB")).unsqueeze(0).to(DEVICE)
+    image = eval_transform(model)(Image.open(path).convert("RGB")).unsqueeze(0).to(DEVICE)
     with torch.no_grad():
         probs = model(image).softmax(1)[0]
     top = probs.topk(TOP_K)

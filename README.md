@@ -30,6 +30,7 @@ with no class far below the others. Every test set is still reported, including 
 | `prepare_extra_data.py` | Download RealWaste and TACO, map them to the 6 classes, split them | | `data/realwaste/`, `data/taco/`, `data/splits_extra.csv` |
 | `train_mixed.py` | Train a model (`--arch`, ResNet-50 by default) on trashnet + RealWaste + TACO from ImageNet weights, every batch mixing the three | both splits files | `models/<arch>_mixed.pth` |
 | `benchmark.py` | Score checkpoints on every test set, with a confusion matrix per test set | splits files, `data/commons_*` | `results/benchmark_<model>.csv` |
+| `probe_siglip.py` | Train a 6-class head on SigLIP's frozen image encoder (linear probe), then score every test set from the cached features | splits files, `data/commons_*` | `models/features_siglip_base.pt` (cache), `models/siglip_base_probe.pth`, `results/benchmark_siglip_base_probe.csv` |
 | `zero_shot.py` | Score a CLIP or SigLIP model on every test set with no training: it picks the class whose description fits best | splits files, `data/commons_*` | `results/benchmark_zeroshot_<model>.csv` |
 | `predict.py` | Classify your own images (top 3) | a checkpoint | |
 | `collect_commons.py` | Collect candidate photos from Commons for a large test set, by J-code | `data/commons_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
@@ -147,6 +148,8 @@ python download_commons.py            # 577 test photos, about 120 MB
 # Training
 python train_mixed.py                 # trashnet + RealWaste + TACO -> models/resnet50_mixed.pth
 python train_mixed.py --arch resnet18 # any model from ARCHS in common.py
+python probe_siglip.py                # SigLIP encoder frozen, head only -> models/siglip_base_probe.pth
+python probe_siglip.py --zero-shot-weight 0.5   # half probe, half zero-shot head -> models/siglip_base_probe_zs50.pth
 
 # Evaluation
 python benchmark.py models/resnet50_mixed.pth
@@ -166,7 +169,13 @@ keep them unless given `--force` / `--resplit`. Images listed in a split that co
 Models (`--arch`): `resnet18`, `resnet50` (default), `efficientnet_b0`, `convnext_tiny` with ImageNet weights from
 torchvision, and `dinov2_small`, `dinov2_base` from Hugging Face (Apache 2.0, safetensors weights; train them with
 a lower rate, e.g. `--lr 2e-5`). Checkpoints store their architecture, so `benchmark.py` and `predict.py`
-work out the model to build by themselves. The first ResNet-18 checkpoints (`models/best_model*.pth`, saved
+work out the model to build by themselves.
+`siglip_base` (SigLIP's image encoder, Apache 2.0) has its own preprocessing, a 224 × 224 resize with no crop, and
+is trained by `probe_siglip.py` rather than `train_mixed.py`: the encoder stays frozen and only its head learns. The
+probe encodes each image once and caches the features in `models/features_siglip_base.pt`, so a second run only
+encodes new images. `--zero-shot-weight W` blends the trained head with the zero-shot one of `zero_shot.py` (also a
+linear head on the same features): W is fixed beforehand, never tuned on the test sets. `--limit N` checks that the
+script runs on N images per source and split. The first ResNet-18 checkpoints (`models/best_model*.pth`, saved
 before this) are plain weights and load as ResNet-18.
 
 On a CPU-only machine the data loaders run in the main process (`NUM_WORKERS` in `common.py`):
