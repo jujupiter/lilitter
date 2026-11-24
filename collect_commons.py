@@ -6,15 +6,17 @@ download a thumbnail. Rows without a J-code are general litter queries: their ph
 during review.
 
 data/commons_queries.csv lists product categories ("Beverage cans"): they gave the test set. Commons files a photo
-there for what it shows, not because it is litter, so most were products in shops. data/commons_litter_queries.csv
+there for what it shows, not because it is litter, so most were products in shops. data/commons_dev_queries.csv
 searches for litter instead (`discarded "plastic bottle"`): it finds photos by the words of their title and
-description (CirrusSearch syntax: "phrases", OR, -word). It feeds the development set (#40).
+description (CirrusSearch syntax: "phrases", -word; OR does not combine with other words as expected). It feeds the
+development set (#40), with more product categories for the classes it lacks.
 
 Writes data/commons_candidates/candidates.csv (one row per photo, with the suggested class and J-code) and the
-thumbnails in data/commons_candidates/img/ (not in git). Safe to run again: photos already collected are kept.
+thumbnails in data/commons_candidates/img/ (not in git). Safe to run again: photos already collected are kept, and
+max_files is a total per query, so a second run only tops a query up (e.g. after raising its max_files).
 
 usage: python collect_commons.py               collect up to max_files photos per query row
-       python collect_commons.py --queries data/commons_litter_queries.csv
+       python collect_commons.py --queries data/commons_dev_queries.csv
        python collect_commons.py --dry-run     only count what each query would give
 """
 import argparse
@@ -155,6 +157,11 @@ def main():
 
     rows = []
     for q in queries.itertuples():
+        name = q.category or f"search: {q.search}"
+        need = int(q.max_files) - (old.query_category == name).sum() if "query_category" in old else int(q.max_files)
+        if need <= 0:
+            print(f"{q.jcode or '(any)':<10} {name[:55]:<55} already has {q.max_files}")
+            continue
         found = category_files(q.category, int(q.depth or 0)) if q.category else search_files(q.search)
         files = {i: t for i, t in found.items() if t not in taken}
         # a fixed pseudo-random order, so that a large category is not sampled alphabetically
@@ -162,11 +169,10 @@ def main():
         infos = []
         for i in range(0, len(ids), 50):
             infos += [x for x in file_infos(ids[i:i + 50]) if usable(x)]
-            if len(infos) >= int(q.max_files):
+            if len(infos) >= need:
                 break
             time.sleep(0.2)
-        infos = sorted(infos, key=lambda x: hashlib.md5(x["title"].encode()).hexdigest())[:int(q.max_files)]
-        name = q.category or f"search: {q.search}"
+        infos = sorted(infos, key=lambda x: hashlib.md5(x["title"].encode()).hexdigest())[:need]
         print(f"{q.jcode or '(any)':<10} {name[:55]:<55} {len(files):>5} files, {len(infos):>3} kept")
         for x in infos:
             taken.add(x["title"])

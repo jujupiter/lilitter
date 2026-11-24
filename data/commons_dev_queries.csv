@@ -1,0 +1,57 @@
+jcode,category,search,depth,max_files
+,Littering by country,,2,150
+,Overflowing waste containers,,1,40
+J7 J8,,"discarded ""plastic bottle""",,20
+J7 J8,,"""plastic bottle"" litter",,20
+J3,,"""plastic bag"" litter",,20
+J3,,"""discarded plastic bag""",,15
+J227,,"""plastic cup"" litter",,15
+J175,,"""beverage can"" litter",,15
+J175,,"""drink can"" litter",,15
+J175,,"""beer can"" litter",,15
+J175,,"""discarded can""",,15
+J175,,"""crushed can""",,10
+J175,,"""empty can"" litter",,15
+J200,,"""glass bottle"" litter",,15
+J200,,"""beer bottle"" litter",,15
+J200,,"""discarded bottle""",,15
+J208,,"""broken glass"" litter",,15
+J147,,"""paper bag"" litter",,15
+,,"""discarded newspaper""",,10
+,,"""discarded paper""",,15
+J148,,"""discarded cardboard""",,15
+,,cardboard litter,,15
+J148,,"""pizza box"" litter",,15
+J30,,wrapper litter,,15
+,,"""crisp packet""",,10
+J224,,polystyrene litter,,15
+J224,,styrofoam litter,,15
+J253,,"""face mask"" litter",,15
+J253,,"""discarded mask""",,15
+,,"""crumpled paper"" -volunteers -cleanup -protest -pile -heap -dump -landfill",,20
+J147,,"""paper bag"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J147,,"""paper bag"" ground -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+,,receipt litter -volunteers -cleanup -protest -pile -heap -dump -landfill,,10
+,,flyer litter -volunteers -cleanup -protest -pile -heap -dump -landfill,,10
+,,leaflet litter -volunteers -cleanup -protest -pile -heap -dump -landfill,,10
+J148,,"""cardboard box"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,20
+J148,,"""cardboard box"" sidewalk -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+,,"""flattened cardboard"" -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J148,,"""pizza box"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,10
+,,"""discarded box"" -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J200,,"""broken bottle"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J200,,"""glass bottle"" beach -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J200,,"""beer bottle"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J200,,"""wine bottle"" litter -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J7 J8,,"""plastic bottle"" beach -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J7 J8,,"""plastic bottle"" street -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J3,,"""plastic bag"" tree -volunteers -cleanup -protest -pile -heap -dump -landfill",,10
+J3,,"""plastic bag"" beach -volunteers -cleanup -protest -pile -heap -dump -landfill",,15
+J147,Paper bags,,0,80
+J154,Newspapers,,0,60
+J148,Cardboard boxes,,0,100
+J247,Egg cartons,,0,70
+J148,Pizza boxes,,1,70
+J7 J8,PET bottles,,1,100
+J3,Plastic bags,,1,80
+J227,Plastic cups (disposable),,0,80

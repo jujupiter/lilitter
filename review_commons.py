@@ -24,7 +24,7 @@ With --multiple, the page shows only the photos Claude suggested as several mate
 test set, #10), and Enter confirms them as such.
 
 With --dev, the page shows every photo never reviewed, for a development set (#40): first those Claude suggested
-rejecting, then new candidates from collect_commons.py --queries data/commons_litter_queries.csv. The set holds
+rejecting, then new candidates from collect_commons.py --queries data/commons_dev_queries.csv. The set holds
 photos used to choose settings, such as the zero-shot weight of probe_siglip.py, and never to test. Each photo
 belongs to the set it was first reviewed for (the `set` column of labels.csv: dev, or empty for the test set), so
 the test set never changes.
