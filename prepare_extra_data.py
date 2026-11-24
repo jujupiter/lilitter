@@ -3,6 +3,14 @@
 RealWaste (CC BY 4.0): https://archive.ics.uci.edu/dataset/908/realwaste
 TACO (annotations CC BY 4.0, images under free licences): http://tacodataset.org
 TACO is a detection dataset: each annotated object is cropped (with some surrounding context) into its own image.
+
+The split is committed: a later run only downloads the images it lists. With --add-categories, the TACO categories in
+TACO_CLASSES that the split does not have yet are added to it, without changing a single existing row: a crop from a
+photo already in the split joins that photo's split, and new photos are split 70/15/15.
+
+usage: python prepare_extra_data.py [--realwaste-zip realwaste.zip]
+       python prepare_extra_data.py --add-categories
+       python prepare_extra_data.py --resplit     a new split from scratch: past results are no longer comparable
 """
 import argparse
 import io
@@ -25,8 +33,8 @@ TACO_ANNOTATIONS_URL = "https://raw.githubusercontent.com/pedropro/TACO/master/d
 REALWASTE_CLASSES = {"Cardboard": "cardboard", "Glass": "glass", "Metal": "metal",
                      "Paper": "paper", "Plastic": "plastic", "Miscellaneous Trash": "trash"}
 
-# TACO category name -> trashnet class, by material. Paper cups, drink cartons and cigarette packets are "trash" by our
-# rule (paper lined with plastic or foil, #40) but are not in training yet: adding them changes splits_extra.csv.
+# TACO category name -> trashnet class, by material. Paper cups and drink cartons are "trash" (paper lined with plastic
+# or foil, #40): added with --add-categories.
 TACO_CLASSES = {
     "metal": ["Aluminium foil", "Aerosol", "Drink can", "Food Can", "Metal bottle cap", "Metal lid", "Pop tab", "Scrap metal"],
     "glass": ["Glass bottle", "Broken glass", "Glass cup", "Glass jar"],
@@ -36,7 +44,7 @@ TACO_CLASSES = {
     "paper": ["Normal paper", "Magazine paper", "Wrapping paper", "Paper bag"],
     "cardboard": ["Corrugated carton", "Egg carton", "Meal carton", "Other carton", "Pizza box", "Toilet tube"],
     "trash": ["Cigarette", "Styrofoam piece", "Foam cup", "Foam food container", "Crisp packet", "Other plastic wrapper",
-              "Plastic film", "Tissues", "Plastic glooves", "Rope & strings"],
+              "Plastic film", "Tissues", "Plastic glooves", "Rope & strings", "Paper cup", "Drink carton"],
 }
 TACO_MAP = {name: label for label, names in TACO_CLASSES.items() for name in names}
 TACO_MIN_SIDE = 96       # px at full resolution: smaller objects are too blurry to classify
@@ -86,17 +94,31 @@ def taco_crops(image, anns):
         yield ann, crop
 
 
-def prepare_taco(out):
+def taco_annotations():
+    """TACO's annotation file, its {category id: name}, and the annotations we can use."""
     data = json.loads(fetch(TACO_ANNOTATIONS_URL))
     cats = {c["id"]: c["name"] for c in data["categories"]}
     anns = [a for a in data["annotations"]
             if cats[a["category_id"]] in TACO_MAP and min(a["bbox"][2], a["bbox"][3]) >= TACO_MIN_SIDE]
-    # cap each class so cigarettes and plastic film do not dominate
+    return data, cats, anns
+
+
+def capped(anns, cats):
+    """At most TACO_MAX_PER_CLASS annotations per class, so cigarettes and plastic film do not dominate."""
     rng = random.Random(SEED)
     by_label = {}
     for a in anns:
         by_label.setdefault(TACO_MAP[cats[a["category_id"]]], []).append(a)
-    kept = [a for group in by_label.values() for a in rng.sample(group, min(len(group), TACO_MAX_PER_CLASS))]
+    return [a for group in by_label.values() for a in rng.sample(group, min(len(group), TACO_MAX_PER_CLASS))]
+
+
+def taco_ids(df):
+    """The TACO annotation ids in a splits dataframe, from the crop names (taco_<id>.jpg)."""
+    return set(df[df.source == "taco"].path.str.extract(r"taco_(\d+)\.jpg")[0].astype(int))
+
+
+def prepare_taco(out, data, cats, kept):
+    """Crop the `kept` annotations, downloading their photos unless the crops are already here."""
     per_image = {}
     for a in kept:
         per_image.setdefault(a["image_id"], []).append(a)
@@ -139,6 +161,32 @@ def split(df):
     return df.drop(columns="group")
 
 
+def add_categories(df):
+    """Add the crops of the TACO_CLASSES categories the split does not have yet. Existing rows stay as they are."""
+    data, cats, anns = taco_annotations()
+    have = taco_ids(df)
+    present = {cats[a["category_id"]] for a in data["annotations"] if a["id"] in have}
+    new_cats = sorted(set(TACO_MAP) - present)
+    if not new_cats:
+        return print("Every TACO category in TACO_CLASSES is already in the split: nothing to add.")
+    print("Adding TACO categories:", ", ".join(new_cats))
+    new = prepare_taco(Path("data/taco"), data, cats, capped([a for a in anns if cats[a["category_id"]] in new_cats], cats))
+    # a photo already in the split keeps its split, so none is in two; new photos are split 70/15/15
+    image_of = {a["id"]: a["image_id"] for a in data["annotations"]}
+    old_split = {image_of[i]: s for i, s in zip(df[df.source == "taco"].path.str.extract(r"taco_(\d+)\.jpg")[0].astype(int),
+                                               df[df.source == "taco"].split)}
+    img = new.path.str.extract(r"taco_(\d+)\.jpg")[0].astype(int).map(image_of)
+    known = img.map(old_split)
+    fresh = new[known.isna()]
+    if len(fresh):
+        fresh = split(fresh)
+    new = pd.concat([new[known.notna()].drop(columns="group").assign(split=known[known.notna()]), fresh])
+    out = pd.concat([df, new], ignore_index=True)
+    out.to_csv(EXTRA_SPLITS, index=False)
+    print(f"{len(new)} crops added to {EXTRA_SPLITS}:")
+    print(new.groupby(["label", "split"]).size().unstack(fill_value=0))
+
+
 def missing(df, source):
     return (~df[df.source == source].path.map(lambda p: Path(p).exists())).sum()
 
@@ -146,19 +194,26 @@ def missing(df, source):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--realwaste-zip", type=Path, help="use an already downloaded realwaste.zip")
-    parser.add_argument("--resplit", action="store_true", help=f"make a new split and overwrite {EXTRA_SPLITS}")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--resplit", action="store_true", help=f"make a new split and overwrite {EXTRA_SPLITS}")
+    mode.add_argument("--add-categories", action="store_true",
+                      help="add the TACO_CLASSES categories the split does not have yet, keeping every existing row")
     args = parser.parse_args()
 
     # The split is committed to git: keep it, and only download the images it lists that are not here yet
     if Path(EXTRA_SPLITS).exists() and not args.resplit:
         df = pd.read_csv(EXTRA_SPLITS)
+        if args.add_categories:
+            return add_categories(df)
         print(f"Keeping the existing {EXTRA_SPLITS} (use --resplit to make a new split)")
         if missing(df, "realwaste"):
             prepare_realwaste(Path("data/realwaste"), args.realwaste_zip)
         else:
             print("RealWaste already in data/realwaste/, skipping download")
-        if missing(df, "taco"):
-            prepare_taco(Path("data/taco"))  # skips the photos whose crops are already here
+        if missing(df, "taco"):  # exactly the crops the split lists; those already here are skipped
+            data, cats, anns = taco_annotations()
+            listed = taco_ids(df)
+            prepare_taco(Path("data/taco"), data, cats, [a for a in anns if a["id"] in listed])
         else:
             print("TACO crops already in data/taco/, skipping download")
         for source in ["realwaste", "taco"]:
@@ -167,7 +222,8 @@ def main():
         return
 
     realwaste = split(prepare_realwaste(Path("data/realwaste"), args.realwaste_zip))
-    taco = split(prepare_taco(Path("data/taco")))
+    data, cats, anns = taco_annotations()
+    taco = split(prepare_taco(Path("data/taco"), data, cats, capped(anns, cats)))
     df = pd.concat([realwaste, taco])
     df.to_csv(EXTRA_SPLITS, index=False)
     print(df.groupby(["source", "label"]).size().unstack(0))

@@ -190,7 +190,9 @@ three datasets. Their results stay in `results/` for comparison: `benchmark_resn
 
 The data scripts only download what is missing, so they are safe to run again. Both splits files are
 committed, so every machine trains and tests on the same images: `split.py` and `prepare_extra_data.py`
-keep them unless given `--force` / `--resplit`. Images listed in a split that could not be downloaded
+keep them unless given `--force` / `--resplit`. `prepare_extra_data.py --add-categories` adds the TACO categories newly listed in
+`TACO_CLASSES` (paper cups and drink cartons, as trash, #40) without changing any existing row: a crop from a photo
+already in the split joins that photo's split, and new photos are split 70/15/15. Images listed in a split that could not be downloaded
 (e.g. a TACO photo that was taken off Flickr) are skipped by training and benchmarking, with a message.
 
 Models (`--arch`): `resnet18`, `resnet50` (default), `efficientnet_b0`, `convnext_tiny` with ImageNet weights from
