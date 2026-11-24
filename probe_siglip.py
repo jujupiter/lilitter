@@ -9,10 +9,15 @@ the encoder over the images plus a small logistic regression.
 2. Fit a logistic regression on the training features for each regularisation strength C; keep the one with the best
    mean validation accuracy over the three sources (as train_mixed.py does). Each source weighs in the loss as in
    train_mixed.py's batches.
-3. Save the encoder with its new head to models/<arch>_probe.pth, which benchmark.py and predict.py can load, and
+3. With --zero-shot-weight W, blend the probe with the zero-shot classifier of zero_shot.py, which is a linear head
+   on the same features: head = (1 - W) * probe + W * zero-shot. Both give scores on a similar scale (checked on the
+   validation set), so W = 0.5 weighs them equally. The blend is one linear head again: no extra cost to run it.
+4. Save the encoder with its new head to models/<arch>_probe.pth, which benchmark.py and predict.py can load, and
    score every test set from the cached features: results/benchmark_<arch>_probe.csv, in benchmark.py's format.
 
-usage: python probe_siglip.py [--limit N]
+usage: python probe_siglip.py [--zero-shot-weight 0.5] [--limit N]
+--zero-shot-weight W: outputs end in _zs<W x 100>, e.g. models/siglip_base_probe_zs50.pth. W is set beforehand,
+never tuned on the test sets; the validation sets come from the training sources and would always favour W = 0.
 --limit N uses only N images per source and split, to check that the script runs; its outputs end in _limitN.
 The run's energy goes to results/runs.csv.
 """
@@ -26,9 +31,10 @@ from sklearn.linear_model import LogisticRegression
 from torch.utils.data import DataLoader
 
 from benchmark import benchmarks
-from common import (CLASSES, CLASS_TO_IDX, DEVICE, NUM_WORKERS, TrashDataset, build_model, load_splits, measured_run,
+from common import (ARCHS, CLASSES, CLASS_TO_IDX, DEVICE, NUM_WORKERS, TrashDataset, build_model, load_splits, measured_run,
                     save_model)
 from train_mixed import BATCH_MIX
+from zero_shot import SCALE, text_head
 
 ARCH = "siglip_base"
 C_GRID = [1, 3, 10, 30, 100, 300, 1000]  # features have length 1, so the head needs little regularisation
@@ -66,9 +72,12 @@ def source_weights(sources):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--zero-shot-weight", type=float, default=0.0,
+                        help="weight of the zero-shot head in the blend, from 0 (probe only) to 1 (zero-shot only)")
     parser.add_argument("--limit", type=int, help="only N images per source and split, to check the script runs")
     args = parser.parse_args()
-    suffix = f"_limit{args.limit}" if args.limit else ""
+    w = args.zero_shot_weight
+    suffix = (f"_zs{round(w * 100)}" if w else "") + (f"_limit{args.limit}" if args.limit else "")
     out = Path(f"models/{ARCH}_probe{suffix}.pth")
     out_csv = Path(f"results/benchmark_{ARCH}_probe{suffix}.csv")
 
@@ -100,13 +109,26 @@ def main():
         _, c, clf = best
         print(f"Best: C {c}, mean val acc {best[0]:.4f}")
 
+        weight, bias = torch.from_numpy(clf.coef_).float(), torch.from_numpy(clf.intercept_).float()
+        if w:
+            from transformers import AutoModel, AutoProcessor
+            name = ARCHS[ARCH]
+            clip = AutoModel.from_pretrained(name, use_safetensors=True).eval()
+            zero_shot = SCALE * text_head(clip, AutoProcessor.from_pretrained(name)).cpu()
+            del clip
+            weight, bias = (1 - w) * weight + w * zero_shot, (1 - w) * bias
+            scores = torch.from_numpy(x_val) @ weight.T + bias
+            acc = val.assign(ok=scores.argmax(1).numpy() == val.label.map(CLASS_TO_IDX)).groupby("source").ok.mean()
+            print(f"Blend, zero-shot weight {w} | val acc " + " ".join(f"{s} {a:.3f}" for s, a in acc.items())
+                  + f" | mean {acc.mean():.3f}")
+
         with torch.no_grad():
-            model.head.weight.copy_(torch.from_numpy(clf.coef_).float())
-            model.head.bias.copy_(torch.from_numpy(clf.intercept_).float())
+            model.head.weight.copy_(weight)
+            model.head.bias.copy_(bias)
             # the saved model must give what the cached features give
             images, _ = next(iter(DataLoader(TrashDataset(bench.head(4), model.transform), batch_size=4)))
             direct = model(images.to(DEVICE)).softmax(1).cpu().numpy()
-        probs = clf.predict_proba(x_bench)
+        probs = (torch.from_numpy(x_bench) @ weight.T + bias).softmax(1).numpy()
         assert np.allclose(direct, probs[:len(direct)], atol=1e-3), "the saved model disagrees with the cached features"
         save_model(model, ARCH, out)
 
