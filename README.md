@@ -34,7 +34,7 @@ with no class far below the others. Every test set is still reported, including 
 | `zero_shot.py` | Score a CLIP or SigLIP model on every test set with no training: it picks the class whose description fits best | splits files, `data/commons_*` | `results/benchmark_zeroshot_<model>.csv` |
 | `predict.py` | Classify your own images (top 3) | a checkpoint | |
 | `collect_commons.py` | Collect candidate photos from Commons for a large test set, by J-code | `data/commons_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
-| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/` |
+| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/`, `data/commons_dev/` |
 | `.github/workflows/photo-reminder.yml` | Comment on #15 every morning, as a reminder to photograph litter | | a comment on #15 |
 
 ## Data
@@ -47,6 +47,7 @@ with no class far below the others. Every test set is still reported, including 
 | `data/commons_studio/` | 20 product-style photos from Wikimedia Commons | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 | `data/commons_outdoor/` | 20 outdoor photos from Wikimedia Commons | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 | `data/commons_large/` | 537 reviewed Commons photos (345 studio, 192 outdoor), with class, J-code and setting | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
+| `data/commons_dev/` | Development set: more reviewed Commons photos, used to choose settings (never to train or test) | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 
 Every source has its own train/val/test split. TACO crops from the same photo stay in the same split.
 The Commons sets are only used for testing, never for training.
@@ -74,6 +75,7 @@ python collect_commons.py      # ~2,000 candidates from Commons categories liste
 python review_commons.py       # check each photo in the browser, ~3 s per photo; stop and resume any time
 python review_commons.py --export   # accepted photos -> data/commons_large/sources.csv
 python review_commons.py --multiple # confirm the photos suggested as several materials (for detection, #10)
+python review_commons.py --dev      # review the photos never shown (Claude suggested rejecting them) for the development set
 ```
 
 `data/commons_candidates/suggestions.csv` holds a first pass by Claude (accept or reject, class, J-code, setting,
@@ -84,6 +86,11 @@ now in the page (several items of one material are accepted; several materials a
 
 `benchmark.py` scores the exported set as two benchmarks, `commons large studio` and `commons large outdoor`.
 Its 16 photos with no class (drink cartons, food waste) have a J-code only and are left out until phase 2.
+
+The **development set** (`data/commons_dev/`, #40) chooses settings that the validation sets cannot: they come from
+the training sources, while the settings in question are about unfamiliar photos (e.g. the zero-shot weight of
+`probe_siglip.py`). It is never a test set. `labels.csv` records which set each photo was first reviewed for, in its
+`set` column (`dev`, or empty for the test set); a photo never moves, so the test set stays the same.
 
 ## Energy
 

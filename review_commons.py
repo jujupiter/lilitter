@@ -23,9 +23,16 @@ Keys:  Enter      accept as pre-filled (class, J-code, studio or outdoor), go to
 With --multiple, the page shows only the photos Claude suggested as several materials (kept for the detection
 test set, #10), and Enter confirms them as such.
 
+With --dev, the page shows the photos never reviewed that Claude suggested rejecting, for a development set (#40):
+photos used to choose settings, such as the zero-shot weight of probe_siglip.py, and never to test. Each photo
+belongs to the set it was first reviewed for (the `set` column of labels.csv: dev, or empty for the test set), so
+the test set never changes.
+
 usage: python review_commons.py            open the review page on http://127.0.0.1:8765
        python review_commons.py --multiple confirm the photos suggested as several materials
-       python review_commons.py --export   write the accepted photos to data/commons_large/ for benchmark.py
+       python review_commons.py --dev      review photos for the development set
+       python review_commons.py --export   write the accepted photos to data/commons_large/ (test set) and
+                                           data/commons_dev/ (development set)
 """
 import argparse
 import hashlib
@@ -45,15 +52,15 @@ DIR = Path("data/commons_candidates")
 CANDIDATES = DIR / "candidates.csv"
 LABELS = DIR / "labels.csv"
 SUGGESTIONS = DIR / "suggestions.csv"
-EXPORT = Path("data/commons_large")
-LABEL_COLUMNS = ["id", "status", "label", "jcode", "setting", "reviewed_at"]
+EXPORT = {"": Path("data/commons_large"), "dev": Path("data/commons_dev")}  # by the `set` column of labels.csv
+LABEL_COLUMNS = ["id", "status", "label", "jcode", "setting", "reviewed_at", "set"]
 PORT = 8765
-FOCUS = ""  # "multiple" with --multiple: only show the photos Claude suggested with that status
+FOCUS = ""  # "multiple" with --multiple: only the photos Claude suggested with that status; "dev" with --dev
 
 
 def load_labels():
     if LABELS.exists():
-        return pd.read_csv(LABELS, dtype=str).fillna("")
+        return pd.read_csv(LABELS, dtype=str).reindex(columns=LABEL_COLUMNS).fillna("")
     return pd.DataFrame(columns=LABEL_COLUMNS)
 
 
@@ -121,15 +128,20 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def export():
-    """Accepted photos -> data/commons_large/<class>/<id>.jpg and sources.csv, in the format of the small sets."""
+    """Accepted photos -> data/commons_large/ (test set) or data/commons_dev/ (development set): <class>/<id>.jpg and
+    sources.csv, in the format of the small sets."""
     cands = pd.read_csv(CANDIDATES, dtype=str).fillna("").set_index("id")
-    labels = load_labels().query("status == 'accepted'")
+    for name, folder in EXPORT.items():
+        export_set(cands, load_labels().query("status == 'accepted' and set == @name"), folder)
+
+
+def export_set(cands, labels, folder):
     if labels.empty:
-        return print(f"No accepted photo in {LABELS} yet: nothing to export.")
+        return print(f"No accepted photo for {folder} in {LABELS} yet: nothing to export.")
     rows = []
     for r in labels.itertuples():
         c = cands.loc[r.id]
-        dest = EXPORT / (r.label or "none") / f"commons_{r.id}.jpg"
+        dest = folder / (r.label or "none") / f"commons_{r.id}.jpg"
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(c.path, dest)
         rows.append(dict(path=str(dest), label=r.label, jcode=r.jcode, setting=r.setting, title=c.title,
@@ -137,8 +149,8 @@ def export():
                          commons_sha1=c.commons_sha1, sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),
                          processing="original"))
     out = pd.DataFrame(rows)
-    out.to_csv(EXPORT / "sources.csv", index=False)
-    print(f"{len(out)} photos exported to {EXPORT}/sources.csv")
+    out.to_csv(folder / "sources.csv", index=False)
+    print(f"{len(out)} photos exported to {folder}/sources.csv")
     print(out.groupby(["setting", "label"]).size().unstack(fill_value=0).to_string())
 
 
@@ -147,11 +159,12 @@ def main():
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--export", action="store_true", help="write the accepted photos to data/commons_large/")
     mode.add_argument("--multiple", action="store_true", help="only show the photos suggested as several materials")
+    mode.add_argument("--dev", action="store_true", help="review photos for the development set")
     args = parser.parse_args()
     if args.export:
         return export()
     global FOCUS
-    FOCUS = "multiple" if args.multiple else ""
+    FOCUS = "multiple" if args.multiple else "dev" if args.dev else ""
     server = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     url = f"http://127.0.0.1:{PORT}"
     print(f"Review page on {url} (Ctrl+C to stop; labels are saved as you go)")
@@ -232,13 +245,17 @@ async function load() {
     b.dataset.label = k < 6 ? c : ""; b.innerHTML = `<kbd>${k < 6 ? k + 1 : 0}</kbd> ${c}`;
     b.onclick = () => { cur.label = b.dataset.label; draw(); }; $("classes").append(b); });
   showAll = !Object.keys(D.suggestions).length;
+  if (D.focus === "dev") document.querySelector("header b").textContent = "Commons review: development set";
   i = firstTodo(); show();
 }
 // with suggestions, only show what Claude would accept (and what you already reviewed), unless showAll;
-// with --multiple (D.focus), only the photos Claude suggested as several materials
+// with --multiple (D.focus), only the photos Claude suggested as several materials; with --dev, the development
+// set: photos already reviewed for it, and those never reviewed that Claude suggested rejecting
 let showAll = false;
-const visible = c => showAll || (D.focus ? (D.suggestions[c.id] || {}).status === D.focus
-  : !!D.labels[c.id] || (D.suggestions[c.id] || {}).status === "accepted");
+const visible = c => { const l = D.labels[c.id], s = D.suggestions[c.id] || {};
+  if (showAll) return true;
+  if (D.focus === "dev") return l ? l.set === "dev" : s.status === "rejected";
+  return D.focus ? s.status === D.focus : !!l || s.status === "accepted"; };
 const waiting = () => D.candidates.filter(c => !D.labels[c.id] && visible(c)).length;
 function step(from, dir) {
   for (let k = from + dir; k >= 0 && k < D.candidates.length; k += dir) if (visible(D.candidates[k])) return k;
@@ -279,7 +296,9 @@ async function decide(status, setting = "") {
   if (busy) return;
   busy = true;
   try {
-    const row = { id: D.candidates[i].id, status, setting, label: status === "accepted" ? cur.label : "", jcode: status === "accepted" ? cur.jcode : "" };
+    // a photo stays in the set it was first reviewed for, so the test set never changes
+    const l = D.labels[D.candidates[i].id];
+    const row = { id: D.candidates[i].id, set: l ? l.set : D.focus === "dev" ? "dev" : "", status, setting, label: status === "accepted" ? cur.label : "", jcode: status === "accepted" ? cur.jcode : "" };
     const r = await fetch("/label", { method: "POST", body: JSON.stringify(row) });
     if (!r.ok) { alert("Not saved: " + await r.text()); return; }
     D.labels[row.id] = row;
