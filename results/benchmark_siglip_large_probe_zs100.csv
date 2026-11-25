@@ -1,0 +1,1824 @@
+path,label,benchmark,pred,conf,ok
+data/trashnet/metal/metal93.jpg,metal,trashnet test,metal,0.99481046,True
+data/trashnet/plastic/plastic414.jpg,plastic,trashnet test,glass,0.47741497,False
+data/trashnet/cardboard/cardboard118.jpg,cardboard,trashnet test,cardboard,0.7935473,True
+data/trashnet/glass/glass375.jpg,glass,trashnet test,glass,0.9942351,True
+data/trashnet/glass/glass242.jpg,glass,trashnet test,glass,0.9979492,True
+data/trashnet/plastic/plastic39.jpg,plastic,trashnet test,metal,0.5503112,False
+data/trashnet/metal/metal315.jpg,metal,trashnet test,metal,0.99112844,True
+data/trashnet/plastic/plastic108.jpg,plastic,trashnet test,glass,0.837111,False
+data/trashnet/paper/paper529.jpg,paper,trashnet test,paper,0.5677009,True
+data/trashnet/paper/paper352.jpg,paper,trashnet test,glass,0.6609835,False
+data/trashnet/trash/trash68.jpg,trash,trashnet test,metal,0.88282794,False
+data/trashnet/glass/glass355.jpg,glass,trashnet test,glass,0.992304,True
+data/trashnet/paper/paper349.jpg,paper,trashnet test,paper,0.5197025,True
+data/trashnet/cardboard/cardboard259.jpg,cardboard,trashnet test,cardboard,0.9952779,True
+data/trashnet/metal/metal153.jpg,metal,trashnet test,metal,0.9969597,True
+data/trashnet/plastic/plastic291.jpg,plastic,trashnet test,glass,0.72724974,False
+data/trashnet/cardboard/cardboard212.jpg,cardboard,trashnet test,cardboard,0.91415054,True
+data/trashnet/paper/paper517.jpg,paper,trashnet test,paper,0.96885943,True
+data/trashnet/metal/metal142.jpg,metal,trashnet test,metal,0.99573684,True
+data/trashnet/plastic/plastic186.jpg,plastic,trashnet test,cardboard,0.9952655,False
+data/trashnet/paper/paper374.jpg,paper,trashnet test,paper,0.7122848,True
+data/trashnet/paper/paper391.jpg,paper,trashnet test,paper,0.90267193,True
+data/trashnet/paper/paper460.jpg,paper,trashnet test,paper,0.98500013,True
+data/trashnet/plastic/plastic425.jpg,plastic,trashnet test,glass,0.8539973,False
+data/trashnet/cardboard/cardboard258.jpg,cardboard,trashnet test,cardboard,0.99612445,True
+data/trashnet/glass/glass151.jpg,glass,trashnet test,glass,0.83501303,True
+data/trashnet/metal/metal304.jpg,metal,trashnet test,metal,0.99958307,True
+data/trashnet/paper/paper324.jpg,paper,trashnet test,paper,0.4335555,True
+data/trashnet/cardboard/cardboard248.jpg,cardboard,trashnet test,cardboard,0.99055606,True
+data/trashnet/paper/paper105.jpg,paper,trashnet test,paper,0.9853028,True
+data/trashnet/metal/metal173.jpg,metal,trashnet test,metal,0.9410614,True
+data/trashnet/metal/metal106.jpg,metal,trashnet test,metal,0.9995951,True
+data/trashnet/metal/metal270.jpg,metal,trashnet test,metal,0.99880624,True
+data/trashnet/plastic/plastic68.jpg,plastic,trashnet test,glass,0.99320376,False
+data/trashnet/trash/trash58.jpg,trash,trashnet test,paper,0.9946766,False
+data/trashnet/glass/glass237.jpg,glass,trashnet test,glass,0.80308586,True
+data/trashnet/cardboard/cardboard143.jpg,cardboard,trashnet test,paper,0.5176257,False
+data/trashnet/paper/paper486.jpg,paper,trashnet test,metal,0.57183856,False
+data/trashnet/metal/metal130.jpg,metal,trashnet test,metal,0.99801433,True
+data/trashnet/cardboard/cardboard238.jpg,cardboard,trashnet test,cardboard,0.98486924,True
+data/trashnet/metal/metal376.jpg,metal,trashnet test,metal,0.99720794,True
+data/trashnet/metal/metal220.jpg,metal,trashnet test,metal,0.99679846,True
+data/trashnet/trash/trash22.jpg,trash,trashnet test,trash,0.8970941,True
+data/trashnet/paper/paper195.jpg,paper,trashnet test,paper,0.9580586,True
+data/trashnet/paper/paper299.jpg,paper,trashnet test,paper,0.99061185,True
+data/trashnet/glass/glass256.jpg,glass,trashnet test,metal,0.6197236,False
+data/trashnet/glass/glass23.jpg,glass,trashnet test,glass,0.99434114,True
+data/trashnet/metal/metal68.jpg,metal,trashnet test,metal,0.9988937,True
+data/trashnet/paper/paper37.jpg,paper,trashnet test,paper,0.49339652,True
+data/trashnet/paper/paper242.jpg,paper,trashnet test,paper,0.5635706,True
+data/trashnet/cardboard/cardboard195.jpg,cardboard,trashnet test,cardboard,0.9992279,True
+data/trashnet/metal/metal122.jpg,metal,trashnet test,metal,0.9888475,True
+data/trashnet/paper/paper450.jpg,paper,trashnet test,paper,0.5436488,True
+data/trashnet/metal/metal274.jpg,metal,trashnet test,metal,0.9973641,True
+data/trashnet/paper/paper430.jpg,paper,trashnet test,paper,0.41111764,True
+data/trashnet/metal/metal48.jpg,metal,trashnet test,metal,0.5193882,True
+data/trashnet/paper/paper69.jpg,paper,trashnet test,paper,0.9906503,True
+data/trashnet/paper/paper543.jpg,paper,trashnet test,paper,0.6304714,True
+data/trashnet/metal/metal58.jpg,metal,trashnet test,metal,0.99965394,True
+data/trashnet/paper/paper58.jpg,paper,trashnet test,paper,0.74291515,True
+data/trashnet/metal/metal332.jpg,metal,trashnet test,metal,0.999476,True
+data/trashnet/metal/metal12.jpg,metal,trashnet test,metal,0.99942976,True
+data/trashnet/paper/paper387.jpg,paper,trashnet test,cardboard,0.90434533,False
+data/trashnet/plastic/plastic305.jpg,plastic,trashnet test,glass,0.85523564,False
+data/trashnet/cardboard/cardboard292.jpg,cardboard,trashnet test,cardboard,0.9879318,True
+data/trashnet/paper/paper211.jpg,paper,trashnet test,paper,0.40965512,True
+data/trashnet/cardboard/cardboard159.jpg,cardboard,trashnet test,cardboard,0.99833786,True
+data/trashnet/cardboard/cardboard31.jpg,cardboard,trashnet test,cardboard,0.874245,True
+data/trashnet/cardboard/cardboard291.jpg,cardboard,trashnet test,cardboard,0.9510785,True
+data/trashnet/paper/paper308.jpg,paper,trashnet test,paper,0.9998392,True
+data/trashnet/paper/paper462.jpg,paper,trashnet test,paper,0.5666414,True
+data/trashnet/plastic/plastic220.jpg,plastic,trashnet test,glass,0.595596,False
+data/trashnet/glass/glass1.jpg,glass,trashnet test,glass,0.9953818,True
+data/trashnet/glass/glass388.jpg,glass,trashnet test,glass,0.9992582,True
+data/trashnet/plastic/plastic90.jpg,plastic,trashnet test,cardboard,0.9351147,False
+data/trashnet/trash/trash107.jpg,trash,trashnet test,glass,0.5517223,False
+data/trashnet/plastic/plastic299.jpg,plastic,trashnet test,glass,0.56117356,False
+data/trashnet/paper/paper410.jpg,paper,trashnet test,paper,0.9959188,True
+data/trashnet/cardboard/cardboard302.jpg,cardboard,trashnet test,paper,0.93420243,False
+data/trashnet/paper/paper120.jpg,paper,trashnet test,paper,0.8847886,True
+data/trashnet/plastic/plastic79.jpg,plastic,trashnet test,cardboard,0.6927429,False
+data/trashnet/glass/glass169.jpg,glass,trashnet test,glass,0.99970585,True
+data/trashnet/trash/trash11.jpg,trash,trashnet test,plastic,0.7172649,False
+data/trashnet/paper/paper422.jpg,paper,trashnet test,paper,0.99628484,True
+data/trashnet/glass/glass59.jpg,glass,trashnet test,glass,0.9979138,True
+data/trashnet/cardboard/cardboard184.jpg,cardboard,trashnet test,cardboard,0.93339944,True
+data/trashnet/plastic/plastic318.jpg,plastic,trashnet test,cardboard,0.5001531,False
+data/trashnet/glass/glass249.jpg,glass,trashnet test,glass,0.99961203,True
+data/trashnet/cardboard/cardboard318.jpg,cardboard,trashnet test,cardboard,0.9958858,True
+data/trashnet/cardboard/cardboard25.jpg,cardboard,trashnet test,cardboard,0.98935705,True
+data/trashnet/plastic/plastic188.jpg,plastic,trashnet test,metal,0.56518084,False
+data/trashnet/paper/paper525.jpg,paper,trashnet test,paper,0.99089897,True
+data/trashnet/glass/glass475.jpg,glass,trashnet test,glass,0.9996654,True
+data/trashnet/metal/metal90.jpg,metal,trashnet test,metal,0.9996915,True
+data/trashnet/glass/glass352.jpg,glass,trashnet test,glass,0.9999337,True
+data/trashnet/cardboard/cardboard187.jpg,cardboard,trashnet test,cardboard,0.9940188,True
+data/trashnet/paper/paper36.jpg,paper,trashnet test,paper,0.9748864,True
+data/trashnet/glass/glass366.jpg,glass,trashnet test,glass,0.70285517,True
+data/trashnet/plastic/plastic385.jpg,plastic,trashnet test,glass,0.82136923,False
+data/trashnet/glass/glass139.jpg,glass,trashnet test,glass,0.9989605,True
+data/trashnet/glass/glass480.jpg,glass,trashnet test,glass,0.9967399,True
+data/trashnet/plastic/plastic130.jpg,plastic,trashnet test,metal,0.71016806,False
+data/trashnet/plastic/plastic282.jpg,plastic,trashnet test,cardboard,0.5318448,False
+data/trashnet/glass/glass68.jpg,glass,trashnet test,glass,0.90220577,True
+data/trashnet/metal/metal367.jpg,metal,trashnet test,metal,0.9989693,True
+data/trashnet/plastic/plastic280.jpg,plastic,trashnet test,glass,0.78377134,False
+data/trashnet/cardboard/cardboard252.jpg,cardboard,trashnet test,cardboard,0.9636102,True
+data/trashnet/glass/glass70.jpg,glass,trashnet test,glass,0.97612214,True
+data/trashnet/paper/paper62.jpg,paper,trashnet test,paper,0.7335936,True
+data/trashnet/glass/glass495.jpg,glass,trashnet test,glass,0.9802924,True
+data/trashnet/paper/paper185.jpg,paper,trashnet test,paper,0.958965,True
+data/trashnet/glass/glass163.jpg,glass,trashnet test,glass,0.88913184,True
+data/trashnet/glass/glass464.jpg,glass,trashnet test,glass,0.9999895,True
+data/trashnet/metal/metal357.jpg,metal,trashnet test,metal,0.97191626,True
+data/trashnet/paper/paper334.jpg,paper,trashnet test,paper,0.9635142,True
+data/trashnet/metal/metal196.jpg,metal,trashnet test,metal,0.99829906,True
+data/trashnet/plastic/plastic431.jpg,plastic,trashnet test,cardboard,0.59346354,False
+data/trashnet/plastic/plastic306.jpg,plastic,trashnet test,glass,0.5316934,False
+data/trashnet/glass/glass264.jpg,glass,trashnet test,glass,0.99701333,True
+data/trashnet/paper/paper145.jpg,paper,trashnet test,paper,0.9992859,True
+data/trashnet/paper/paper584.jpg,paper,trashnet test,paper,0.91639614,True
+data/trashnet/plastic/plastic336.jpg,plastic,trashnet test,metal,0.98424613,False
+data/trashnet/glass/glass182.jpg,glass,trashnet test,glass,0.89306104,True
+data/trashnet/paper/paper223.jpg,paper,trashnet test,paper,0.8559295,True
+data/trashnet/cardboard/cardboard236.jpg,cardboard,trashnet test,glass,0.57587075,False
+data/trashnet/plastic/plastic441.jpg,plastic,trashnet test,glass,0.9990753,False
+data/trashnet/plastic/plastic376.jpg,plastic,trashnet test,glass,0.6708796,False
+data/trashnet/metal/metal63.jpg,metal,trashnet test,metal,0.9970878,True
+data/trashnet/paper/paper170.jpg,paper,trashnet test,paper,0.9964657,True
+data/trashnet/glass/glass208.jpg,glass,trashnet test,glass,0.96748614,True
+data/trashnet/paper/paper106.jpg,paper,trashnet test,trash,0.51703304,False
+data/trashnet/trash/trash30.jpg,trash,trashnet test,paper,0.98505604,False
+data/trashnet/cardboard/cardboard281.jpg,cardboard,trashnet test,cardboard,0.99797195,True
+data/trashnet/metal/metal290.jpg,metal,trashnet test,metal,0.96071136,True
+data/trashnet/plastic/plastic54.jpg,plastic,trashnet test,glass,0.5798431,False
+data/trashnet/plastic/plastic354.jpg,plastic,trashnet test,glass,0.77946293,False
+data/trashnet/trash/trash133.jpg,trash,trashnet test,glass,0.84205675,False
+data/trashnet/glass/glass489.jpg,glass,trashnet test,glass,0.9991787,True
+data/trashnet/paper/paper48.jpg,paper,trashnet test,paper,0.9907137,True
+data/trashnet/plastic/plastic103.jpg,plastic,trashnet test,cardboard,0.7363134,False
+data/trashnet/plastic/plastic262.jpg,plastic,trashnet test,metal,0.55710703,False
+data/trashnet/glass/glass497.jpg,glass,trashnet test,glass,0.9996314,True
+data/trashnet/plastic/plastic273.jpg,plastic,trashnet test,glass,0.6370857,False
+data/trashnet/paper/paper554.jpg,paper,trashnet test,cardboard,0.6925251,False
+data/trashnet/plastic/plastic210.jpg,plastic,trashnet test,plastic,0.45207494,True
+data/trashnet/cardboard/cardboard52.jpg,cardboard,trashnet test,cardboard,0.9902147,True
+data/trashnet/cardboard/cardboard394.jpg,cardboard,trashnet test,paper,0.7080995,False
+data/trashnet/glass/glass12.jpg,glass,trashnet test,glass,0.9919592,True
+data/trashnet/trash/trash75.jpg,trash,trashnet test,metal,0.76721007,False
+data/trashnet/paper/paper83.jpg,paper,trashnet test,paper,0.9966748,True
+data/trashnet/trash/trash130.jpg,trash,trashnet test,metal,0.87500006,False
+data/trashnet/paper/paper50.jpg,paper,trashnet test,paper,0.7796519,True
+data/trashnet/cardboard/cardboard54.jpg,cardboard,trashnet test,cardboard,0.99301344,True
+data/trashnet/plastic/plastic384.jpg,plastic,trashnet test,glass,0.5363244,False
+data/trashnet/metal/metal340.jpg,metal,trashnet test,metal,0.99802655,True
+data/trashnet/paper/paper193.jpg,paper,trashnet test,paper,0.9352433,True
+data/trashnet/paper/paper353.jpg,paper,trashnet test,paper,0.9941835,True
+data/trashnet/plastic/plastic203.jpg,plastic,trashnet test,cardboard,0.93632233,False
+data/trashnet/paper/paper249.jpg,paper,trashnet test,paper,0.73510873,True
+data/trashnet/cardboard/cardboard30.jpg,cardboard,trashnet test,cardboard,0.8018044,True
+data/trashnet/paper/paper488.jpg,paper,trashnet test,paper,0.9880733,True
+data/trashnet/paper/paper200.jpg,paper,trashnet test,cardboard,0.53522515,False
+data/trashnet/paper/paper319.jpg,paper,trashnet test,paper,0.9951585,True
+data/trashnet/glass/glass10.jpg,glass,trashnet test,glass,0.93766636,True
+data/trashnet/paper/paper247.jpg,paper,trashnet test,cardboard,0.70804554,False
+data/trashnet/paper/paper234.jpg,paper,trashnet test,paper,0.9968747,True
+data/trashnet/glass/glass28.jpg,glass,trashnet test,glass,0.9471698,True
+data/trashnet/cardboard/cardboard148.jpg,cardboard,trashnet test,cardboard,0.97860795,True
+data/trashnet/paper/paper240.jpg,paper,trashnet test,paper,0.9792909,True
+data/trashnet/paper/paper96.jpg,paper,trashnet test,paper,0.995271,True
+data/trashnet/metal/metal275.jpg,metal,trashnet test,metal,0.99940467,True
+data/trashnet/metal/metal326.jpg,metal,trashnet test,metal,0.9918983,True
+data/trashnet/paper/paper252.jpg,paper,trashnet test,cardboard,0.6756578,False
+data/trashnet/cardboard/cardboard92.jpg,cardboard,trashnet test,cardboard,0.96920043,True
+data/trashnet/paper/paper103.jpg,paper,trashnet test,paper,0.93535405,True
+data/trashnet/metal/metal26.jpg,metal,trashnet test,metal,0.9999968,True
+data/trashnet/glass/glass341.jpg,glass,trashnet test,glass,0.9906345,True
+data/trashnet/cardboard/cardboard47.jpg,cardboard,trashnet test,cardboard,0.9842366,True
+data/trashnet/cardboard/cardboard108.jpg,cardboard,trashnet test,cardboard,0.9969531,True
+data/trashnet/cardboard/cardboard285.jpg,cardboard,trashnet test,cardboard,0.98930734,True
+data/trashnet/paper/paper409.jpg,paper,trashnet test,paper,0.995076,True
+data/trashnet/trash/trash93.jpg,trash,trashnet test,trash,0.48135763,True
+data/trashnet/plastic/plastic38.jpg,plastic,trashnet test,glass,0.685728,False
+data/trashnet/paper/paper314.jpg,paper,trashnet test,metal,0.3792535,False
+data/trashnet/glass/glass38.jpg,glass,trashnet test,glass,0.9982673,True
+data/trashnet/glass/glass303.jpg,glass,trashnet test,metal,0.51168555,False
+data/trashnet/metal/metal256.jpg,metal,trashnet test,metal,0.9812216,True
+data/trashnet/paper/paper363.jpg,paper,trashnet test,paper,0.9608948,True
+data/trashnet/plastic/plastic248.jpg,plastic,trashnet test,cardboard,0.49476647,False
+data/trashnet/cardboard/cardboard43.jpg,cardboard,trashnet test,cardboard,0.9990212,True
+data/trashnet/paper/paper276.jpg,paper,trashnet test,paper,0.99602675,True
+data/trashnet/cardboard/cardboard296.jpg,cardboard,trashnet test,paper,0.7904179,False
+data/trashnet/glass/glass154.jpg,glass,trashnet test,glass,0.9717243,True
+data/trashnet/cardboard/cardboard381.jpg,cardboard,trashnet test,cardboard,0.99179137,True
+data/trashnet/paper/paper167.jpg,paper,trashnet test,paper,0.98196894,True
+data/trashnet/paper/paper436.jpg,paper,trashnet test,paper,0.8442853,True
+data/trashnet/metal/metal172.jpg,metal,trashnet test,metal,0.5131835,True
+data/trashnet/glass/glass136.jpg,glass,trashnet test,glass,0.9756446,True
+data/trashnet/plastic/plastic104.jpg,plastic,trashnet test,glass,0.53954655,False
+data/trashnet/paper/paper197.jpg,paper,trashnet test,paper,0.96299237,True
+data/trashnet/glass/glass398.jpg,glass,trashnet test,glass,0.9991316,True
+data/trashnet/glass/glass346.jpg,glass,trashnet test,glass,0.99219465,True
+data/trashnet/paper/paper59.jpg,paper,trashnet test,paper,0.997993,True
+data/trashnet/metal/metal356.jpg,metal,trashnet test,metal,0.9909218,True
+data/trashnet/plastic/plastic310.jpg,plastic,trashnet test,glass,0.9132088,False
+data/trashnet/cardboard/cardboard161.jpg,cardboard,trashnet test,cardboard,0.9699555,True
+data/trashnet/cardboard/cardboard349.jpg,cardboard,trashnet test,cardboard,0.99294853,True
+data/trashnet/paper/paper221.jpg,paper,trashnet test,paper,0.98050034,True
+data/trashnet/glass/glass298.jpg,glass,trashnet test,glass,0.95649713,True
+data/trashnet/trash/trash39.jpg,trash,trashnet test,trash,0.63566214,True
+data/trashnet/plastic/plastic437.jpg,plastic,trashnet test,glass,0.54613715,False
+data/trashnet/cardboard/cardboard78.jpg,cardboard,trashnet test,cardboard,0.99783105,True
+data/trashnet/cardboard/cardboard370.jpg,cardboard,trashnet test,cardboard,0.8133655,True
+data/trashnet/cardboard/cardboard172.jpg,cardboard,trashnet test,cardboard,0.9102053,True
+data/trashnet/paper/paper93.jpg,paper,trashnet test,cardboard,0.49114454,False
+data/trashnet/glass/glass79.jpg,glass,trashnet test,glass,0.9865389,True
+data/trashnet/trash/trash90.jpg,trash,trashnet test,paper,0.7623242,False
+data/trashnet/paper/paper416.jpg,paper,trashnet test,paper,0.9930548,True
+data/trashnet/plastic/plastic31.jpg,plastic,trashnet test,metal,0.9095884,False
+data/trashnet/paper/paper42.jpg,paper,trashnet test,paper,0.9455299,True
+data/trashnet/cardboard/cardboard216.jpg,cardboard,trashnet test,cardboard,0.71107686,True
+data/trashnet/plastic/plastic93.jpg,plastic,trashnet test,metal,0.68959665,False
+data/trashnet/plastic/plastic178.jpg,plastic,trashnet test,glass,0.9615829,False
+data/trashnet/trash/trash102.jpg,trash,trashnet test,plastic,0.82644325,False
+data/trashnet/glass/glass457.jpg,glass,trashnet test,glass,0.6056184,True
+data/trashnet/cardboard/cardboard157.jpg,cardboard,trashnet test,cardboard,0.9998448,True
+data/trashnet/glass/glass429.jpg,glass,trashnet test,glass,0.9963546,True
+data/trashnet/glass/glass490.jpg,glass,trashnet test,glass,0.9999701,True
+data/trashnet/glass/glass307.jpg,glass,trashnet test,glass,0.96802795,True
+data/trashnet/metal/metal242.jpg,metal,trashnet test,metal,0.99984026,True
+data/trashnet/cardboard/cardboard391.jpg,cardboard,trashnet test,cardboard,0.9988386,True
+data/trashnet/paper/paper329.jpg,paper,trashnet test,paper,0.9985226,True
+data/trashnet/plastic/plastic420.jpg,plastic,trashnet test,metal,0.5197989,False
+data/trashnet/plastic/plastic460.jpg,plastic,trashnet test,metal,0.81753665,False
+data/trashnet/plastic/plastic227.jpg,plastic,trashnet test,glass,0.8437892,False
+data/trashnet/cardboard/cardboard127.jpg,cardboard,trashnet test,cardboard,0.9856058,True
+data/trashnet/cardboard/cardboard91.jpg,cardboard,trashnet test,cardboard,0.999605,True
+data/trashnet/cardboard/cardboard23.jpg,cardboard,trashnet test,cardboard,0.98201054,True
+data/trashnet/metal/metal60.jpg,metal,trashnet test,metal,0.99994123,True
+data/trashnet/glass/glass52.jpg,glass,trashnet test,glass,0.99994063,True
+data/trashnet/plastic/plastic177.jpg,plastic,trashnet test,glass,0.98650867,False
+data/trashnet/metal/metal79.jpg,metal,trashnet test,metal,0.9999943,True
+data/trashnet/glass/glass272.jpg,glass,trashnet test,glass,0.9547965,True
+data/trashnet/paper/paper550.jpg,paper,trashnet test,cardboard,0.8485533,False
+data/trashnet/cardboard/cardboard196.jpg,cardboard,trashnet test,cardboard,0.99936277,True
+data/trashnet/plastic/plastic158.jpg,plastic,trashnet test,glass,0.79039127,False
+data/trashnet/metal/metal310.jpg,metal,trashnet test,metal,0.99366176,True
+data/trashnet/cardboard/cardboard398.jpg,cardboard,trashnet test,cardboard,0.9925672,True
+data/trashnet/glass/glass225.jpg,glass,trashnet test,glass,0.9994816,True
+data/trashnet/cardboard/cardboard113.jpg,cardboard,trashnet test,cardboard,0.9924096,True
+data/trashnet/glass/glass285.jpg,glass,trashnet test,glass,0.56266236,True
+data/trashnet/metal/metal328.jpg,metal,trashnet test,metal,0.9943218,True
+data/trashnet/trash/trash15.jpg,trash,trashnet test,metal,0.7117524,False
+data/trashnet/cardboard/cardboard82.jpg,cardboard,trashnet test,cardboard,0.99279153,True
+data/trashnet/paper/paper343.jpg,paper,trashnet test,paper,0.9701967,True
+data/trashnet/glass/glass395.jpg,glass,trashnet test,glass,0.9661264,True
+data/trashnet/glass/glass322.jpg,glass,trashnet test,glass,0.80780244,True
+data/trashnet/metal/metal185.jpg,metal,trashnet test,metal,0.99896026,True
+data/trashnet/glass/glass415.jpg,glass,trashnet test,glass,0.8017084,True
+data/trashnet/metal/metal339.jpg,metal,trashnet test,metal,0.9999627,True
+data/trashnet/plastic/plastic313.jpg,plastic,trashnet test,glass,0.5442238,False
+data/trashnet/cardboard/cardboard241.jpg,cardboard,trashnet test,cardboard,0.9428767,True
+data/trashnet/paper/paper216.jpg,paper,trashnet test,cardboard,0.49315348,False
+data/trashnet/plastic/plastic168.jpg,plastic,trashnet test,metal,0.5495427,False
+data/trashnet/metal/metal206.jpg,metal,trashnet test,metal,0.9999491,True
+data/trashnet/glass/glass358.jpg,glass,trashnet test,metal,0.9263491,False
+data/trashnet/trash/trash27.jpg,trash,trashnet test,metal,0.59937084,False
+data/trashnet/glass/glass150.jpg,glass,trashnet test,glass,0.99965656,True
+data/trashnet/glass/glass236.jpg,glass,trashnet test,metal,0.6068356,False
+data/trashnet/plastic/plastic164.jpg,plastic,trashnet test,metal,0.6017517,False
+data/trashnet/trash/trash97.jpg,trash,trashnet test,glass,0.45863697,False
+data/trashnet/glass/glass164.jpg,glass,trashnet test,glass,0.8365969,True
+data/trashnet/trash/trash87.jpg,trash,trashnet test,metal,0.938282,False
+data/trashnet/glass/glass329.jpg,glass,trashnet test,glass,0.9806969,True
+data/trashnet/paper/paper389.jpg,paper,trashnet test,paper,0.9952226,True
+data/trashnet/paper/paper431.jpg,paper,trashnet test,paper,0.90150154,True
+data/trashnet/paper/paper472.jpg,paper,trashnet test,paper,0.99688786,True
+data/trashnet/cardboard/cardboard390.jpg,cardboard,trashnet test,cardboard,0.94147575,True
+data/trashnet/paper/paper74.jpg,paper,trashnet test,paper,0.99366176,True
+data/trashnet/paper/paper500.jpg,paper,trashnet test,paper,0.6353707,True
+data/trashnet/cardboard/cardboard179.jpg,cardboard,trashnet test,cardboard,0.99726653,True
+data/trashnet/metal/metal391.jpg,metal,trashnet test,metal,0.99873894,True
+data/trashnet/plastic/plastic447.jpg,plastic,trashnet test,glass,0.71004784,False
+data/trashnet/glass/glass331.jpg,glass,trashnet test,glass,0.9995148,True
+data/trashnet/metal/metal207.jpg,metal,trashnet test,metal,0.9987955,True
+data/trashnet/paper/paper385.jpg,paper,trashnet test,paper,0.986803,True
+data/trashnet/glass/glass408.jpg,glass,trashnet test,glass,0.9815091,True
+data/trashnet/plastic/plastic377.jpg,plastic,trashnet test,glass,0.48370725,False
+data/trashnet/paper/paper98.jpg,paper,trashnet test,paper,0.96671396,True
+data/trashnet/glass/glass27.jpg,glass,trashnet test,glass,0.72409034,True
+data/trashnet/metal/metal87.jpg,metal,trashnet test,metal,0.6555167,True
+data/trashnet/paper/paper127.jpg,paper,trashnet test,paper,0.96338594,True
+data/trashnet/glass/glass173.jpg,glass,trashnet test,glass,0.99922836,True
+data/trashnet/glass/glass170.jpg,glass,trashnet test,metal,0.97356266,False
+data/trashnet/metal/metal175.jpg,metal,trashnet test,cardboard,0.59513336,False
+data/trashnet/metal/metal337.jpg,metal,trashnet test,metal,0.9949714,True
+data/trashnet/glass/glass345.jpg,glass,trashnet test,glass,0.99708647,True
+data/trashnet/plastic/plastic401.jpg,plastic,trashnet test,glass,0.6088686,False
+data/trashnet/cardboard/cardboard297.jpg,cardboard,trashnet test,cardboard,0.9852368,True
+data/trashnet/cardboard/cardboard100.jpg,cardboard,trashnet test,cardboard,0.99923944,True
+data/trashnet/metal/metal244.jpg,metal,trashnet test,metal,0.94908345,True
+data/trashnet/paper/paper384.jpg,paper,trashnet test,paper,0.9721743,True
+data/trashnet/plastic/plastic473.jpg,plastic,trashnet test,glass,0.8793139,False
+data/trashnet/metal/metal321.jpg,metal,trashnet test,metal,0.9999577,True
+data/trashnet/cardboard/cardboard396.jpg,cardboard,trashnet test,cardboard,0.982672,True
+data/trashnet/paper/paper320.jpg,paper,trashnet test,paper,0.9629657,True
+data/trashnet/paper/paper446.jpg,paper,trashnet test,paper,0.98629135,True
+data/trashnet/metal/metal260.jpg,metal,trashnet test,metal,0.99941516,True
+data/trashnet/paper/paper506.jpg,paper,trashnet test,paper,0.98818856,True
+data/trashnet/plastic/plastic245.jpg,plastic,trashnet test,cardboard,0.754067,False
+data/trashnet/plastic/plastic128.jpg,plastic,trashnet test,glass,0.4776301,False
+data/trashnet/metal/metal395.jpg,metal,trashnet test,metal,0.9972057,True
+data/trashnet/plastic/plastic411.jpg,plastic,trashnet test,metal,0.5703255,False
+data/trashnet/glass/glass274.jpg,glass,trashnet test,glass,0.99632275,True
+data/trashnet/metal/metal281.jpg,metal,trashnet test,metal,0.9998921,True
+data/trashnet/trash/trash21.jpg,trash,trashnet test,metal,0.7892275,False
+data/trashnet/glass/glass243.jpg,glass,trashnet test,glass,0.9874663,True
+data/trashnet/cardboard/cardboard128.jpg,cardboard,trashnet test,cardboard,0.8713212,True
+data/trashnet/metal/metal180.jpg,metal,trashnet test,metal,0.9983985,True
+data/trashnet/plastic/plastic276.jpg,plastic,trashnet test,metal,0.64977115,False
+data/trashnet/metal/metal390.jpg,metal,trashnet test,metal,0.9969566,True
+data/trashnet/plastic/plastic284.jpg,plastic,trashnet test,cardboard,0.77858365,False
+data/trashnet/paper/paper455.jpg,paper,trashnet test,paper,0.980998,True
+data/trashnet/metal/metal187.jpg,metal,trashnet test,metal,0.9998319,True
+data/trashnet/metal/metal189.jpg,metal,trashnet test,metal,0.9998292,True
+data/trashnet/metal/metal210.jpg,metal,trashnet test,metal,0.9998857,True
+data/trashnet/metal/metal4.jpg,metal,trashnet test,metal,0.99919695,True
+data/trashnet/plastic/plastic213.jpg,plastic,trashnet test,cardboard,0.8236968,False
+data/trashnet/metal/metal269.jpg,metal,trashnet test,metal,0.9984615,True
+data/trashnet/plastic/plastic73.jpg,plastic,trashnet test,metal,0.4873429,False
+data/trashnet/metal/metal76.jpg,metal,trashnet test,metal,0.9999678,True
+data/trashnet/paper/paper316.jpg,paper,trashnet test,paper,0.97590816,True
+data/trashnet/glass/glass296.jpg,glass,trashnet test,glass,0.9996989,True
+data/trashnet/cardboard/cardboard316.jpg,cardboard,trashnet test,cardboard,0.98197937,True
+data/trashnet/trash/trash35.jpg,trash,trashnet test,metal,0.43765515,False
+data/trashnet/plastic/plastic329.jpg,plastic,trashnet test,glass,0.91425014,False
+data/trashnet/glass/glass332.jpg,glass,trashnet test,glass,0.9834457,True
+data/trashnet/glass/glass413.jpg,glass,trashnet test,glass,0.9983558,True
+data/trashnet/cardboard/cardboard146.jpg,cardboard,trashnet test,cardboard,0.9983845,True
+data/trashnet/paper/paper588.jpg,paper,trashnet test,metal,0.33727592,False
+data/trashnet/glass/glass362.jpg,glass,trashnet test,glass,0.99055696,True
+data/trashnet/plastic/plastic445.jpg,plastic,trashnet test,glass,0.6075761,False
+data/trashnet/metal/metal5.jpg,metal,trashnet test,metal,0.89549446,True
+data/trashnet/glass/glass55.jpg,glass,trashnet test,glass,0.99257267,True
+data/trashnet/plastic/plastic298.jpg,plastic,trashnet test,glass,0.5533993,False
+data/trashnet/paper/paper551.jpg,paper,trashnet test,paper,0.9982496,True
+data/trashnet/metal/metal170.jpg,metal,trashnet test,metal,0.99516135,True
+data/trashnet/plastic/plastic240.jpg,plastic,trashnet test,cardboard,0.3605474,False
+data/trashnet/metal/metal144.jpg,metal,trashnet test,metal,0.99877113,True
+data/trashnet/cardboard/cardboard89.jpg,cardboard,trashnet test,cardboard,0.95110834,True
+data/trashnet/plastic/plastic5.jpg,plastic,trashnet test,glass,0.517055,False
+data/trashnet/cardboard/cardboard227.jpg,cardboard,trashnet test,cardboard,0.97963285,True
+data/trashnet/plastic/plastic246.jpg,plastic,trashnet test,glass,0.5688535,False
+data/trashnet/metal/metal262.jpg,metal,trashnet test,metal,0.99781114,True
+data/trashnet/glass/glass214.jpg,glass,trashnet test,glass,0.99974793,True
+data/trashnet/plastic/plastic470.jpg,plastic,trashnet test,glass,0.7865987,False
+data/trashnet/glass/glass275.jpg,glass,trashnet test,glass,0.99984705,True
+data/trashnet/plastic/plastic110.jpg,plastic,trashnet test,glass,0.9747489,False
+data/trashnet/paper/paper244.jpg,paper,trashnet test,cardboard,0.9374756,False
+data/trashnet/paper/paper493.jpg,paper,trashnet test,paper,0.9872311,True
+data/trashnet/paper/paper87.jpg,paper,trashnet test,paper,0.9205162,True
+data/trashnet/plastic/plastic36.jpg,plastic,trashnet test,glass,0.9755584,False
+data/trashnet/plastic/plastic47.jpg,plastic,trashnet test,glass,0.6506483,False
+data/trashnet/cardboard/cardboard312.jpg,cardboard,trashnet test,cardboard,0.99723935,True
+data/trashnet/cardboard/cardboard153.jpg,cardboard,trashnet test,cardboard,0.9356437,True
+data/trashnet/paper/paper71.jpg,paper,trashnet test,paper,0.79920316,True
+data/trashnet/glass/glass333.jpg,glass,trashnet test,glass,0.9958942,True
+data/trashnet/glass/glass466.jpg,glass,trashnet test,glass,0.9899996,True
+data/trashnet/glass/glass74.jpg,glass,trashnet test,glass,0.73357373,True
+data/trashnet/plastic/plastic13.jpg,plastic,trashnet test,glass,0.89033633,False
+data/trashnet/plastic/plastic6.jpg,plastic,trashnet test,glass,0.91962934,False
+data/trashnet/glass/glass301.jpg,glass,trashnet test,glass,0.8666604,True
+data/trashnet/plastic/plastic115.jpg,plastic,trashnet test,glass,0.963535,False
+data/trashnet/plastic/plastic293.jpg,plastic,trashnet test,metal,0.8053927,False
+data/trashnet/metal/metal402.jpg,metal,trashnet test,metal,0.99408734,True
+data/trashnet/plastic/plastic412.jpg,plastic,trashnet test,glass,0.97484916,False
+data/trashnet/trash/trash13.jpg,trash,trashnet test,paper,0.98707294,False
+data/trashnet/glass/glass67.jpg,glass,trashnet test,glass,0.924906,True
+data/trashnet/paper/paper117.jpg,paper,trashnet test,paper,0.8440813,True
+data/trashnet/glass/glass112.jpg,glass,trashnet test,glass,0.9955852,True
+data/realwaste/cardboard/Cardboard_10.jpg,cardboard,realwaste test,cardboard,0.9812344,True
+data/realwaste/cardboard/Cardboard_111.jpg,cardboard,realwaste test,paper,0.8252204,False
+data/realwaste/cardboard/Cardboard_118.jpg,cardboard,realwaste test,cardboard,0.42771778,True
+data/realwaste/cardboard/Cardboard_123.jpg,cardboard,realwaste test,metal,0.557184,False
+data/realwaste/cardboard/Cardboard_128.jpg,cardboard,realwaste test,trash,0.99205595,False
+data/realwaste/cardboard/Cardboard_13.jpg,cardboard,realwaste test,cardboard,0.5633114,True
+data/realwaste/cardboard/Cardboard_138.jpg,cardboard,realwaste test,metal,0.91097385,False
+data/realwaste/cardboard/Cardboard_144.jpg,cardboard,realwaste test,metal,0.32425565,False
+data/realwaste/cardboard/Cardboard_148.jpg,cardboard,realwaste test,cardboard,0.994041,True
+data/realwaste/cardboard/Cardboard_154.jpg,cardboard,realwaste test,trash,0.5267289,False
+data/realwaste/cardboard/Cardboard_155.jpg,cardboard,realwaste test,cardboard,0.9961738,True
+data/realwaste/cardboard/Cardboard_179.jpg,cardboard,realwaste test,cardboard,0.9989359,True
+data/realwaste/cardboard/Cardboard_181.jpg,cardboard,realwaste test,trash,0.95287573,False
+data/realwaste/cardboard/Cardboard_191.jpg,cardboard,realwaste test,cardboard,0.73317647,True
+data/realwaste/cardboard/Cardboard_216.jpg,cardboard,realwaste test,paper,0.614195,False
+data/realwaste/cardboard/Cardboard_243.jpg,cardboard,realwaste test,metal,0.75000346,False
+data/realwaste/cardboard/Cardboard_244.jpg,cardboard,realwaste test,trash,0.46262425,False
+data/realwaste/cardboard/Cardboard_245.jpg,cardboard,realwaste test,paper,0.6123136,False
+data/realwaste/cardboard/Cardboard_268.jpg,cardboard,realwaste test,paper,0.6586326,False
+data/realwaste/cardboard/Cardboard_27.jpg,cardboard,realwaste test,cardboard,0.8847966,True
+data/realwaste/cardboard/Cardboard_271.jpg,cardboard,realwaste test,trash,0.7975416,False
+data/realwaste/cardboard/Cardboard_28.jpg,cardboard,realwaste test,cardboard,0.893502,True
+data/realwaste/cardboard/Cardboard_284.jpg,cardboard,realwaste test,trash,0.61814654,False
+data/realwaste/cardboard/Cardboard_290.jpg,cardboard,realwaste test,cardboard,0.7935696,True
+data/realwaste/cardboard/Cardboard_291.jpg,cardboard,realwaste test,trash,0.8025323,False
+data/realwaste/cardboard/Cardboard_293.jpg,cardboard,realwaste test,trash,0.50150794,False
+data/realwaste/cardboard/Cardboard_294.jpg,cardboard,realwaste test,metal,0.78531814,False
+data/realwaste/cardboard/Cardboard_302.jpg,cardboard,realwaste test,cardboard,0.9993273,True
+data/realwaste/cardboard/Cardboard_311.jpg,cardboard,realwaste test,cardboard,0.9271524,True
+data/realwaste/cardboard/Cardboard_316.jpg,cardboard,realwaste test,cardboard,0.544961,True
+data/realwaste/cardboard/Cardboard_33.jpg,cardboard,realwaste test,trash,0.89886564,False
+data/realwaste/cardboard/Cardboard_336.jpg,cardboard,realwaste test,metal,0.9552941,False
+data/realwaste/cardboard/Cardboard_337.jpg,cardboard,realwaste test,metal,0.8378869,False
+data/realwaste/cardboard/Cardboard_34.jpg,cardboard,realwaste test,trash,0.57621443,False
+data/realwaste/cardboard/Cardboard_341.jpg,cardboard,realwaste test,cardboard,0.8384151,True
+data/realwaste/cardboard/Cardboard_348.jpg,cardboard,realwaste test,metal,0.8699246,False
+data/realwaste/cardboard/Cardboard_363.jpg,cardboard,realwaste test,cardboard,0.50386107,True
+data/realwaste/cardboard/Cardboard_365.jpg,cardboard,realwaste test,trash,0.95415723,False
+data/realwaste/cardboard/Cardboard_37.jpg,cardboard,realwaste test,paper,0.6243756,False
+data/realwaste/cardboard/Cardboard_372.jpg,cardboard,realwaste test,paper,0.5900444,False
+data/realwaste/cardboard/Cardboard_375.jpg,cardboard,realwaste test,cardboard,0.9835134,True
+data/realwaste/cardboard/Cardboard_393.jpg,cardboard,realwaste test,metal,0.7469679,False
+data/realwaste/cardboard/Cardboard_394.jpg,cardboard,realwaste test,cardboard,0.99814904,True
+data/realwaste/cardboard/Cardboard_395.jpg,cardboard,realwaste test,trash,0.51189375,False
+data/realwaste/cardboard/Cardboard_404.jpg,cardboard,realwaste test,cardboard,0.9957521,True
+data/realwaste/cardboard/Cardboard_409.jpg,cardboard,realwaste test,cardboard,0.8953277,True
+data/realwaste/cardboard/Cardboard_41.jpg,cardboard,realwaste test,cardboard,0.99722505,True
+data/realwaste/cardboard/Cardboard_412.jpg,cardboard,realwaste test,cardboard,0.39959446,True
+data/realwaste/cardboard/Cardboard_414.jpg,cardboard,realwaste test,metal,0.9180889,False
+data/realwaste/cardboard/Cardboard_422.jpg,cardboard,realwaste test,cardboard,0.6196792,True
+data/realwaste/cardboard/Cardboard_426.jpg,cardboard,realwaste test,cardboard,0.8130262,True
+data/realwaste/cardboard/Cardboard_429.jpg,cardboard,realwaste test,cardboard,0.7922725,True
+data/realwaste/cardboard/Cardboard_434.jpg,cardboard,realwaste test,metal,0.7224129,False
+data/realwaste/cardboard/Cardboard_436.jpg,cardboard,realwaste test,cardboard,0.57764614,True
+data/realwaste/cardboard/Cardboard_444.jpg,cardboard,realwaste test,cardboard,0.9992126,True
+data/realwaste/cardboard/Cardboard_453.jpg,cardboard,realwaste test,cardboard,0.9993624,True
+data/realwaste/cardboard/Cardboard_455.jpg,cardboard,realwaste test,cardboard,0.9793732,True
+data/realwaste/cardboard/Cardboard_457.jpg,cardboard,realwaste test,cardboard,0.54459935,True
+data/realwaste/cardboard/Cardboard_460.jpg,cardboard,realwaste test,cardboard,0.99439585,True
+data/realwaste/cardboard/Cardboard_64.jpg,cardboard,realwaste test,metal,0.9787203,False
+data/realwaste/cardboard/Cardboard_65.jpg,cardboard,realwaste test,cardboard,0.9961836,True
+data/realwaste/cardboard/Cardboard_7.jpg,cardboard,realwaste test,cardboard,0.85085046,True
+data/realwaste/cardboard/Cardboard_77.jpg,cardboard,realwaste test,metal,0.7474709,False
+data/realwaste/cardboard/Cardboard_79.jpg,cardboard,realwaste test,cardboard,0.9816202,True
+data/realwaste/cardboard/Cardboard_8.jpg,cardboard,realwaste test,cardboard,0.9984981,True
+data/realwaste/cardboard/Cardboard_83.jpg,cardboard,realwaste test,trash,0.7145499,False
+data/realwaste/cardboard/Cardboard_85.jpg,cardboard,realwaste test,cardboard,0.9932828,True
+data/realwaste/cardboard/Cardboard_9.jpg,cardboard,realwaste test,cardboard,0.9970395,True
+data/realwaste/cardboard/Cardboard_92.jpg,cardboard,realwaste test,metal,0.6369089,False
+data/realwaste/glass/Glass_107.jpg,glass,realwaste test,glass,0.9991885,True
+data/realwaste/glass/Glass_112.jpg,glass,realwaste test,glass,0.99221885,True
+data/realwaste/glass/Glass_115.jpg,glass,realwaste test,glass,0.9999515,True
+data/realwaste/glass/Glass_130.jpg,glass,realwaste test,glass,0.99638474,True
+data/realwaste/glass/Glass_131.jpg,glass,realwaste test,glass,0.97544587,True
+data/realwaste/glass/Glass_136.jpg,glass,realwaste test,glass,0.999739,True
+data/realwaste/glass/Glass_138.jpg,glass,realwaste test,glass,0.99999714,True
+data/realwaste/glass/Glass_140.jpg,glass,realwaste test,glass,0.99999905,True
+data/realwaste/glass/Glass_157.jpg,glass,realwaste test,glass,0.99999547,True
+data/realwaste/glass/Glass_167.jpg,glass,realwaste test,glass,0.9999914,True
+data/realwaste/glass/Glass_174.jpg,glass,realwaste test,glass,0.99997294,True
+data/realwaste/glass/Glass_188.jpg,glass,realwaste test,glass,0.9999305,True
+data/realwaste/glass/Glass_189.jpg,glass,realwaste test,glass,0.9996896,True
+data/realwaste/glass/Glass_19.jpg,glass,realwaste test,glass,0.9999511,True
+data/realwaste/glass/Glass_201.jpg,glass,realwaste test,glass,0.92221177,True
+data/realwaste/glass/Glass_208.jpg,glass,realwaste test,glass,0.99997747,True
+data/realwaste/glass/Glass_218.jpg,glass,realwaste test,glass,0.9999968,True
+data/realwaste/glass/Glass_235.jpg,glass,realwaste test,metal,0.57570827,False
+data/realwaste/glass/Glass_237.jpg,glass,realwaste test,glass,0.99997735,True
+data/realwaste/glass/Glass_242.jpg,glass,realwaste test,glass,0.9985599,True
+data/realwaste/glass/Glass_246.jpg,glass,realwaste test,glass,0.9987417,True
+data/realwaste/glass/Glass_25.jpg,glass,realwaste test,glass,0.9999964,True
+data/realwaste/glass/Glass_26.jpg,glass,realwaste test,metal,0.57292867,False
+data/realwaste/glass/Glass_260.jpg,glass,realwaste test,glass,0.99999857,True
+data/realwaste/glass/Glass_263.jpg,glass,realwaste test,glass,0.9999968,True
+data/realwaste/glass/Glass_265.jpg,glass,realwaste test,glass,0.9999918,True
+data/realwaste/glass/Glass_267.jpg,glass,realwaste test,glass,0.99882156,True
+data/realwaste/glass/Glass_271.jpg,glass,realwaste test,glass,0.99999845,True
+data/realwaste/glass/Glass_275.jpg,glass,realwaste test,glass,0.99998116,True
+data/realwaste/glass/Glass_284.jpg,glass,realwaste test,glass,0.9999933,True
+data/realwaste/glass/Glass_294.jpg,glass,realwaste test,glass,0.9996966,True
+data/realwaste/glass/Glass_295.jpg,glass,realwaste test,glass,0.99995744,True
+data/realwaste/glass/Glass_297.jpg,glass,realwaste test,glass,0.9976152,True
+data/realwaste/glass/Glass_3.jpg,glass,realwaste test,glass,0.99970466,True
+data/realwaste/glass/Glass_30.jpg,glass,realwaste test,glass,0.90723264,True
+data/realwaste/glass/Glass_312.jpg,glass,realwaste test,glass,0.99984574,True
+data/realwaste/glass/Glass_32.jpg,glass,realwaste test,glass,0.96074206,True
+data/realwaste/glass/Glass_320.jpg,glass,realwaste test,glass,0.99998176,True
+data/realwaste/glass/Glass_326.jpg,glass,realwaste test,glass,0.9999634,True
+data/realwaste/glass/Glass_33.jpg,glass,realwaste test,glass,0.97551244,True
+data/realwaste/glass/Glass_330.jpg,glass,realwaste test,glass,0.99990094,True
+data/realwaste/glass/Glass_34.jpg,glass,realwaste test,glass,0.8042734,True
+data/realwaste/glass/Glass_35.jpg,glass,realwaste test,glass,0.99992573,True
+data/realwaste/glass/Glass_350.jpg,glass,realwaste test,glass,0.9468682,True
+data/realwaste/glass/Glass_354.jpg,glass,realwaste test,metal,0.5947803,False
+data/realwaste/glass/Glass_370.jpg,glass,realwaste test,glass,0.9989548,True
+data/realwaste/glass/Glass_378.jpg,glass,realwaste test,glass,0.96298075,True
+data/realwaste/glass/Glass_391.jpg,glass,realwaste test,glass,0.98706216,True
+data/realwaste/glass/Glass_396.jpg,glass,realwaste test,glass,0.9999993,True
+data/realwaste/glass/Glass_40.jpg,glass,realwaste test,glass,0.98856527,True
+data/realwaste/glass/Glass_403.jpg,glass,realwaste test,glass,0.9924879,True
+data/realwaste/glass/Glass_404.jpg,glass,realwaste test,glass,0.9681294,True
+data/realwaste/glass/Glass_405.jpg,glass,realwaste test,glass,0.9994336,True
+data/realwaste/glass/Glass_41.jpg,glass,realwaste test,glass,0.9952573,True
+data/realwaste/glass/Glass_42.jpg,glass,realwaste test,glass,0.9996624,True
+data/realwaste/glass/Glass_55.jpg,glass,realwaste test,glass,0.9999924,True
+data/realwaste/glass/Glass_60.jpg,glass,realwaste test,glass,0.9999893,True
+data/realwaste/glass/Glass_70.jpg,glass,realwaste test,metal,0.7526289,False
+data/realwaste/glass/Glass_77.jpg,glass,realwaste test,glass,0.9987288,True
+data/realwaste/glass/Glass_80.jpg,glass,realwaste test,glass,0.99995804,True
+data/realwaste/glass/Glass_85.jpg,glass,realwaste test,glass,0.90211153,True
+data/realwaste/glass/Glass_86.jpg,glass,realwaste test,glass,0.5414088,True
+data/realwaste/glass/Glass_93.jpg,glass,realwaste test,glass,0.8907729,True
+data/realwaste/metal/Metal_107.jpg,metal,realwaste test,metal,0.99924374,True
+data/realwaste/metal/Metal_108.jpg,metal,realwaste test,metal,0.9996309,True
+data/realwaste/metal/Metal_11.jpg,metal,realwaste test,metal,0.9993311,True
+data/realwaste/metal/Metal_111.jpg,metal,realwaste test,metal,0.9990865,True
+data/realwaste/metal/Metal_119.jpg,metal,realwaste test,metal,0.9784985,True
+data/realwaste/metal/Metal_121.jpg,metal,realwaste test,metal,0.9947417,True
+data/realwaste/metal/Metal_123.jpg,metal,realwaste test,metal,0.99832803,True
+data/realwaste/metal/Metal_124.jpg,metal,realwaste test,metal,0.999892,True
+data/realwaste/metal/Metal_129.jpg,metal,realwaste test,metal,0.9948473,True
+data/realwaste/metal/Metal_133.jpg,metal,realwaste test,metal,0.9998135,True
+data/realwaste/metal/Metal_134.jpg,metal,realwaste test,metal,0.99737763,True
+data/realwaste/metal/Metal_136.jpg,metal,realwaste test,metal,0.999887,True
+data/realwaste/metal/Metal_140.jpg,metal,realwaste test,metal,0.9945484,True
+data/realwaste/metal/Metal_159.jpg,metal,realwaste test,metal,0.9991042,True
+data/realwaste/metal/Metal_184.jpg,metal,realwaste test,metal,0.996567,True
+data/realwaste/metal/Metal_186.jpg,metal,realwaste test,metal,0.99611664,True
+data/realwaste/metal/Metal_192.jpg,metal,realwaste test,metal,0.99959964,True
+data/realwaste/metal/Metal_197.jpg,metal,realwaste test,metal,0.9961747,True
+data/realwaste/metal/Metal_199.jpg,metal,realwaste test,metal,0.99908936,True
+data/realwaste/metal/Metal_204.jpg,metal,realwaste test,metal,0.9703523,True
+data/realwaste/metal/Metal_211.jpg,metal,realwaste test,metal,0.99691963,True
+data/realwaste/metal/Metal_215.jpg,metal,realwaste test,metal,0.9228019,True
+data/realwaste/metal/Metal_218.jpg,metal,realwaste test,metal,0.9318073,True
+data/realwaste/metal/Metal_223.jpg,metal,realwaste test,metal,0.99975365,True
+data/realwaste/metal/Metal_224.jpg,metal,realwaste test,metal,0.99929035,True
+data/realwaste/metal/Metal_225.jpg,metal,realwaste test,metal,0.9993813,True
+data/realwaste/metal/Metal_229.jpg,metal,realwaste test,metal,0.9997178,True
+data/realwaste/metal/Metal_23.jpg,metal,realwaste test,metal,0.99985766,True
+data/realwaste/metal/Metal_24.jpg,metal,realwaste test,metal,0.9916739,True
+data/realwaste/metal/Metal_25.jpg,metal,realwaste test,metal,0.99581677,True
+data/realwaste/metal/Metal_254.jpg,metal,realwaste test,metal,0.9906335,True
+data/realwaste/metal/Metal_262.jpg,metal,realwaste test,metal,0.99383545,True
+data/realwaste/metal/Metal_277.jpg,metal,realwaste test,metal,0.99989796,True
+data/realwaste/metal/Metal_288.jpg,metal,realwaste test,metal,0.9974246,True
+data/realwaste/metal/Metal_303.jpg,metal,realwaste test,metal,0.6790797,True
+data/realwaste/metal/Metal_304.jpg,metal,realwaste test,metal,0.85814774,True
+data/realwaste/metal/Metal_317.jpg,metal,realwaste test,metal,0.99994457,True
+data/realwaste/metal/Metal_327.jpg,metal,realwaste test,metal,0.9933669,True
+data/realwaste/metal/Metal_331.jpg,metal,realwaste test,metal,0.9997032,True
+data/realwaste/metal/Metal_333.jpg,metal,realwaste test,metal,0.9931739,True
+data/realwaste/metal/Metal_341.jpg,metal,realwaste test,metal,0.9834169,True
+data/realwaste/metal/Metal_344.jpg,metal,realwaste test,metal,0.997212,True
+data/realwaste/metal/Metal_353.jpg,metal,realwaste test,metal,0.99477553,True
+data/realwaste/metal/Metal_360.jpg,metal,realwaste test,metal,0.9994567,True
+data/realwaste/metal/Metal_370.jpg,metal,realwaste test,metal,0.99708086,True
+data/realwaste/metal/Metal_377.jpg,metal,realwaste test,metal,0.99678576,True
+data/realwaste/metal/Metal_380.jpg,metal,realwaste test,metal,0.9780161,True
+data/realwaste/metal/Metal_382.jpg,metal,realwaste test,metal,0.9969494,True
+data/realwaste/metal/Metal_390.jpg,metal,realwaste test,metal,0.99937433,True
+data/realwaste/metal/Metal_41.jpg,metal,realwaste test,metal,0.9998186,True
+data/realwaste/metal/Metal_412.jpg,metal,realwaste test,metal,0.99997544,True
+data/realwaste/metal/Metal_425.jpg,metal,realwaste test,metal,0.992827,True
+data/realwaste/metal/Metal_432.jpg,metal,realwaste test,metal,0.995583,True
+data/realwaste/metal/Metal_437.jpg,metal,realwaste test,metal,0.9977646,True
+data/realwaste/metal/Metal_438.jpg,metal,realwaste test,metal,0.98767346,True
+data/realwaste/metal/Metal_439.jpg,metal,realwaste test,metal,0.9990897,True
+data/realwaste/metal/Metal_451.jpg,metal,realwaste test,metal,0.9965144,True
+data/realwaste/metal/Metal_453.jpg,metal,realwaste test,metal,0.99567336,True
+data/realwaste/metal/Metal_460.jpg,metal,realwaste test,metal,0.99687517,True
+data/realwaste/metal/Metal_469.jpg,metal,realwaste test,metal,0.9954659,True
+data/realwaste/metal/Metal_476.jpg,metal,realwaste test,metal,0.9467895,True
+data/realwaste/metal/Metal_477.jpg,metal,realwaste test,metal,0.7797107,True
+data/realwaste/metal/Metal_490.jpg,metal,realwaste test,metal,0.99992096,True
+data/realwaste/metal/Metal_496.jpg,metal,realwaste test,metal,0.9992036,True
+data/realwaste/metal/Metal_498.jpg,metal,realwaste test,metal,0.9971161,True
+data/realwaste/metal/Metal_50.jpg,metal,realwaste test,metal,0.99979,True
+data/realwaste/metal/Metal_511.jpg,metal,realwaste test,metal,0.92629725,True
+data/realwaste/metal/Metal_512.jpg,metal,realwaste test,metal,0.9995585,True
+data/realwaste/metal/Metal_514.jpg,metal,realwaste test,metal,0.6883491,True
+data/realwaste/metal/Metal_521.jpg,metal,realwaste test,metal,0.99760336,True
+data/realwaste/metal/Metal_525.jpg,metal,realwaste test,metal,0.99138016,True
+data/realwaste/metal/Metal_529.jpg,metal,realwaste test,metal,0.996552,True
+data/realwaste/metal/Metal_535.jpg,metal,realwaste test,metal,0.9964953,True
+data/realwaste/metal/Metal_549.jpg,metal,realwaste test,metal,0.58686525,True
+data/realwaste/metal/Metal_551.jpg,metal,realwaste test,metal,0.9975216,True
+data/realwaste/metal/Metal_552.jpg,metal,realwaste test,metal,0.9999341,True
+data/realwaste/metal/Metal_559.jpg,metal,realwaste test,metal,0.9977342,True
+data/realwaste/metal/Metal_563.jpg,metal,realwaste test,metal,0.8205483,True
+data/realwaste/metal/Metal_565.jpg,metal,realwaste test,metal,0.59727186,True
+data/realwaste/metal/Metal_569.jpg,metal,realwaste test,metal,0.8238674,True
+data/realwaste/metal/Metal_571.jpg,metal,realwaste test,glass,0.6837028,False
+data/realwaste/metal/Metal_588.jpg,metal,realwaste test,metal,0.9894776,True
+data/realwaste/metal/Metal_594.jpg,metal,realwaste test,metal,0.57955784,True
+data/realwaste/metal/Metal_615.jpg,metal,realwaste test,metal,0.99570626,True
+data/realwaste/metal/Metal_62.jpg,metal,realwaste test,metal,0.995983,True
+data/realwaste/metal/Metal_621.jpg,metal,realwaste test,metal,0.9922626,True
+data/realwaste/metal/Metal_625.jpg,metal,realwaste test,metal,0.9979108,True
+data/realwaste/metal/Metal_628.jpg,metal,realwaste test,metal,0.99240196,True
+data/realwaste/metal/Metal_649.jpg,metal,realwaste test,metal,0.99955267,True
+data/realwaste/metal/Metal_650.jpg,metal,realwaste test,metal,0.9997321,True
+data/realwaste/metal/Metal_653.jpg,metal,realwaste test,metal,0.6752145,True
+data/realwaste/metal/Metal_655.jpg,metal,realwaste test,metal,0.9998293,True
+data/realwaste/metal/Metal_658.jpg,metal,realwaste test,metal,0.9999291,True
+data/realwaste/metal/Metal_659.jpg,metal,realwaste test,metal,0.9972614,True
+data/realwaste/metal/Metal_66.jpg,metal,realwaste test,metal,0.999884,True
+data/realwaste/metal/Metal_660.jpg,metal,realwaste test,metal,0.98668635,True
+data/realwaste/metal/Metal_677.jpg,metal,realwaste test,metal,0.6549394,True
+data/realwaste/metal/Metal_680.jpg,metal,realwaste test,metal,0.9642229,True
+data/realwaste/metal/Metal_688.jpg,metal,realwaste test,metal,0.9982804,True
+data/realwaste/metal/Metal_707.jpg,metal,realwaste test,metal,0.99818915,True
+data/realwaste/metal/Metal_719.jpg,metal,realwaste test,metal,0.99559206,True
+data/realwaste/metal/Metal_721.jpg,metal,realwaste test,glass,0.89136684,False
+data/realwaste/metal/Metal_722.jpg,metal,realwaste test,metal,0.99965405,True
+data/realwaste/metal/Metal_730.jpg,metal,realwaste test,metal,0.9998215,True
+data/realwaste/metal/Metal_731.jpg,metal,realwaste test,metal,0.99940515,True
+data/realwaste/metal/Metal_740.jpg,metal,realwaste test,metal,0.9442591,True
+data/realwaste/metal/Metal_743.jpg,metal,realwaste test,metal,0.99874926,True
+data/realwaste/metal/Metal_763.jpg,metal,realwaste test,metal,0.9994466,True
+data/realwaste/metal/Metal_764.jpg,metal,realwaste test,metal,0.9998493,True
+data/realwaste/metal/Metal_766.jpg,metal,realwaste test,metal,0.99980277,True
+data/realwaste/metal/Metal_767.jpg,metal,realwaste test,metal,0.9999937,True
+data/realwaste/metal/Metal_773.jpg,metal,realwaste test,metal,0.9999964,True
+data/realwaste/metal/Metal_778.jpg,metal,realwaste test,metal,0.99984777,True
+data/realwaste/metal/Metal_787.jpg,metal,realwaste test,metal,0.9921502,True
+data/realwaste/metal/Metal_788.jpg,metal,realwaste test,metal,0.9998888,True
+data/realwaste/metal/Metal_9.jpg,metal,realwaste test,metal,0.9996892,True
+data/realwaste/metal/Metal_91.jpg,metal,realwaste test,metal,0.9911528,True
+data/realwaste/metal/Metal_92.jpg,metal,realwaste test,metal,0.9982956,True
+data/realwaste/metal/Metal_97.jpg,metal,realwaste test,metal,0.9987631,True
+data/realwaste/trash/Miscellaneous_Trash_112.jpg,trash,realwaste test,glass,0.98361224,False
+data/realwaste/trash/Miscellaneous_Trash_117.jpg,trash,realwaste test,glass,0.90916526,False
+data/realwaste/trash/Miscellaneous_Trash_121.jpg,trash,realwaste test,metal,0.76168686,False
+data/realwaste/trash/Miscellaneous_Trash_123.jpg,trash,realwaste test,glass,0.8290571,False
+data/realwaste/trash/Miscellaneous_Trash_13.jpg,trash,realwaste test,glass,0.5816308,False
+data/realwaste/trash/Miscellaneous_Trash_132.jpg,trash,realwaste test,glass,0.51655436,False
+data/realwaste/trash/Miscellaneous_Trash_135.jpg,trash,realwaste test,metal,0.9556742,False
+data/realwaste/trash/Miscellaneous_Trash_14.jpg,trash,realwaste test,metal,0.7361545,False
+data/realwaste/trash/Miscellaneous_Trash_143.jpg,trash,realwaste test,metal,0.5147275,False
+data/realwaste/trash/Miscellaneous_Trash_155.jpg,trash,realwaste test,glass,0.67569876,False
+data/realwaste/trash/Miscellaneous_Trash_156.jpg,trash,realwaste test,trash,0.78568226,True
+data/realwaste/trash/Miscellaneous_Trash_159.jpg,trash,realwaste test,glass,0.7865192,False
+data/realwaste/trash/Miscellaneous_Trash_163.jpg,trash,realwaste test,metal,0.91093457,False
+data/realwaste/trash/Miscellaneous_Trash_164.jpg,trash,realwaste test,glass,0.5901209,False
+data/realwaste/trash/Miscellaneous_Trash_167.jpg,trash,realwaste test,metal,0.89336187,False
+data/realwaste/trash/Miscellaneous_Trash_182.jpg,trash,realwaste test,metal,0.93310297,False
+data/realwaste/trash/Miscellaneous_Trash_189.jpg,trash,realwaste test,glass,0.86214113,False
+data/realwaste/trash/Miscellaneous_Trash_198.jpg,trash,realwaste test,trash,0.5442981,True
+data/realwaste/trash/Miscellaneous_Trash_201.jpg,trash,realwaste test,glass,0.6766966,False
+data/realwaste/trash/Miscellaneous_Trash_206.jpg,trash,realwaste test,glass,0.93959594,False
+data/realwaste/trash/Miscellaneous_Trash_207.jpg,trash,realwaste test,glass,0.9919962,False
+data/realwaste/trash/Miscellaneous_Trash_21.jpg,trash,realwaste test,trash,0.4128131,True
+data/realwaste/trash/Miscellaneous_Trash_212.jpg,trash,realwaste test,glass,0.6709707,False
+data/realwaste/trash/Miscellaneous_Trash_230.jpg,trash,realwaste test,metal,0.5875834,False
+data/realwaste/trash/Miscellaneous_Trash_232.jpg,trash,realwaste test,metal,0.8105025,False
+data/realwaste/trash/Miscellaneous_Trash_233.jpg,trash,realwaste test,glass,0.4365188,False
+data/realwaste/trash/Miscellaneous_Trash_236.jpg,trash,realwaste test,glass,0.921971,False
+data/realwaste/trash/Miscellaneous_Trash_237.jpg,trash,realwaste test,metal,0.9854622,False
+data/realwaste/trash/Miscellaneous_Trash_24.jpg,trash,realwaste test,metal,0.7197319,False
+data/realwaste/trash/Miscellaneous_Trash_244.jpg,trash,realwaste test,glass,0.9658255,False
+data/realwaste/trash/Miscellaneous_Trash_254.jpg,trash,realwaste test,glass,0.57419807,False
+data/realwaste/trash/Miscellaneous_Trash_27.jpg,trash,realwaste test,metal,0.62384886,False
+data/realwaste/trash/Miscellaneous_Trash_273.jpg,trash,realwaste test,metal,0.96544117,False
+data/realwaste/trash/Miscellaneous_Trash_28.jpg,trash,realwaste test,trash,0.8378071,True
+data/realwaste/trash/Miscellaneous_Trash_285.jpg,trash,realwaste test,metal,0.7080484,False
+data/realwaste/trash/Miscellaneous_Trash_288.jpg,trash,realwaste test,cardboard,0.61935556,False
+data/realwaste/trash/Miscellaneous_Trash_296.jpg,trash,realwaste test,trash,0.80989695,True
+data/realwaste/trash/Miscellaneous_Trash_299.jpg,trash,realwaste test,glass,0.98883456,False
+data/realwaste/trash/Miscellaneous_Trash_302.jpg,trash,realwaste test,paper,0.73954505,False
+data/realwaste/trash/Miscellaneous_Trash_325.jpg,trash,realwaste test,paper,0.9689869,False
+data/realwaste/trash/Miscellaneous_Trash_33.jpg,trash,realwaste test,metal,0.98057854,False
+data/realwaste/trash/Miscellaneous_Trash_34.jpg,trash,realwaste test,metal,0.98609716,False
+data/realwaste/trash/Miscellaneous_Trash_341.jpg,trash,realwaste test,paper,0.83274597,False
+data/realwaste/trash/Miscellaneous_Trash_346.jpg,trash,realwaste test,metal,0.66821945,False
+data/realwaste/trash/Miscellaneous_Trash_347.jpg,trash,realwaste test,metal,0.6388116,False
+data/realwaste/trash/Miscellaneous_Trash_351.jpg,trash,realwaste test,paper,0.5489588,False
+data/realwaste/trash/Miscellaneous_Trash_356.jpg,trash,realwaste test,glass,0.5751864,False
+data/realwaste/trash/Miscellaneous_Trash_372.jpg,trash,realwaste test,glass,0.8535464,False
+data/realwaste/trash/Miscellaneous_Trash_375.jpg,trash,realwaste test,glass,0.9777589,False
+data/realwaste/trash/Miscellaneous_Trash_377.jpg,trash,realwaste test,glass,0.922048,False
+data/realwaste/trash/Miscellaneous_Trash_379.jpg,trash,realwaste test,trash,0.88107705,True
+data/realwaste/trash/Miscellaneous_Trash_391.jpg,trash,realwaste test,glass,0.8430886,False
+data/realwaste/trash/Miscellaneous_Trash_393.jpg,trash,realwaste test,glass,0.6801073,False
+data/realwaste/trash/Miscellaneous_Trash_4.jpg,trash,realwaste test,paper,0.8071347,False
+data/realwaste/trash/Miscellaneous_Trash_406.jpg,trash,realwaste test,paper,0.4606423,False
+data/realwaste/trash/Miscellaneous_Trash_407.jpg,trash,realwaste test,plastic,0.716934,False
+data/realwaste/trash/Miscellaneous_Trash_408.jpg,trash,realwaste test,glass,0.64815503,False
+data/realwaste/trash/Miscellaneous_Trash_411.jpg,trash,realwaste test,cardboard,0.897096,False
+data/realwaste/trash/Miscellaneous_Trash_423.jpg,trash,realwaste test,glass,0.508271,False
+data/realwaste/trash/Miscellaneous_Trash_44.jpg,trash,realwaste test,glass,0.8063377,False
+data/realwaste/trash/Miscellaneous_Trash_452.jpg,trash,realwaste test,metal,0.6307233,False
+data/realwaste/trash/Miscellaneous_Trash_457.jpg,trash,realwaste test,glass,0.35297465,False
+data/realwaste/trash/Miscellaneous_Trash_482.jpg,trash,realwaste test,glass,0.8353329,False
+data/realwaste/trash/Miscellaneous_Trash_487.jpg,trash,realwaste test,glass,0.5258781,False
+data/realwaste/trash/Miscellaneous_Trash_488.jpg,trash,realwaste test,paper,0.7173543,False
+data/realwaste/trash/Miscellaneous_Trash_51.jpg,trash,realwaste test,glass,0.4047243,False
+data/realwaste/trash/Miscellaneous_Trash_67.jpg,trash,realwaste test,metal,0.6442113,False
+data/realwaste/trash/Miscellaneous_Trash_7.jpg,trash,realwaste test,glass,0.51176107,False
+data/realwaste/trash/Miscellaneous_Trash_71.jpg,trash,realwaste test,trash,0.4955482,True
+data/realwaste/trash/Miscellaneous_Trash_73.jpg,trash,realwaste test,glass,0.9382245,False
+data/realwaste/trash/Miscellaneous_Trash_75.jpg,trash,realwaste test,metal,0.6501727,False
+data/realwaste/trash/Miscellaneous_Trash_8.jpg,trash,realwaste test,plastic,0.40358353,False
+data/realwaste/trash/Miscellaneous_Trash_80.jpg,trash,realwaste test,metal,0.6521753,False
+data/realwaste/trash/Miscellaneous_Trash_88.jpg,trash,realwaste test,glass,0.9126632,False
+data/realwaste/paper/Paper_10.jpg,paper,realwaste test,paper,0.9866333,True
+data/realwaste/paper/Paper_104.jpg,paper,realwaste test,trash,0.6549997,False
+data/realwaste/paper/Paper_108.jpg,paper,realwaste test,paper,0.9808334,True
+data/realwaste/paper/Paper_111.jpg,paper,realwaste test,paper,0.63605654,True
+data/realwaste/paper/Paper_117.jpg,paper,realwaste test,paper,0.72601604,True
+data/realwaste/paper/Paper_124.jpg,paper,realwaste test,paper,0.99940753,True
+data/realwaste/paper/Paper_135.jpg,paper,realwaste test,paper,0.9940404,True
+data/realwaste/paper/Paper_152.jpg,paper,realwaste test,paper,0.99950373,True
+data/realwaste/paper/Paper_166.jpg,paper,realwaste test,paper,0.7812843,True
+data/realwaste/paper/Paper_167.jpg,paper,realwaste test,paper,0.7289721,True
+data/realwaste/paper/Paper_170.jpg,paper,realwaste test,paper,0.9997719,True
+data/realwaste/paper/Paper_174.jpg,paper,realwaste test,paper,0.96782327,True
+data/realwaste/paper/Paper_178.jpg,paper,realwaste test,paper,0.9722917,True
+data/realwaste/paper/Paper_202.jpg,paper,realwaste test,paper,0.97665876,True
+data/realwaste/paper/Paper_203.jpg,paper,realwaste test,trash,0.69438076,False
+data/realwaste/paper/Paper_236.jpg,paper,realwaste test,paper,0.9430932,True
+data/realwaste/paper/Paper_237.jpg,paper,realwaste test,paper,0.87054163,True
+data/realwaste/paper/Paper_24.jpg,paper,realwaste test,paper,0.9858477,True
+data/realwaste/paper/Paper_243.jpg,paper,realwaste test,paper,0.8609953,True
+data/realwaste/paper/Paper_245.jpg,paper,realwaste test,paper,0.6519194,True
+data/realwaste/paper/Paper_248.jpg,paper,realwaste test,paper,0.94449544,True
+data/realwaste/paper/Paper_261.jpg,paper,realwaste test,trash,0.54995173,False
+data/realwaste/paper/Paper_273.jpg,paper,realwaste test,paper,0.98336965,True
+data/realwaste/paper/Paper_274.jpg,paper,realwaste test,paper,0.99983513,True
+data/realwaste/paper/Paper_280.jpg,paper,realwaste test,paper,0.9469264,True
+data/realwaste/paper/Paper_284.jpg,paper,realwaste test,paper,0.974531,True
+data/realwaste/paper/Paper_286.jpg,paper,realwaste test,paper,0.9284119,True
+data/realwaste/paper/Paper_287.jpg,paper,realwaste test,paper,0.96484905,True
+data/realwaste/paper/Paper_294.jpg,paper,realwaste test,paper,0.9712939,True
+data/realwaste/paper/Paper_301.jpg,paper,realwaste test,paper,0.998623,True
+data/realwaste/paper/Paper_303.jpg,paper,realwaste test,paper,0.83737487,True
+data/realwaste/paper/Paper_308.jpg,paper,realwaste test,paper,0.9575657,True
+data/realwaste/paper/Paper_310.jpg,paper,realwaste test,paper,0.99775344,True
+data/realwaste/paper/Paper_316.jpg,paper,realwaste test,paper,0.99939716,True
+data/realwaste/paper/Paper_33.jpg,paper,realwaste test,trash,0.46161693,False
+data/realwaste/paper/Paper_334.jpg,paper,realwaste test,paper,0.5317186,True
+data/realwaste/paper/Paper_339.jpg,paper,realwaste test,paper,0.9912812,True
+data/realwaste/paper/Paper_342.jpg,paper,realwaste test,paper,0.59845495,True
+data/realwaste/paper/Paper_344.jpg,paper,realwaste test,paper,0.9786026,True
+data/realwaste/paper/Paper_345.jpg,paper,realwaste test,trash,0.9683316,False
+data/realwaste/paper/Paper_348.jpg,paper,realwaste test,paper,0.9994764,True
+data/realwaste/paper/Paper_350.jpg,paper,realwaste test,paper,0.96291506,True
+data/realwaste/paper/Paper_351.jpg,paper,realwaste test,paper,0.63361466,True
+data/realwaste/paper/Paper_355.jpg,paper,realwaste test,trash,0.49135068,False
+data/realwaste/paper/Paper_358.jpg,paper,realwaste test,paper,0.992657,True
+data/realwaste/paper/Paper_359.jpg,paper,realwaste test,paper,0.9959638,True
+data/realwaste/paper/Paper_37.jpg,paper,realwaste test,paper,0.99897337,True
+data/realwaste/paper/Paper_371.jpg,paper,realwaste test,paper,0.9784516,True
+data/realwaste/paper/Paper_377.jpg,paper,realwaste test,glass,0.7677322,False
+data/realwaste/paper/Paper_383.jpg,paper,realwaste test,paper,0.7385967,True
+data/realwaste/paper/Paper_387.jpg,paper,realwaste test,paper,0.9969926,True
+data/realwaste/paper/Paper_402.jpg,paper,realwaste test,paper,0.9537778,True
+data/realwaste/paper/Paper_412.jpg,paper,realwaste test,glass,0.38943642,False
+data/realwaste/paper/Paper_428.jpg,paper,realwaste test,paper,0.9960334,True
+data/realwaste/paper/Paper_429.jpg,paper,realwaste test,paper,0.99188167,True
+data/realwaste/paper/Paper_439.jpg,paper,realwaste test,trash,0.58120316,False
+data/realwaste/paper/Paper_444.jpg,paper,realwaste test,paper,0.93449724,True
+data/realwaste/paper/Paper_454.jpg,paper,realwaste test,paper,0.93019146,True
+data/realwaste/paper/Paper_456.jpg,paper,realwaste test,paper,0.8802538,True
+data/realwaste/paper/Paper_458.jpg,paper,realwaste test,trash,0.95794815,False
+data/realwaste/paper/Paper_46.jpg,paper,realwaste test,paper,0.991955,True
+data/realwaste/paper/Paper_47.jpg,paper,realwaste test,paper,0.9999378,True
+data/realwaste/paper/Paper_473.jpg,paper,realwaste test,trash,0.70124096,False
+data/realwaste/paper/Paper_487.jpg,paper,realwaste test,metal,0.5111078,False
+data/realwaste/paper/Paper_488.jpg,paper,realwaste test,paper,0.995142,True
+data/realwaste/paper/Paper_490.jpg,paper,realwaste test,paper,0.9744313,True
+data/realwaste/paper/Paper_491.jpg,paper,realwaste test,paper,0.925408,True
+data/realwaste/paper/Paper_495.jpg,paper,realwaste test,paper,0.8045735,True
+data/realwaste/paper/Paper_497.jpg,paper,realwaste test,paper,0.8636065,True
+data/realwaste/paper/Paper_500.jpg,paper,realwaste test,paper,0.86940247,True
+data/realwaste/paper/Paper_59.jpg,paper,realwaste test,paper,0.9965377,True
+data/realwaste/paper/Paper_60.jpg,paper,realwaste test,paper,0.97784275,True
+data/realwaste/paper/Paper_76.jpg,paper,realwaste test,paper,0.9738566,True
+data/realwaste/paper/Paper_8.jpg,paper,realwaste test,paper,0.97093225,True
+data/realwaste/paper/Paper_82.jpg,paper,realwaste test,paper,0.99830556,True
+data/realwaste/plastic/Plastic_107.jpg,plastic,realwaste test,trash,0.5606112,False
+data/realwaste/plastic/Plastic_109.jpg,plastic,realwaste test,glass,0.9949603,False
+data/realwaste/plastic/Plastic_121.jpg,plastic,realwaste test,glass,0.9313255,False
+data/realwaste/plastic/Plastic_136.jpg,plastic,realwaste test,cardboard,0.5378118,False
+data/realwaste/plastic/Plastic_142.jpg,plastic,realwaste test,trash,0.7271396,False
+data/realwaste/plastic/Plastic_149.jpg,plastic,realwaste test,metal,0.6655993,False
+data/realwaste/plastic/Plastic_150.jpg,plastic,realwaste test,trash,0.74741584,False
+data/realwaste/plastic/Plastic_17.jpg,plastic,realwaste test,metal,0.3794183,False
+data/realwaste/plastic/Plastic_174.jpg,plastic,realwaste test,glass,0.7812057,False
+data/realwaste/plastic/Plastic_184.jpg,plastic,realwaste test,paper,0.53281903,False
+data/realwaste/plastic/Plastic_19.jpg,plastic,realwaste test,metal,0.5217158,False
+data/realwaste/plastic/Plastic_192.jpg,plastic,realwaste test,trash,0.6873365,False
+data/realwaste/plastic/Plastic_202.jpg,plastic,realwaste test,trash,0.9602862,False
+data/realwaste/plastic/Plastic_203.jpg,plastic,realwaste test,metal,0.9955052,False
+data/realwaste/plastic/Plastic_204.jpg,plastic,realwaste test,metal,0.93082047,False
+data/realwaste/plastic/Plastic_213.jpg,plastic,realwaste test,trash,0.8009632,False
+data/realwaste/plastic/Plastic_215.jpg,plastic,realwaste test,metal,0.78332895,False
+data/realwaste/plastic/Plastic_219.jpg,plastic,realwaste test,trash,0.88400483,False
+data/realwaste/plastic/Plastic_225.jpg,plastic,realwaste test,metal,0.9144193,False
+data/realwaste/plastic/Plastic_227.jpg,plastic,realwaste test,metal,0.7063236,False
+data/realwaste/plastic/Plastic_23.jpg,plastic,realwaste test,glass,0.9586014,False
+data/realwaste/plastic/Plastic_235.jpg,plastic,realwaste test,glass,0.85166776,False
+data/realwaste/plastic/Plastic_239.jpg,plastic,realwaste test,glass,0.66329575,False
+data/realwaste/plastic/Plastic_240.jpg,plastic,realwaste test,glass,0.5064644,False
+data/realwaste/plastic/Plastic_246.jpg,plastic,realwaste test,metal,0.9645872,False
+data/realwaste/plastic/Plastic_249.jpg,plastic,realwaste test,trash,0.5916395,False
+data/realwaste/plastic/Plastic_254.jpg,plastic,realwaste test,metal,0.9720152,False
+data/realwaste/plastic/Plastic_284.jpg,plastic,realwaste test,glass,0.7476934,False
+data/realwaste/plastic/Plastic_295.jpg,plastic,realwaste test,glass,0.7018956,False
+data/realwaste/plastic/Plastic_305.jpg,plastic,realwaste test,metal,0.5032594,False
+data/realwaste/plastic/Plastic_311.jpg,plastic,realwaste test,metal,0.6965125,False
+data/realwaste/plastic/Plastic_312.jpg,plastic,realwaste test,trash,0.88010556,False
+data/realwaste/plastic/Plastic_313.jpg,plastic,realwaste test,metal,0.99179596,False
+data/realwaste/plastic/Plastic_316.jpg,plastic,realwaste test,metal,0.76096976,False
+data/realwaste/plastic/Plastic_321.jpg,plastic,realwaste test,metal,0.72809523,False
+data/realwaste/plastic/Plastic_326.jpg,plastic,realwaste test,metal,0.38579768,False
+data/realwaste/plastic/Plastic_331.jpg,plastic,realwaste test,metal,0.83715516,False
+data/realwaste/plastic/Plastic_336.jpg,plastic,realwaste test,glass,0.5541099,False
+data/realwaste/plastic/Plastic_338.jpg,plastic,realwaste test,metal,0.8832504,False
+data/realwaste/plastic/Plastic_348.jpg,plastic,realwaste test,glass,0.8507938,False
+data/realwaste/plastic/Plastic_35.jpg,plastic,realwaste test,metal,0.61870956,False
+data/realwaste/plastic/Plastic_350.jpg,plastic,realwaste test,glass,0.6026097,False
+data/realwaste/plastic/Plastic_358.jpg,plastic,realwaste test,metal,0.6273486,False
+data/realwaste/plastic/Plastic_383.jpg,plastic,realwaste test,metal,0.8170269,False
+data/realwaste/plastic/Plastic_388.jpg,plastic,realwaste test,trash,0.8941206,False
+data/realwaste/plastic/Plastic_400.jpg,plastic,realwaste test,plastic,0.83706397,True
+data/realwaste/plastic/Plastic_405.jpg,plastic,realwaste test,glass,0.9309687,False
+data/realwaste/plastic/Plastic_411.jpg,plastic,realwaste test,glass,0.7613935,False
+data/realwaste/plastic/Plastic_416.jpg,plastic,realwaste test,metal,0.96530485,False
+data/realwaste/plastic/Plastic_426.jpg,plastic,realwaste test,glass,0.5584704,False
+data/realwaste/plastic/Plastic_435.jpg,plastic,realwaste test,glass,0.88774747,False
+data/realwaste/plastic/Plastic_439.jpg,plastic,realwaste test,trash,0.5191936,False
+data/realwaste/plastic/Plastic_441.jpg,plastic,realwaste test,trash,0.7768247,False
+data/realwaste/plastic/Plastic_45.jpg,plastic,realwaste test,trash,0.805787,False
+data/realwaste/plastic/Plastic_458.jpg,plastic,realwaste test,metal,0.27580377,False
+data/realwaste/plastic/Plastic_459.jpg,plastic,realwaste test,cardboard,0.41319513,False
+data/realwaste/plastic/Plastic_464.jpg,plastic,realwaste test,trash,0.5037797,False
+data/realwaste/plastic/Plastic_465.jpg,plastic,realwaste test,trash,0.4774907,False
+data/realwaste/plastic/Plastic_476.jpg,plastic,realwaste test,trash,0.6394228,False
+data/realwaste/plastic/Plastic_481.jpg,plastic,realwaste test,glass,0.740588,False
+data/realwaste/plastic/Plastic_485.jpg,plastic,realwaste test,cardboard,0.6407226,False
+data/realwaste/plastic/Plastic_496.jpg,plastic,realwaste test,metal,0.41650718,False
+data/realwaste/plastic/Plastic_500.jpg,plastic,realwaste test,plastic,0.7253132,True
+data/realwaste/plastic/Plastic_502.jpg,plastic,realwaste test,glass,0.9594318,False
+data/realwaste/plastic/Plastic_509.jpg,plastic,realwaste test,glass,0.6312025,False
+data/realwaste/plastic/Plastic_51.jpg,plastic,realwaste test,cardboard,0.7409517,False
+data/realwaste/plastic/Plastic_512.jpg,plastic,realwaste test,metal,0.8438169,False
+data/realwaste/plastic/Plastic_515.jpg,plastic,realwaste test,glass,0.5543743,False
+data/realwaste/plastic/Plastic_519.jpg,plastic,realwaste test,metal,0.45898822,False
+data/realwaste/plastic/Plastic_531.jpg,plastic,realwaste test,glass,0.7421743,False
+data/realwaste/plastic/Plastic_532.jpg,plastic,realwaste test,glass,0.9639723,False
+data/realwaste/plastic/Plastic_543.jpg,plastic,realwaste test,glass,0.80593824,False
+data/realwaste/plastic/Plastic_557.jpg,plastic,realwaste test,glass,0.5312052,False
+data/realwaste/plastic/Plastic_568.jpg,plastic,realwaste test,glass,0.72868574,False
+data/realwaste/plastic/Plastic_584.jpg,plastic,realwaste test,trash,0.6520252,False
+data/realwaste/plastic/Plastic_587.jpg,plastic,realwaste test,glass,0.32996416,False
+data/realwaste/plastic/Plastic_598.jpg,plastic,realwaste test,trash,0.6324571,False
+data/realwaste/plastic/Plastic_601.jpg,plastic,realwaste test,trash,0.86812055,False
+data/realwaste/plastic/Plastic_619.jpg,plastic,realwaste test,trash,0.34454474,False
+data/realwaste/plastic/Plastic_63.jpg,plastic,realwaste test,trash,0.3633668,False
+data/realwaste/plastic/Plastic_633.jpg,plastic,realwaste test,trash,0.42105496,False
+data/realwaste/plastic/Plastic_636.jpg,plastic,realwaste test,trash,0.48083428,False
+data/realwaste/plastic/Plastic_646.jpg,plastic,realwaste test,glass,0.7703266,False
+data/realwaste/plastic/Plastic_65.jpg,plastic,realwaste test,trash,0.5378431,False
+data/realwaste/plastic/Plastic_652.jpg,plastic,realwaste test,glass,0.48308647,False
+data/realwaste/plastic/Plastic_655.jpg,plastic,realwaste test,metal,0.8247734,False
+data/realwaste/plastic/Plastic_663.jpg,plastic,realwaste test,glass,0.43547946,False
+data/realwaste/plastic/Plastic_666.jpg,plastic,realwaste test,glass,0.77126634,False
+data/realwaste/plastic/Plastic_687.jpg,plastic,realwaste test,trash,0.7662627,False
+data/realwaste/plastic/Plastic_688.jpg,plastic,realwaste test,trash,0.44014567,False
+data/realwaste/plastic/Plastic_689.jpg,plastic,realwaste test,trash,0.5551846,False
+data/realwaste/plastic/Plastic_691.jpg,plastic,realwaste test,trash,0.9697146,False
+data/realwaste/plastic/Plastic_694.jpg,plastic,realwaste test,glass,0.72330636,False
+data/realwaste/plastic/Plastic_695.jpg,plastic,realwaste test,glass,0.71401894,False
+data/realwaste/plastic/Plastic_699.jpg,plastic,realwaste test,trash,0.93854046,False
+data/realwaste/plastic/Plastic_70.jpg,plastic,realwaste test,metal,0.8277509,False
+data/realwaste/plastic/Plastic_703.jpg,plastic,realwaste test,trash,0.6924835,False
+data/realwaste/plastic/Plastic_704.jpg,plastic,realwaste test,cardboard,0.6226237,False
+data/realwaste/plastic/Plastic_706.jpg,plastic,realwaste test,glass,0.5934229,False
+data/realwaste/plastic/Plastic_709.jpg,plastic,realwaste test,glass,0.9218963,False
+data/realwaste/plastic/Plastic_721.jpg,plastic,realwaste test,cardboard,0.6880284,False
+data/realwaste/plastic/Plastic_729.jpg,plastic,realwaste test,glass,0.96224904,False
+data/realwaste/plastic/Plastic_730.jpg,plastic,realwaste test,glass,0.978917,False
+data/realwaste/plastic/Plastic_732.jpg,plastic,realwaste test,trash,0.9956697,False
+data/realwaste/plastic/Plastic_747.jpg,plastic,realwaste test,glass,0.9220373,False
+data/realwaste/plastic/Plastic_753.jpg,plastic,realwaste test,trash,0.4679793,False
+data/realwaste/plastic/Plastic_764.jpg,plastic,realwaste test,trash,0.7772901,False
+data/realwaste/plastic/Plastic_768.jpg,plastic,realwaste test,glass,0.946062,False
+data/realwaste/plastic/Plastic_772.jpg,plastic,realwaste test,glass,0.9055636,False
+data/realwaste/plastic/Plastic_775.jpg,plastic,realwaste test,metal,0.81430227,False
+data/realwaste/plastic/Plastic_792.jpg,plastic,realwaste test,glass,0.70658606,False
+data/realwaste/plastic/Plastic_801.jpg,plastic,realwaste test,glass,0.95173854,False
+data/realwaste/plastic/Plastic_803.jpg,plastic,realwaste test,glass,0.62371945,False
+data/realwaste/plastic/Plastic_81.jpg,plastic,realwaste test,trash,0.40721512,False
+data/realwaste/plastic/Plastic_811.jpg,plastic,realwaste test,glass,0.47035113,False
+data/realwaste/plastic/Plastic_817.jpg,plastic,realwaste test,glass,0.83711225,False
+data/realwaste/plastic/Plastic_823.jpg,plastic,realwaste test,glass,0.48155448,False
+data/realwaste/plastic/Plastic_826.jpg,plastic,realwaste test,metal,0.8511519,False
+data/realwaste/plastic/Plastic_836.jpg,plastic,realwaste test,glass,0.61621416,False
+data/realwaste/plastic/Plastic_841.jpg,plastic,realwaste test,metal,0.53965956,False
+data/realwaste/plastic/Plastic_842.jpg,plastic,realwaste test,glass,0.98202926,False
+data/realwaste/plastic/Plastic_843.jpg,plastic,realwaste test,glass,0.9027942,False
+data/realwaste/plastic/Plastic_847.jpg,plastic,realwaste test,trash,0.9351513,False
+data/realwaste/plastic/Plastic_848.jpg,plastic,realwaste test,cardboard,0.2820366,False
+data/realwaste/plastic/Plastic_859.jpg,plastic,realwaste test,glass,0.55481803,False
+data/realwaste/plastic/Plastic_865.jpg,plastic,realwaste test,cardboard,0.41672787,False
+data/realwaste/plastic/Plastic_870.jpg,plastic,realwaste test,cardboard,0.42013863,False
+data/realwaste/plastic/Plastic_871.jpg,plastic,realwaste test,trash,0.7068683,False
+data/realwaste/plastic/Plastic_875.jpg,plastic,realwaste test,plastic,0.81361485,True
+data/realwaste/plastic/Plastic_881.jpg,plastic,realwaste test,glass,0.9124851,False
+data/realwaste/plastic/Plastic_883.jpg,plastic,realwaste test,trash,0.43848512,False
+data/realwaste/plastic/Plastic_885.jpg,plastic,realwaste test,cardboard,0.500966,False
+data/realwaste/plastic/Plastic_887.jpg,plastic,realwaste test,plastic,0.41215095,True
+data/realwaste/plastic/Plastic_892.jpg,plastic,realwaste test,metal,0.6272434,False
+data/realwaste/plastic/Plastic_898.jpg,plastic,realwaste test,metal,0.45132524,False
+data/realwaste/plastic/Plastic_903.jpg,plastic,realwaste test,trash,0.3256016,False
+data/realwaste/plastic/Plastic_913.jpg,plastic,realwaste test,trash,0.8557018,False
+data/realwaste/plastic/Plastic_914.jpg,plastic,realwaste test,glass,0.7648848,False
+data/realwaste/plastic/Plastic_96.jpg,plastic,realwaste test,trash,0.77610433,False
+data/taco/glass/taco_34.jpg,glass,taco test,glass,0.8734973,True
+data/taco/plastic/taco_38.jpg,plastic,taco test,metal,0.9510465,False
+data/taco/plastic/taco_37.jpg,plastic,taco test,metal,0.98172885,False
+data/taco/plastic/taco_39.jpg,plastic,taco test,metal,0.59827125,False
+data/taco/plastic/taco_32.jpg,plastic,taco test,metal,0.60915536,False
+data/taco/plastic/taco_40.jpg,plastic,taco test,metal,0.94466656,False
+data/taco/metal/taco_41.jpg,metal,taco test,metal,0.9527545,True
+data/taco/glass/taco_3738.jpg,glass,taco test,glass,0.99907196,True
+data/taco/glass/taco_3737.jpg,glass,taco test,glass,0.99809986,True
+data/taco/paper/taco_3739.jpg,paper,taco test,glass,0.99949896,False
+data/taco/glass/taco_69.jpg,glass,taco test,glass,0.57548434,True
+data/taco/trash/taco_70.jpg,trash,taco test,trash,0.74553275,True
+data/taco/glass/taco_3011.jpg,glass,taco test,glass,0.9951213,True
+data/taco/glass/taco_1866.jpg,glass,taco test,glass,0.97379386,True
+data/taco/glass/taco_1870.jpg,glass,taco test,glass,0.9946424,True
+data/taco/glass/taco_1867.jpg,glass,taco test,glass,0.9961061,True
+data/taco/glass/taco_1851.jpg,glass,taco test,glass,0.99854505,True
+data/taco/glass/taco_1876.jpg,glass,taco test,glass,0.99749494,True
+data/taco/glass/taco_1865.jpg,glass,taco test,glass,0.9854591,True
+data/taco/glass/taco_1857.jpg,glass,taco test,glass,0.9240774,True
+data/taco/glass/taco_1860.jpg,glass,taco test,glass,0.9998072,True
+data/taco/glass/taco_1852.jpg,glass,taco test,glass,0.9823874,True
+data/taco/glass/taco_1854.jpg,glass,taco test,glass,0.98985565,True
+data/taco/glass/taco_3558.jpg,glass,taco test,glass,0.66297823,True
+data/taco/plastic/taco_3557.jpg,plastic,taco test,glass,0.41605562,False
+data/taco/glass/taco_657.jpg,glass,taco test,glass,0.99247944,True
+data/taco/glass/taco_652.jpg,glass,taco test,glass,0.99766916,True
+data/taco/trash/taco_653.jpg,trash,taco test,metal,0.43212298,False
+data/taco/glass/taco_1952.jpg,glass,taco test,glass,0.9994222,True
+data/taco/glass/taco_4274.jpg,glass,taco test,glass,0.9734533,True
+data/taco/glass/taco_2338.jpg,glass,taco test,glass,0.99958426,True
+data/taco/glass/taco_4175.jpg,glass,taco test,metal,0.9137936,False
+data/taco/plastic/taco_4174.jpg,plastic,taco test,trash,0.9516103,False
+data/taco/metal/taco_4179.jpg,metal,taco test,glass,0.5990619,False
+data/taco/trash/taco_4178.jpg,trash,taco test,glass,0.29657188,False
+data/taco/paper/taco_4181.jpg,paper,taco test,trash,0.97190195,False
+data/taco/glass/taco_2986.jpg,glass,taco test,glass,0.671421,True
+data/taco/cardboard/taco_280.jpg,cardboard,taco test,cardboard,0.9966254,True
+data/taco/cardboard/taco_276.jpg,cardboard,taco test,cardboard,0.9887954,True
+data/taco/cardboard/taco_282.jpg,cardboard,taco test,cardboard,0.818672,True
+data/taco/cardboard/taco_281.jpg,cardboard,taco test,cardboard,0.5367129,True
+data/taco/cardboard/taco_279.jpg,cardboard,taco test,cardboard,0.7997397,True
+data/taco/metal/taco_277.jpg,metal,taco test,metal,0.9996138,True
+data/taco/cardboard/taco_2982.jpg,cardboard,taco test,cardboard,0.6631997,True
+data/taco/cardboard/taco_780.jpg,cardboard,taco test,trash,0.9859687,False
+data/taco/cardboard/taco_782.jpg,cardboard,taco test,trash,0.97303843,False
+data/taco/trash/taco_781.jpg,trash,taco test,trash,0.67069113,True
+data/taco/paper/taco_783.jpg,paper,taco test,trash,0.879559,False
+data/taco/cardboard/taco_1596.jpg,cardboard,taco test,metal,0.9840083,False
+data/taco/metal/taco_1599.jpg,metal,taco test,metal,0.9985624,True
+data/taco/metal/taco_1605.jpg,metal,taco test,metal,0.9983432,True
+data/taco/metal/taco_1606.jpg,metal,taco test,metal,0.99935025,True
+data/taco/metal/taco_1604.jpg,metal,taco test,metal,0.9997943,True
+data/taco/metal/taco_1607.jpg,metal,taco test,metal,0.99753237,True
+data/taco/metal/taco_1600.jpg,metal,taco test,metal,0.99930525,True
+data/taco/metal/taco_1597.jpg,metal,taco test,metal,0.998961,True
+data/taco/metal/taco_1602.jpg,metal,taco test,metal,0.9993981,True
+data/taco/metal/taco_1598.jpg,metal,taco test,metal,0.9991085,True
+data/taco/metal/taco_1603.jpg,metal,taco test,metal,0.999553,True
+data/taco/metal/taco_1611.jpg,metal,taco test,metal,0.99730873,True
+data/taco/metal/taco_1601.jpg,metal,taco test,metal,0.9992718,True
+data/taco/metal/taco_1608.jpg,metal,taco test,metal,0.9972422,True
+data/taco/metal/taco_1610.jpg,metal,taco test,metal,0.9798309,True
+data/taco/metal/taco_1609.jpg,metal,taco test,metal,0.9865935,True
+data/taco/cardboard/taco_4725.jpg,cardboard,taco test,trash,0.999752,False
+data/taco/cardboard/taco_431.jpg,cardboard,taco test,cardboard,0.9996543,True
+data/taco/cardboard/taco_430.jpg,cardboard,taco test,cardboard,0.9975937,True
+data/taco/cardboard/taco_1794.jpg,cardboard,taco test,glass,0.45980978,False
+data/taco/trash/taco_1793.jpg,trash,taco test,glass,0.87605816,False
+data/taco/cardboard/taco_3565.jpg,cardboard,taco test,cardboard,0.98976034,True
+data/taco/cardboard/taco_2546.jpg,cardboard,taco test,trash,0.64420587,False
+data/taco/cardboard/taco_623.jpg,cardboard,taco test,glass,0.55741304,False
+data/taco/metal/taco_621.jpg,metal,taco test,metal,0.9132372,True
+data/taco/metal/taco_616.jpg,metal,taco test,metal,0.83835036,True
+data/taco/trash/taco_617.jpg,trash,taco test,glass,0.98179364,False
+data/taco/trash/taco_618.jpg,trash,taco test,glass,0.5210544,False
+data/taco/cardboard/taco_699.jpg,cardboard,taco test,cardboard,0.87426895,True
+data/taco/cardboard/taco_1656.jpg,cardboard,taco test,trash,0.99323326,False
+data/taco/cardboard/taco_4193.jpg,cardboard,taco test,trash,0.9918479,False
+data/taco/plastic/taco_4195.jpg,plastic,taco test,glass,0.6674138,False
+data/taco/cardboard/taco_487.jpg,cardboard,taco test,cardboard,0.8066314,True
+data/taco/cardboard/taco_931.jpg,cardboard,taco test,trash,0.97607625,False
+data/taco/cardboard/taco_2527.jpg,cardboard,taco test,trash,0.9430853,False
+data/taco/cardboard/taco_2385.jpg,cardboard,taco test,trash,0.53741103,False
+data/taco/trash/taco_2386.jpg,trash,taco test,paper,0.5633052,False
+data/taco/cardboard/taco_2991.jpg,cardboard,taco test,paper,0.8531953,False
+data/taco/cardboard/taco_2843.jpg,cardboard,taco test,paper,0.9047513,False
+data/taco/plastic/taco_2842.jpg,plastic,taco test,plastic,0.9944323,True
+data/taco/cardboard/taco_1906.jpg,cardboard,taco test,trash,0.99263656,False
+data/taco/cardboard/taco_2225.jpg,cardboard,taco test,trash,0.7088661,False
+data/taco/plastic/taco_1396.jpg,plastic,taco test,plastic,0.9316207,True
+data/taco/plastic/taco_1394.jpg,plastic,taco test,plastic,0.9084587,True
+data/taco/plastic/taco_1399.jpg,plastic,taco test,plastic,0.9247426,True
+data/taco/plastic/taco_1395.jpg,plastic,taco test,plastic,0.87668073,True
+data/taco/trash/taco_1397.jpg,trash,taco test,plastic,0.8888188,False
+data/taco/trash/taco_1404.jpg,trash,taco test,glass,0.70321107,False
+data/taco/trash/taco_1401.jpg,trash,taco test,glass,0.97433245,False
+data/taco/trash/taco_1403.jpg,trash,taco test,glass,0.43912506,False
+data/taco/plastic/taco_1563.jpg,plastic,taco test,metal,0.8731473,False
+data/taco/plastic/taco_1561.jpg,plastic,taco test,metal,0.92225355,False
+data/taco/plastic/taco_1562.jpg,plastic,taco test,glass,0.82752544,False
+data/taco/plastic/taco_3280.jpg,plastic,taco test,glass,0.4993243,False
+data/taco/plastic/taco_1888.jpg,plastic,taco test,glass,0.6930091,False
+data/taco/plastic/taco_1065.jpg,plastic,taco test,metal,0.41069376,False
+data/taco/plastic/taco_1066.jpg,plastic,taco test,glass,0.7401924,False
+data/taco/paper/taco_1069.jpg,paper,taco test,trash,0.80643797,False
+data/taco/paper/taco_1068.jpg,paper,taco test,glass,0.937002,False
+data/taco/paper/taco_1071.jpg,paper,taco test,glass,0.77083707,False
+data/taco/paper/taco_1070.jpg,paper,taco test,trash,0.6688215,False
+data/taco/plastic/taco_2234.jpg,plastic,taco test,plastic,0.91769344,True
+data/taco/plastic/taco_2233.jpg,plastic,taco test,plastic,0.8580201,True
+data/taco/plastic/taco_2235.jpg,plastic,taco test,plastic,0.9253971,True
+data/taco/plastic/taco_1693.jpg,plastic,taco test,glass,0.52136725,False
+data/taco/plastic/taco_1692.jpg,plastic,taco test,glass,0.4437496,False
+data/taco/plastic/taco_1694.jpg,plastic,taco test,metal,0.84269524,False
+data/taco/plastic/taco_1446.jpg,plastic,taco test,plastic,0.9634248,True
+data/taco/plastic/taco_1445.jpg,plastic,taco test,plastic,0.95019376,True
+data/taco/trash/taco_1447.jpg,trash,taco test,plastic,0.77797544,False
+data/taco/plastic/taco_1708.jpg,plastic,taco test,metal,0.6598128,False
+data/taco/plastic/taco_1709.jpg,plastic,taco test,metal,0.99567395,False
+data/taco/plastic/taco_1064.jpg,plastic,taco test,trash,0.98161775,False
+data/taco/plastic/taco_1059.jpg,plastic,taco test,metal,0.8344693,False
+data/taco/trash/taco_1057.jpg,trash,taco test,trash,0.9927973,True
+data/taco/trash/taco_1061.jpg,trash,taco test,trash,0.78686076,True
+data/taco/plastic/taco_919.jpg,plastic,taco test,glass,0.48941445,False
+data/taco/plastic/taco_3640.jpg,plastic,taco test,metal,0.7465682,False
+data/taco/plastic/taco_817.jpg,plastic,taco test,plastic,0.96001905,True
+data/taco/trash/taco_818.jpg,trash,taco test,glass,0.9913406,False
+data/taco/plastic/taco_3029.jpg,plastic,taco test,plastic,0.4964986,True
+data/taco/paper/taco_3030.jpg,paper,taco test,trash,0.7062807,False
+data/taco/plastic/taco_1798.jpg,plastic,taco test,plastic,0.6536505,True
+data/taco/plastic/taco_84.jpg,plastic,taco test,glass,0.89296436,False
+data/taco/plastic/taco_1413.jpg,plastic,taco test,glass,0.8747477,False
+data/taco/plastic/taco_3982.jpg,plastic,taco test,plastic,0.755435,True
+data/taco/plastic/taco_1427.jpg,plastic,taco test,glass,0.63460165,False
+data/taco/plastic/taco_3004.jpg,plastic,taco test,plastic,0.86587673,True
+data/taco/plastic/taco_3406.jpg,plastic,taco test,trash,0.7856165,False
+data/taco/plastic/taco_3403.jpg,plastic,taco test,glass,0.60530865,False
+data/taco/plastic/taco_3404.jpg,plastic,taco test,trash,0.7884068,False
+data/taco/plastic/taco_1834.jpg,plastic,taco test,plastic,0.42610672,True
+data/taco/trash/taco_1833.jpg,trash,taco test,trash,0.9273374,True
+data/taco/plastic/taco_1813.jpg,plastic,taco test,glass,0.9930861,False
+data/taco/plastic/taco_1814.jpg,plastic,taco test,trash,0.8483556,False
+data/taco/plastic/taco_2183.jpg,plastic,taco test,trash,0.84235847,False
+data/taco/plastic/taco_2182.jpg,plastic,taco test,metal,0.9438667,False
+data/taco/metal/taco_2181.jpg,metal,taco test,metal,0.9979134,True
+data/taco/paper/taco_2184.jpg,paper,taco test,metal,0.80842215,False
+data/taco/paper/taco_2185.jpg,paper,taco test,trash,0.6166665,False
+data/taco/paper/taco_2186.jpg,paper,taco test,glass,0.5553986,False
+data/taco/plastic/taco_1698.jpg,plastic,taco test,plastic,0.49541286,True
+data/taco/plastic/taco_2296.jpg,plastic,taco test,plastic,0.9070164,True
+data/taco/plastic/taco_2294.jpg,plastic,taco test,trash,0.8759569,False
+data/taco/plastic/taco_2342.jpg,plastic,taco test,metal,0.72628164,False
+data/taco/plastic/taco_1456.jpg,plastic,taco test,plastic,0.978822,True
+data/taco/trash/taco_1457.jpg,trash,taco test,trash,0.5872381,True
+data/taco/plastic/taco_4070.jpg,plastic,taco test,metal,0.72073543,False
+data/taco/plastic/taco_4672.jpg,plastic,taco test,glass,0.5177799,False
+data/taco/plastic/taco_4671.jpg,plastic,taco test,plastic,0.925091,True
+data/taco/plastic/taco_2763.jpg,plastic,taco test,glass,0.66300064,False
+data/taco/paper/taco_2764.jpg,paper,taco test,glass,0.8659531,False
+data/taco/plastic/taco_1489.jpg,plastic,taco test,plastic,0.97619957,True
+data/taco/plastic/taco_1484.jpg,plastic,taco test,trash,0.8325757,False
+data/taco/plastic/taco_1487.jpg,plastic,taco test,trash,0.8461123,False
+data/taco/trash/taco_1491.jpg,trash,taco test,glass,0.95289606,False
+data/taco/trash/taco_1490.jpg,trash,taco test,glass,0.5406459,False
+data/taco/plastic/taco_3086.jpg,plastic,taco test,plastic,0.8812228,True
+data/taco/plastic/taco_3085.jpg,plastic,taco test,plastic,0.886816,True
+data/taco/plastic/taco_2189.jpg,plastic,taco test,glass,0.5342365,False
+data/taco/plastic/taco_337.jpg,plastic,taco test,plastic,0.9270384,True
+data/taco/plastic/taco_335.jpg,plastic,taco test,metal,0.86521006,False
+data/taco/plastic/taco_331.jpg,plastic,taco test,plastic,0.6318128,True
+data/taco/trash/taco_338.jpg,trash,taco test,plastic,0.73996484,False
+data/taco/plastic/taco_1481.jpg,plastic,taco test,plastic,0.9541715,True
+data/taco/plastic/taco_2680.jpg,plastic,taco test,glass,0.50821275,False
+data/taco/plastic/taco_1124.jpg,plastic,taco test,glass,0.98866755,False
+data/taco/plastic/taco_2765.jpg,plastic,taco test,plastic,0.833701,True
+data/taco/plastic/taco_4432.jpg,plastic,taco test,glass,0.7733488,False
+data/taco/plastic/taco_3564.jpg,plastic,taco test,glass,0.4434312,False
+data/taco/plastic/taco_741.jpg,plastic,taco test,glass,0.60737234,False
+data/taco/trash/taco_744.jpg,trash,taco test,glass,0.6787912,False
+data/taco/plastic/taco_2544.jpg,plastic,taco test,trash,0.88993156,False
+data/taco/plastic/taco_3909.jpg,plastic,taco test,glass,0.93991125,False
+data/taco/plastic/taco_3296.jpg,plastic,taco test,glass,0.7363551,False
+data/taco/metal/taco_3298.jpg,metal,taco test,glass,0.8459976,False
+data/taco/plastic/taco_3276.jpg,plastic,taco test,metal,0.65545017,False
+data/taco/plastic/taco_325.jpg,plastic,taco test,glass,0.97129166,False
+data/taco/plastic/taco_1677.jpg,plastic,taco test,glass,0.6166053,False
+data/taco/plastic/taco_4205.jpg,plastic,taco test,glass,0.8345427,False
+data/taco/metal/taco_4210.jpg,metal,taco test,trash,0.63779503,False
+data/taco/trash/taco_4209.jpg,trash,taco test,trash,0.97187144,True
+data/taco/plastic/taco_3935.jpg,plastic,taco test,glass,0.7120286,False
+data/taco/plastic/taco_4658.jpg,plastic,taco test,plastic,0.73045886,True
+data/taco/paper/taco_4660.jpg,paper,taco test,paper,0.86106783,True
+data/taco/plastic/taco_195.jpg,plastic,taco test,metal,0.85522825,False
+data/taco/plastic/taco_954.jpg,plastic,taco test,glass,0.9732005,False
+data/taco/plastic/taco_2088.jpg,plastic,taco test,trash,0.36823732,False
+data/taco/plastic/taco_1929.jpg,plastic,taco test,glass,0.96456903,False
+data/taco/metal/taco_1924.jpg,metal,taco test,metal,0.99451506,True
+data/taco/plastic/taco_3916.jpg,plastic,taco test,trash,0.92545086,False
+data/taco/plastic/taco_3106.jpg,plastic,taco test,metal,0.7736663,False
+data/taco/plastic/taco_1459.jpg,plastic,taco test,metal,0.72251993,False
+data/taco/plastic/taco_2525.jpg,plastic,taco test,metal,0.99906164,False
+data/taco/metal/taco_2524.jpg,metal,taco test,metal,0.996554,True
+data/taco/plastic/taco_2822.jpg,plastic,taco test,glass,0.9674192,False
+data/taco/plastic/taco_2950.jpg,plastic,taco test,glass,0.9657091,False
+data/taco/metal/taco_4245.jpg,metal,taco test,metal,0.74634427,True
+data/taco/metal/taco_1673.jpg,metal,taco test,metal,0.9983802,True
+data/taco/metal/taco_1671.jpg,metal,taco test,metal,0.998752,True
+data/taco/metal/taco_1668.jpg,metal,taco test,metal,0.99869424,True
+data/taco/metal/taco_1674.jpg,metal,taco test,metal,0.99822086,True
+data/taco/metal/taco_1672.jpg,metal,taco test,metal,0.9977889,True
+data/taco/metal/taco_1670.jpg,metal,taco test,metal,0.9989982,True
+data/taco/metal/taco_1675.jpg,metal,taco test,metal,0.9961428,True
+data/taco/metal/taco_1667.jpg,metal,taco test,metal,0.9983405,True
+data/taco/metal/taco_1669.jpg,metal,taco test,metal,0.9677086,True
+data/taco/metal/taco_4422.jpg,metal,taco test,metal,0.9994469,True
+data/taco/metal/taco_4423.jpg,metal,taco test,metal,0.9868233,True
+data/taco/metal/taco_50.jpg,metal,taco test,metal,0.9920671,True
+data/taco/paper/taco_51.jpg,paper,taco test,metal,0.9907927,False
+data/taco/metal/taco_2502.jpg,metal,taco test,metal,0.9988287,True
+data/taco/metal/taco_1804.jpg,metal,taco test,metal,0.9999639,True
+data/taco/metal/taco_1803.jpg,metal,taco test,metal,0.9981869,True
+data/taco/metal/taco_62.jpg,metal,taco test,metal,0.9978994,True
+data/taco/metal/taco_2090.jpg,metal,taco test,metal,0.96604097,True
+data/taco/metal/taco_2854.jpg,metal,taco test,metal,0.99701935,True
+data/taco/metal/taco_3231.jpg,metal,taco test,metal,0.9941766,True
+data/taco/metal/taco_162.jpg,metal,taco test,metal,0.99975055,True
+data/taco/metal/taco_2324.jpg,metal,taco test,metal,0.98023075,True
+data/taco/metal/taco_1684.jpg,metal,taco test,metal,0.9963116,True
+data/taco/metal/taco_1685.jpg,metal,taco test,metal,0.99601245,True
+data/taco/metal/taco_3167.jpg,metal,taco test,metal,0.99985445,True
+data/taco/metal/taco_3124.jpg,metal,taco test,metal,0.9956033,True
+data/taco/metal/taco_3125.jpg,metal,taco test,metal,0.9004606,True
+data/taco/trash/taco_3122.jpg,trash,taco test,plastic,0.6503541,False
+data/taco/metal/taco_2488.jpg,metal,taco test,metal,0.99842453,True
+data/taco/metal/taco_958.jpg,metal,taco test,metal,0.999726,True
+data/taco/metal/taco_2213.jpg,metal,taco test,metal,0.93144214,True
+data/taco/metal/taco_2613.jpg,metal,taco test,metal,0.8346479,True
+data/taco/metal/taco_106.jpg,metal,taco test,metal,0.99928457,True
+data/taco/metal/taco_85.jpg,metal,taco test,metal,0.99990714,True
+data/taco/metal/taco_1741.jpg,metal,taco test,metal,0.99469286,True
+data/taco/metal/taco_3644.jpg,metal,taco test,metal,0.998171,True
+data/taco/metal/taco_2156.jpg,metal,taco test,metal,0.99582577,True
+data/taco/metal/taco_135.jpg,metal,taco test,metal,0.9958146,True
+data/taco/trash/taco_3028.jpg,trash,taco test,glass,0.7135163,False
+data/taco/trash/taco_835.jpg,trash,taco test,glass,0.9091153,False
+data/taco/trash/taco_836.jpg,trash,taco test,plastic,0.9394329,False
+data/taco/trash/taco_401.jpg,trash,taco test,plastic,0.99271494,False
+data/taco/trash/taco_3928.jpg,trash,taco test,glass,0.9977629,False
+data/taco/trash/taco_4574.jpg,trash,taco test,glass,0.6949155,False
+data/taco/trash/taco_4575.jpg,trash,taco test,glass,0.7273231,False
+data/taco/trash/taco_3065.jpg,trash,taco test,metal,0.45092958,False
+data/taco/trash/taco_2055.jpg,trash,taco test,trash,0.95174295,True
+data/taco/trash/taco_1753.jpg,trash,taco test,trash,0.9596701,True
+data/taco/trash/taco_685.jpg,trash,taco test,trash,0.98222464,True
+data/taco/trash/taco_513.jpg,trash,taco test,glass,0.96218944,False
+data/taco/trash/taco_564.jpg,trash,taco test,glass,0.86415637,False
+data/taco/trash/taco_2799.jpg,trash,taco test,glass,0.99522805,False
+data/taco/trash/taco_770.jpg,trash,taco test,trash,0.9676116,True
+data/taco/trash/taco_1589.jpg,trash,taco test,trash,0.97098327,True
+data/taco/trash/taco_2381.jpg,trash,taco test,metal,0.42486867,False
+data/taco/trash/taco_2232.jpg,trash,taco test,trash,0.94164014,True
+data/taco/trash/taco_3179.jpg,trash,taco test,metal,0.9565713,False
+data/taco/trash/taco_2586.jpg,trash,taco test,glass,0.65707034,False
+data/taco/trash/taco_2587.jpg,trash,taco test,plastic,0.61512667,False
+data/taco/trash/taco_2585.jpg,trash,taco test,plastic,0.83305013,False
+data/taco/trash/taco_1968.jpg,trash,taco test,glass,0.6913741,False
+data/taco/trash/taco_1970.jpg,trash,taco test,trash,0.986655,True
+data/taco/trash/taco_1971.jpg,trash,taco test,trash,0.8367301,True
+data/taco/trash/taco_1969.jpg,trash,taco test,trash,0.7157519,True
+data/taco/trash/taco_1802.jpg,trash,taco test,glass,0.9082327,False
+data/taco/trash/taco_3178.jpg,trash,taco test,metal,0.8406247,False
+data/taco/trash/taco_727.jpg,trash,taco test,trash,0.7637684,True
+data/taco/trash/taco_870.jpg,trash,taco test,plastic,0.5447218,False
+data/taco/trash/taco_4628.jpg,trash,taco test,metal,0.9336152,False
+data/taco/trash/taco_4627.jpg,trash,taco test,trash,0.53894967,True
+data/taco/trash/taco_2378.jpg,trash,taco test,glass,0.99707925,False
+data/taco/trash/taco_1831.jpg,trash,taco test,glass,0.88820994,False
+data/taco/trash/taco_1797.jpg,trash,taco test,trash,0.9044135,True
+data/taco/trash/taco_2839.jpg,trash,taco test,glass,0.94738024,False
+data/taco/trash/taco_875.jpg,trash,taco test,metal,0.5279765,False
+data/taco/trash/taco_874.jpg,trash,taco test,trash,0.84275734,True
+data/taco/trash/taco_2616.jpg,trash,taco test,trash,0.9366827,True
+data/taco/trash/taco_2617.jpg,trash,taco test,trash,0.96555096,True
+data/taco/trash/taco_2861.jpg,trash,taco test,glass,0.47747487,False
+data/taco/trash/taco_4590.jpg,trash,taco test,glass,0.97122306,False
+data/taco/trash/taco_2379.jpg,trash,taco test,glass,0.94217247,False
+data/taco/trash/taco_3169.jpg,trash,taco test,trash,0.8415344,True
+data/taco/trash/taco_2117.jpg,trash,taco test,trash,0.99368554,True
+data/taco/trash/taco_2118.jpg,trash,taco test,trash,0.78255576,True
+data/taco/trash/taco_580.jpg,trash,taco test,glass,0.7230477,False
+data/taco/trash/taco_2855.jpg,trash,taco test,trash,0.5520737,True
+data/taco/trash/taco_4049.jpg,trash,taco test,trash,0.99107856,True
+data/taco/trash/taco_2166.jpg,trash,taco test,plastic,0.32649875,False
+data/taco/trash/taco_2511.jpg,trash,taco test,metal,0.63390976,False
+data/taco/trash/taco_1789.jpg,trash,taco test,glass,0.575746,False
+data/taco/trash/taco_706.jpg,trash,taco test,cardboard,0.48917708,False
+data/taco/trash/taco_2770.jpg,trash,taco test,glass,0.4946006,False
+data/taco/trash/taco_3099.jpg,trash,taco test,plastic,0.72138506,False
+data/taco/trash/taco_4488.jpg,trash,taco test,glass,0.5533721,False
+data/taco/trash/taco_1830.jpg,trash,taco test,trash,0.96989197,True
+data/taco/paper/taco_2719.jpg,paper,taco test,paper,0.9733819,True
+data/taco/paper/taco_2725.jpg,paper,taco test,paper,0.94389075,True
+data/taco/paper/taco_2722.jpg,paper,taco test,paper,0.98577785,True
+data/taco/paper/taco_2724.jpg,paper,taco test,paper,0.96575594,True
+data/taco/paper/taco_2721.jpg,paper,taco test,paper,0.98485816,True
+data/taco/paper/taco_2720.jpg,paper,taco test,paper,0.91555953,True
+data/taco/paper/taco_2723.jpg,paper,taco test,paper,0.9563268,True
+data/taco/paper/taco_4463.jpg,paper,taco test,paper,0.71631575,True
+data/taco/paper/taco_3100.jpg,paper,taco test,paper,0.9830322,True
+data/taco/paper/taco_3027.jpg,paper,taco test,paper,0.79821855,True
+data/taco/paper/taco_3895.jpg,paper,taco test,trash,0.9962865,False
+data/taco/paper/taco_775.jpg,paper,taco test,trash,0.7816841,False
+data/taco/trash/taco_3120.jpg,trash,taco test,trash,0.99438643,True
+data/taco/trash/taco_1479.jpg,trash,taco test,trash,0.556031,True
+data/taco/trash/taco_35.jpg,trash,taco test,metal,0.5961626,False
+data/taco/trash/taco_36.jpg,trash,taco test,metal,0.61037076,False
+data/taco/trash/taco_3893.jpg,trash,taco test,trash,0.98170954,True
+data/taco/trash/taco_278.jpg,trash,taco test,cardboard,0.7935485,False
+data/taco/trash/taco_2056.jpg,trash,taco test,trash,0.9266311,True
+data/taco/trash/taco_4180.jpg,trash,taco test,trash,0.57487494,True
+data/taco/trash/taco_3556.jpg,trash,taco test,cardboard,0.6411343,False
+data/taco/trash/taco_1486.jpg,trash,taco test,trash,0.67026234,True
+data/taco/trash/taco_800.jpg,trash,taco test,metal,0.6946199,False
+data/taco/trash/taco_785.jpg,trash,taco test,trash,0.8622497,True
+data/taco/trash/taco_4766.jpg,trash,taco test,trash,0.9844599,True
+data/taco/trash/taco_4767.jpg,trash,taco test,metal,0.63156855,False
+data/taco/trash/taco_2080.jpg,trash,taco test,trash,0.7529528,True
+data/taco/trash/taco_3170.jpg,trash,taco test,plastic,0.7678006,False
+data/taco/trash/taco_3723.jpg,trash,taco test,trash,0.8899613,True
+data/commons_studio/cardboard/cardboard_studio01.jpg,cardboard,commons studio,cardboard,0.99367875,True
+data/commons_studio/cardboard/cardboard_studio02.jpg,cardboard,commons studio,cardboard,0.94920933,True
+data/commons_studio/cardboard/cardboard_studio03.jpg,cardboard,commons studio,cardboard,0.9997911,True
+data/commons_studio/glass/glass_studio01.jpg,glass,commons studio,glass,0.9479778,True
+data/commons_studio/glass/glass_studio02.jpg,glass,commons studio,glass,0.9995616,True
+data/commons_studio/glass/glass_studio03.jpg,glass,commons studio,glass,0.98306495,True
+data/commons_studio/glass/glass_studio04.jpg,glass,commons studio,glass,0.8184622,True
+data/commons_studio/metal/metal_studio01.jpg,metal,commons studio,metal,0.9952697,True
+data/commons_studio/metal/metal_studio02.jpg,metal,commons studio,metal,0.9990491,True
+data/commons_studio/metal/metal_studio03.jpg,metal,commons studio,metal,0.9997812,True
+data/commons_studio/paper/paper_studio01.jpg,paper,commons studio,paper,0.99825424,True
+data/commons_studio/paper/paper_studio02.jpg,paper,commons studio,paper,0.9692406,True
+data/commons_studio/paper/paper_studio03.jpg,paper,commons studio,paper,0.9997824,True
+data/commons_studio/plastic/plastic_studio01.jpg,plastic,commons studio,metal,0.6849973,False
+data/commons_studio/plastic/plastic_studio02.jpg,plastic,commons studio,glass,0.5040993,False
+data/commons_studio/plastic/plastic_studio03.jpg,plastic,commons studio,glass,0.7631233,False
+data/commons_studio/plastic/plastic_studio04.jpg,plastic,commons studio,glass,0.94981086,False
+data/commons_studio/plastic/plastic_studio05.jpg,plastic,commons studio,metal,0.8176542,False
+data/commons_studio/trash/trash_studio01.jpg,trash,commons studio,paper,0.61999375,False
+data/commons_studio/trash/trash_studio02.jpg,trash,commons studio,metal,0.6769988,False
+data/commons_outdoor/cardboard/cardboard_wild01.jpg,cardboard,commons outdoor,cardboard,0.9327205,True
+data/commons_outdoor/cardboard/cardboard_wild02.jpg,cardboard,commons outdoor,cardboard,0.99987745,True
+data/commons_outdoor/cardboard/cardboard_wild03.jpg,cardboard,commons outdoor,cardboard,0.99968433,True
+data/commons_outdoor/glass/glass_wild01.jpg,glass,commons outdoor,glass,0.98155725,True
+data/commons_outdoor/glass/glass_wild02.jpg,glass,commons outdoor,glass,0.9531125,True
+data/commons_outdoor/glass/glass_wild03.jpg,glass,commons outdoor,glass,0.99997675,True
+data/commons_outdoor/glass/glass_wild04.jpg,glass,commons outdoor,glass,0.9874604,True
+data/commons_outdoor/metal/metal_wild01.jpg,metal,commons outdoor,metal,0.9950045,True
+data/commons_outdoor/metal/metal_wild02.jpg,metal,commons outdoor,metal,0.9989631,True
+data/commons_outdoor/metal/metal_wild03.jpg,metal,commons outdoor,metal,0.8858316,True
+data/commons_outdoor/metal/metal_wild04.jpg,metal,commons outdoor,metal,0.5288405,True
+data/commons_outdoor/paper/paper_wild01.jpg,paper,commons outdoor,paper,0.9913327,True
+data/commons_outdoor/paper/paper_wild02.jpg,paper,commons outdoor,paper,0.9979292,True
+data/commons_outdoor/paper/paper_wild03.jpg,paper,commons outdoor,glass,0.79438627,False
+data/commons_outdoor/plastic/plastic_wild01.jpg,plastic,commons outdoor,plastic,0.49923965,True
+data/commons_outdoor/plastic/plastic_wild02.jpg,plastic,commons outdoor,plastic,0.60395795,True
+data/commons_outdoor/plastic/plastic_wild03.jpg,plastic,commons outdoor,glass,0.807592,False
+data/commons_outdoor/trash/trash_wild01.jpg,trash,commons outdoor,trash,0.99946004,True
+data/commons_outdoor/trash/trash_wild02.jpg,trash,commons outdoor,metal,0.6480981,False
+data/commons_outdoor/trash/trash_wild03.jpg,trash,commons outdoor,trash,0.989897,True
+data/commons_large/plastic/commons_133562122.jpg,plastic,commons large studio,metal,0.9450001,False
+data/commons_large/plastic/commons_2783669.jpg,plastic,commons large studio,metal,0.9818236,False
+data/commons_large/plastic/commons_26760962.jpg,plastic,commons large outdoor,plastic,0.8499709,True
+data/commons_large/plastic/commons_40236321.jpg,plastic,commons large studio,paper,0.605619,False
+data/commons_large/plastic/commons_98144751.jpg,plastic,commons large studio,plastic,0.9823255,True
+data/commons_large/plastic/commons_79497993.jpg,plastic,commons large studio,metal,0.9179857,False
+data/commons_large/plastic/commons_59174053.jpg,plastic,commons large studio,metal,0.97248566,False
+data/commons_large/plastic/commons_108074259.jpg,plastic,commons large outdoor,metal,0.69424784,False
+data/commons_large/plastic/commons_125307050.jpg,plastic,commons large studio,glass,0.9050894,False
+data/commons_large/plastic/commons_75749789.jpg,plastic,commons large studio,glass,0.637883,False
+data/commons_large/plastic/commons_47350709.jpg,plastic,commons large outdoor,glass,0.83787847,False
+data/commons_large/plastic/commons_15627033.jpg,plastic,commons large studio,glass,0.8148182,False
+data/commons_large/plastic/commons_11185595.jpg,plastic,commons large studio,glass,0.63993853,False
+data/commons_large/plastic/commons_7270524.jpg,plastic,commons large studio,metal,0.98566055,False
+data/commons_large/plastic/commons_36692611.jpg,plastic,commons large outdoor,glass,0.5962274,False
+data/commons_large/plastic/commons_154697486.jpg,plastic,commons large outdoor,glass,0.5913933,False
+data/commons_large/plastic/commons_78630026.jpg,plastic,commons large studio,metal,0.9981862,False
+data/commons_large/plastic/commons_81611591.jpg,plastic,commons large studio,metal,0.92697823,False
+data/commons_large/plastic/commons_13322769.jpg,plastic,commons large outdoor,glass,0.97276515,False
+data/commons_large/plastic/commons_142072063.jpg,plastic,commons large studio,glass,0.59057415,False
+data/commons_large/plastic/commons_151368150.jpg,plastic,commons large studio,metal,0.988571,False
+data/commons_large/plastic/commons_78317734.jpg,plastic,commons large studio,metal,0.84638226,False
+data/commons_large/plastic/commons_81611595.jpg,plastic,commons large studio,metal,0.97727394,False
+data/commons_large/plastic/commons_126483965.jpg,plastic,commons large outdoor,metal,0.742741,False
+data/commons_large/plastic/commons_126483953.jpg,plastic,commons large outdoor,metal,0.64192337,False
+data/commons_large/plastic/commons_126483916.jpg,plastic,commons large outdoor,metal,0.60006523,False
+data/commons_large/plastic/commons_134027896.jpg,plastic,commons large outdoor,glass,0.9059018,False
+data/commons_large/plastic/commons_20786902.jpg,plastic,commons large outdoor,metal,0.7747081,False
+data/commons_large/plastic/commons_192835368.jpg,plastic,commons large studio,glass,0.9641554,False
+data/commons_large/plastic/commons_55233215.jpg,plastic,commons large studio,glass,0.9846421,False
+data/commons_large/plastic/commons_4202428.jpg,plastic,commons large studio,glass,0.93973917,False
+data/commons_large/plastic/commons_118083662.jpg,plastic,commons large outdoor,plastic,0.7286247,True
+data/commons_large/trash/commons_53491956.jpg,trash,commons large outdoor,trash,0.78017884,True
+data/commons_large/glass/commons_106068376.jpg,glass,commons large studio,glass,0.72660446,True
+data/commons_large/metal/commons_113034182.jpg,metal,commons large studio,metal,0.9934701,True
+data/commons_large/metal/commons_87386896.jpg,metal,commons large studio,metal,0.9961861,True
+data/commons_large/metal/commons_113000000.jpg,metal,commons large studio,metal,0.9935475,True
+data/commons_large/metal/commons_113364202.jpg,metal,commons large studio,metal,0.9880818,True
+data/commons_large/glass/commons_14778752.jpg,glass,commons large studio,glass,0.9927972,True
+data/commons_large/glass/commons_26466410.jpg,glass,commons large studio,metal,0.8766475,False
+data/commons_large/metal/commons_113657490.jpg,metal,commons large studio,metal,0.99861693,True
+data/commons_large/glass/commons_52848713.jpg,glass,commons large outdoor,metal,0.59069693,False
+data/commons_large/metal/commons_113034320.jpg,metal,commons large studio,metal,0.99640733,True
+data/commons_large/metal/commons_82848999.jpg,metal,commons large studio,metal,0.99953353,True
+data/commons_large/metal/commons_113003190.jpg,metal,commons large studio,metal,0.9877176,True
+data/commons_large/metal/commons_113487336.jpg,metal,commons large studio,metal,0.9959825,True
+data/commons_large/paper/commons_60741465.jpg,paper,commons large studio,metal,0.7682108,False
+data/commons_large/glass/commons_20915559.jpg,glass,commons large studio,glass,0.99981624,True
+data/commons_large/metal/commons_119393767.jpg,metal,commons large studio,metal,0.9988757,True
+data/commons_large/metal/commons_112999800.jpg,metal,commons large studio,metal,0.99684,True
+data/commons_large/metal/commons_113229270.jpg,metal,commons large studio,metal,0.99023706,True
+data/commons_large/metal/commons_113074521.jpg,metal,commons large studio,metal,0.9997179,True
+data/commons_large/paper/commons_67371107.jpg,paper,commons large studio,metal,0.85359436,False
+data/commons_large/metal/commons_87387585.jpg,metal,commons large studio,metal,0.99799794,True
+data/commons_large/glass/commons_79492520.jpg,glass,commons large studio,glass,0.99950933,True
+data/commons_large/glass/commons_3888224.jpg,glass,commons large outdoor,glass,0.8692418,True
+data/commons_large/metal/commons_113034257.jpg,metal,commons large studio,metal,0.99538004,True
+data/commons_large/glass/commons_70283375.jpg,glass,commons large outdoor,glass,0.89364624,True
+data/commons_large/metal/commons_113032562.jpg,metal,commons large studio,metal,0.99671185,True
+data/commons_large/trash/commons_32665487.jpg,trash,commons large studio,paper,0.5170099,False
+data/commons_large/metal/commons_31804162.jpg,metal,commons large studio,metal,0.98389417,True
+data/commons_large/paper/commons_29689628.jpg,paper,commons large studio,paper,0.9452204,True
+data/commons_large/trash/commons_18020165.jpg,trash,commons large studio,paper,0.96043694,False
+data/commons_large/trash/commons_88011704.jpg,trash,commons large studio,metal,0.5641197,False
+data/commons_large/trash/commons_113986610.jpg,trash,commons large studio,trash,0.9880201,True
+data/commons_large/trash/commons_29493330.jpg,trash,commons large studio,cardboard,0.8274702,False
+data/commons_large/trash/commons_29554214.jpg,trash,commons large studio,cardboard,0.878618,False
+data/commons_large/trash/commons_27325499.jpg,trash,commons large studio,cardboard,0.55773705,False
+data/commons_large/trash/commons_29474751.jpg,trash,commons large studio,cardboard,0.49756685,False
+data/commons_large/trash/commons_32427209.jpg,trash,commons large studio,cardboard,0.7781437,False
+data/commons_large/trash/commons_29482611.jpg,trash,commons large studio,cardboard,0.90416384,False
+data/commons_large/trash/commons_29662758.jpg,trash,commons large studio,cardboard,0.5392851,False
+data/commons_large/trash/commons_15993910.jpg,trash,commons large studio,paper,0.6846527,False
+data/commons_large/trash/commons_88897708.jpg,trash,commons large studio,paper,0.9671317,False
+data/commons_large/trash/commons_29493444.jpg,trash,commons large studio,trash,0.35529268,True
+data/commons_large/trash/commons_65947968.jpg,trash,commons large studio,paper,0.55856836,False
+data/commons_large/trash/commons_88897546.jpg,trash,commons large studio,cardboard,0.5939483,False
+data/commons_large/trash/commons_45663203.jpg,trash,commons large studio,cardboard,0.8109253,False
+data/commons_large/trash/commons_44686952.jpg,trash,commons large studio,metal,0.45332605,False
+data/commons_large/trash/commons_24067500.jpg,trash,commons large studio,paper,0.46100864,False
+data/commons_large/trash/commons_32665765.jpg,trash,commons large studio,paper,0.7509014,False
+data/commons_large/trash/commons_37943841.jpg,trash,commons large studio,paper,0.53723985,False
+data/commons_large/trash/commons_5300271.jpg,trash,commons large outdoor,trash,0.9962644,True
+data/commons_large/trash/commons_7522558.jpg,trash,commons large studio,trash,0.99472964,True
+data/commons_large/trash/commons_192202094.jpg,trash,commons large outdoor,trash,0.9894633,True
+data/commons_large/trash/commons_55127433.jpg,trash,commons large outdoor,trash,0.8616887,True
+data/commons_large/trash/commons_107515595.jpg,trash,commons large outdoor,trash,0.8455252,True
+data/commons_large/trash/commons_79335127.jpg,trash,commons large outdoor,trash,0.9957241,True
+data/commons_large/trash/commons_53668934.jpg,trash,commons large outdoor,trash,0.9004259,True
+data/commons_large/trash/commons_61869021.jpg,trash,commons large outdoor,trash,0.8992252,True
+data/commons_large/trash/commons_136017905.jpg,trash,commons large outdoor,trash,0.99390393,True
+data/commons_large/trash/commons_57788741.jpg,trash,commons large outdoor,trash,0.99984634,True
+data/commons_large/trash/commons_1382247.jpg,trash,commons large studio,trash,0.95998204,True
+data/commons_large/trash/commons_42032344.jpg,trash,commons large studio,trash,0.86491996,True
+data/commons_large/trash/commons_34806831.jpg,trash,commons large outdoor,trash,0.9838304,True
+data/commons_large/trash/commons_9911898.jpg,trash,commons large outdoor,trash,0.99399793,True
+data/commons_large/trash/commons_177980719.jpg,trash,commons large outdoor,trash,0.96517944,True
+data/commons_large/trash/commons_43158764.jpg,trash,commons large studio,trash,0.986059,True
+data/commons_large/trash/commons_6498918.jpg,trash,commons large outdoor,trash,0.99875927,True
+data/commons_large/trash/commons_80580802.jpg,trash,commons large studio,paper,0.42853212,False
+data/commons_large/trash/commons_24378550.jpg,trash,commons large outdoor,metal,0.83285797,False
+data/commons_large/trash/commons_24378518.jpg,trash,commons large outdoor,metal,0.9831717,False
+data/commons_large/trash/commons_37316271.jpg,trash,commons large studio,trash,0.39241788,True
+data/commons_large/trash/commons_32413566.jpg,trash,commons large studio,metal,0.64309555,False
+data/commons_large/trash/commons_19125495.jpg,trash,commons large studio,glass,0.5458472,False
+data/commons_large/trash/commons_7678227.jpg,trash,commons large studio,metal,0.3941529,False
+data/commons_large/trash/commons_196913323.jpg,trash,commons large studio,plastic,0.42713127,False
+data/commons_large/trash/commons_659400.jpg,trash,commons large studio,metal,0.5824806,False
+data/commons_large/trash/commons_4224080.jpg,trash,commons large studio,metal,0.4952099,False
+data/commons_large/trash/commons_17714282.jpg,trash,commons large studio,glass,0.4909489,False
+data/commons_large/trash/commons_290822.jpg,trash,commons large studio,glass,0.66829056,False
+data/commons_large/trash/commons_106760681.jpg,trash,commons large studio,glass,0.71196496,False
+data/commons_large/trash/commons_125386379.jpg,trash,commons large studio,glass,0.6025,False
+data/commons_large/plastic/commons_98498315.jpg,plastic,commons large outdoor,glass,0.5787228,False
+data/commons_large/plastic/commons_93001080.jpg,plastic,commons large studio,metal,0.9368977,False
+data/commons_large/plastic/commons_135427811.jpg,plastic,commons large studio,trash,0.3474061,False
+data/commons_large/plastic/commons_110518391.jpg,plastic,commons large studio,metal,0.90546966,False
+data/commons_large/plastic/commons_50173335.jpg,plastic,commons large studio,metal,0.9470571,False
+data/commons_large/plastic/commons_110518408.jpg,plastic,commons large studio,metal,0.9297901,False
+data/commons_large/plastic/commons_46068635.jpg,plastic,commons large outdoor,metal,0.6220916,False
+data/commons_large/plastic/commons_24417218.jpg,plastic,commons large studio,metal,0.8992955,False
+data/commons_large/plastic/commons_61531488.jpg,plastic,commons large outdoor,metal,0.37232572,False
+data/commons_large/plastic/commons_27119954.jpg,plastic,commons large studio,glass,0.86803895,False
+data/commons_large/plastic/commons_31446627.jpg,plastic,commons large studio,metal,0.9740613,False
+data/commons_large/plastic/commons_179195277.jpg,plastic,commons large outdoor,metal,0.78258866,False
+data/commons_large/plastic/commons_129099261.jpg,plastic,commons large outdoor,metal,0.72558737,False
+data/commons_large/plastic/commons_336076.jpg,plastic,commons large outdoor,metal,0.8388561,False
+data/commons_large/plastic/commons_109779994.jpg,plastic,commons large outdoor,trash,0.7860322,False
+data/commons_large/paper/commons_150688005.jpg,paper,commons large studio,paper,0.9979443,True
+data/commons_large/paper/commons_191309326.jpg,paper,commons large studio,paper,0.99988544,True
+data/commons_large/paper/commons_156679178.jpg,paper,commons large studio,paper,0.9970106,True
+data/commons_large/paper/commons_158767971.jpg,paper,commons large studio,paper,0.9982905,True
+data/commons_large/paper/commons_146277684.jpg,paper,commons large studio,paper,0.97885793,True
+data/commons_large/paper/commons_12048096.jpg,paper,commons large studio,paper,0.4881609,True
+data/commons_large/paper/commons_45249295.jpg,paper,commons large studio,paper,0.9863517,True
+data/commons_large/paper/commons_151684313.jpg,paper,commons large studio,paper,0.9996747,True
+data/commons_large/paper/commons_160608132.jpg,paper,commons large studio,paper,0.9813176,True
+data/commons_large/paper/commons_188408547.jpg,paper,commons large studio,paper,0.9993735,True
+data/commons_large/paper/commons_139748463.jpg,paper,commons large studio,paper,0.9933656,True
+data/commons_large/paper/commons_134467764.jpg,paper,commons large studio,paper,0.99784243,True
+data/commons_large/paper/commons_99575190.jpg,paper,commons large studio,paper,0.999728,True
+data/commons_large/paper/commons_158370930.jpg,paper,commons large outdoor,paper,0.99374926,True
+data/commons_large/paper/commons_45365553.jpg,paper,commons large studio,paper,0.94725555,True
+data/commons_large/paper/commons_78318442.jpg,paper,commons large studio,paper,0.94083786,True
+data/commons_large/paper/commons_58062429.jpg,paper,commons large outdoor,trash,0.8750101,False
+data/commons_large/paper/commons_22974348.jpg,paper,commons large outdoor,paper,0.97067285,True
+data/commons_large/paper/commons_48062071.jpg,paper,commons large studio,paper,0.8704258,True
+data/commons_large/cardboard/commons_92827853.jpg,cardboard,commons large studio,cardboard,0.86776257,True
+data/commons_large/cardboard/commons_27728687.jpg,cardboard,commons large studio,paper,0.82086307,False
+data/commons_large/cardboard/commons_198917400.jpg,cardboard,commons large studio,cardboard,0.9930438,True
+data/commons_large/cardboard/commons_123933334.jpg,cardboard,commons large studio,cardboard,0.8761068,True
+data/commons_large/cardboard/commons_76503834.jpg,cardboard,commons large studio,cardboard,0.9985033,True
+data/commons_large/cardboard/commons_92938127.jpg,cardboard,commons large studio,cardboard,0.955632,True
+data/commons_large/cardboard/commons_72384486.jpg,cardboard,commons large outdoor,cardboard,0.9995746,True
+data/commons_large/cardboard/commons_99624814.jpg,cardboard,commons large outdoor,cardboard,0.9997248,True
+data/commons_large/cardboard/commons_158460549.jpg,cardboard,commons large studio,cardboard,0.9476861,True
+data/commons_large/cardboard/commons_165441885.jpg,cardboard,commons large studio,paper,0.60212386,False
+data/commons_large/cardboard/commons_30902300.jpg,cardboard,commons large studio,cardboard,0.89390934,True
+data/commons_large/cardboard/commons_201646340.jpg,cardboard,commons large studio,cardboard,0.99970055,True
+data/commons_large/cardboard/commons_1796004.jpg,cardboard,commons large studio,cardboard,0.90064734,True
+data/commons_large/cardboard/commons_180966207.jpg,cardboard,commons large studio,cardboard,0.9993198,True
+data/commons_large/cardboard/commons_70250784.jpg,cardboard,commons large studio,cardboard,0.99189174,True
+data/commons_large/cardboard/commons_1804363.jpg,cardboard,commons large studio,cardboard,0.9960306,True
+data/commons_large/cardboard/commons_112963480.jpg,cardboard,commons large outdoor,cardboard,0.88451385,True
+data/commons_large/cardboard/commons_126161662.jpg,cardboard,commons large studio,cardboard,0.97359663,True
+data/commons_large/cardboard/commons_2606710.jpg,cardboard,commons large studio,cardboard,0.9993611,True
+data/commons_large/cardboard/commons_3584136.jpg,cardboard,commons large studio,cardboard,0.74499696,True
+data/commons_large/cardboard/commons_3441695.jpg,cardboard,commons large studio,cardboard,0.9961739,True
+data/commons_large/cardboard/commons_2432269.jpg,cardboard,commons large studio,cardboard,0.9762965,True
+data/commons_large/trash/commons_10979390.jpg,trash,commons large studio,metal,0.48659015,False
+data/commons_large/trash/commons_61240188.jpg,trash,commons large studio,metal,0.99033886,False
+data/commons_large/trash/commons_14570150.jpg,trash,commons large studio,metal,0.8326158,False
+data/commons_large/trash/commons_7882811.jpg,trash,commons large studio,metal,0.9028917,False
+data/commons_large/trash/commons_37160941.jpg,trash,commons large studio,metal,0.48913142,False
+data/commons_large/trash/commons_1859075.jpg,trash,commons large studio,cardboard,0.5054107,False
+data/commons_large/trash/commons_35716832.jpg,trash,commons large studio,cardboard,0.8720691,False
+data/commons_large/trash/commons_2956400.jpg,trash,commons large studio,metal,0.5799879,False
+data/commons_large/trash/commons_164432481.jpg,trash,commons large studio,metal,0.91057366,False
+data/commons_large/trash/commons_125168503.jpg,trash,commons large studio,cardboard,0.7777133,False
+data/commons_large/trash/commons_147988567.jpg,trash,commons large studio,paper,0.77021796,False
+data/commons_large/trash/commons_24046792.jpg,trash,commons large studio,cardboard,0.77117264,False
+data/commons_large/trash/commons_131299339.jpg,trash,commons large studio,paper,0.7608622,False
+data/commons_large/paper/commons_153035129.jpg,paper,commons large studio,paper,0.89108145,True
+data/commons_large/paper/commons_153462040.jpg,paper,commons large studio,paper,0.9988686,True
+data/commons_large/metal/commons_196773040.jpg,metal,commons large studio,metal,0.99603695,True
+data/commons_large/metal/commons_2140357.jpg,metal,commons large studio,metal,0.99921095,True
+data/commons_large/metal/commons_24293952.jpg,metal,commons large studio,metal,0.99934,True
+data/commons_large/metal/commons_152500814.jpg,metal,commons large outdoor,metal,0.9979134,True
+data/commons_large/metal/commons_2842691.jpg,metal,commons large studio,metal,0.9833245,True
+data/commons_large/metal/commons_196967699.jpg,metal,commons large studio,metal,0.91624093,True
+data/commons_large/metal/commons_194162025.jpg,metal,commons large studio,metal,0.9980342,True
+data/commons_large/metal/commons_3206994.jpg,metal,commons large outdoor,metal,0.812261,True
+data/commons_large/metal/commons_74844140.jpg,metal,commons large studio,metal,0.8524063,True
+data/commons_large/metal/commons_161863704.jpg,metal,commons large studio,metal,0.9960169,True
+data/commons_large/metal/commons_118069230.jpg,metal,commons large outdoor,metal,0.9960979,True
+data/commons_large/metal/commons_983933.jpg,metal,commons large studio,metal,0.99624455,True
+data/commons_large/metal/commons_119592611.jpg,metal,commons large studio,metal,0.85633796,True
+data/commons_large/metal/commons_77246551.jpg,metal,commons large studio,metal,0.9953962,True
+data/commons_large/metal/commons_115940330.jpg,metal,commons large studio,metal,0.99704,True
+data/commons_large/metal/commons_126039507.jpg,metal,commons large studio,metal,0.9991314,True
+data/commons_large/metal/commons_171121118.jpg,metal,commons large outdoor,metal,0.97424036,True
+data/commons_large/metal/commons_52143467.jpg,metal,commons large studio,metal,0.99998915,True
+data/commons_large/metal/commons_109867999.jpg,metal,commons large outdoor,metal,0.8388066,True
+data/commons_large/metal/commons_11223710.jpg,metal,commons large studio,metal,0.9994635,True
+data/commons_large/metal/commons_914124.jpg,metal,commons large studio,metal,0.99999046,True
+data/commons_large/metal/commons_140700625.jpg,metal,commons large studio,metal,0.9960979,True
+data/commons_large/metal/commons_202339541.jpg,metal,commons large studio,metal,0.9996145,True
+data/commons_large/metal/commons_156878722.jpg,metal,commons large studio,metal,0.99938357,True
+data/commons_large/metal/commons_6410838.jpg,metal,commons large studio,metal,0.9977812,True
+data/commons_large/metal/commons_133156090.jpg,metal,commons large studio,metal,0.9997404,True
+data/commons_large/metal/commons_158993192.jpg,metal,commons large studio,metal,0.998004,True
+data/commons_large/metal/commons_195900748.jpg,metal,commons large outdoor,metal,0.9982632,True
+data/commons_large/metal/commons_114687361.jpg,metal,commons large outdoor,metal,0.9936237,True
+data/commons_large/metal/commons_106329397.jpg,metal,commons large outdoor,metal,0.99969184,True
+data/commons_large/metal/commons_28960991.jpg,metal,commons large studio,metal,0.99045146,True
+data/commons_large/metal/commons_12064608.jpg,metal,commons large studio,metal,0.99872524,True
+data/commons_large/metal/commons_80794058.jpg,metal,commons large studio,metal,0.9989901,True
+data/commons_large/metal/commons_132973096.jpg,metal,commons large outdoor,metal,0.99996936,True
+data/commons_large/metal/commons_120962806.jpg,metal,commons large studio,metal,0.999972,True
+data/commons_large/metal/commons_122370492.jpg,metal,commons large outdoor,metal,0.99938536,True
+data/commons_large/metal/commons_7792126.jpg,metal,commons large studio,metal,0.9999597,True
+data/commons_large/metal/commons_31650375.jpg,metal,commons large studio,metal,0.999995,True
+data/commons_large/metal/commons_105249569.jpg,metal,commons large studio,metal,0.9999902,True
+data/commons_large/metal/commons_178921189.jpg,metal,commons large studio,metal,0.9997831,True
+data/commons_large/metal/commons_77734605.jpg,metal,commons large studio,metal,0.99999535,True
+data/commons_large/metal/commons_135648124.jpg,metal,commons large studio,metal,0.9992349,True
+data/commons_large/metal/commons_28208469.jpg,metal,commons large studio,metal,0.9999496,True
+data/commons_large/metal/commons_90150848.jpg,metal,commons large studio,metal,0.9945856,True
+data/commons_large/metal/commons_134403984.jpg,metal,commons large studio,metal,0.96131426,True
+data/commons_large/metal/commons_6932282.jpg,metal,commons large studio,metal,0.99883157,True
+data/commons_large/metal/commons_5262861.jpg,metal,commons large studio,metal,0.9999616,True
+data/commons_large/metal/commons_40975673.jpg,metal,commons large studio,metal,0.96756995,True
+data/commons_large/metal/commons_45684416.jpg,metal,commons large studio,metal,0.9258883,True
+data/commons_large/metal/commons_17265930.jpg,metal,commons large studio,metal,0.9714598,True
+data/commons_large/metal/commons_130849498.jpg,metal,commons large studio,metal,0.989833,True
+data/commons_large/metal/commons_158220187.jpg,metal,commons large studio,metal,0.6950391,True
+data/commons_large/metal/commons_65398778.jpg,metal,commons large studio,metal,0.9830767,True
+data/commons_large/metal/commons_33944741.jpg,metal,commons large studio,metal,0.99835545,True
+data/commons_large/metal/commons_98270639.jpg,metal,commons large studio,metal,0.9557945,True
+data/commons_large/metal/commons_6041014.jpg,metal,commons large studio,metal,0.99737144,True
+data/commons_large/metal/commons_1861701.jpg,metal,commons large studio,metal,0.999206,True
+data/commons_large/metal/commons_120220018.jpg,metal,commons large studio,metal,0.9997824,True
+data/commons_large/metal/commons_69426102.jpg,metal,commons large studio,metal,0.99926394,True
+data/commons_large/metal/commons_100578216.jpg,metal,commons large outdoor,metal,0.9996526,True
+data/commons_large/metal/commons_780949.jpg,metal,commons large studio,metal,0.9992036,True
+data/commons_large/metal/commons_45877601.jpg,metal,commons large studio,metal,0.99990463,True
+data/commons_large/metal/commons_7016827.jpg,metal,commons large studio,metal,0.9990638,True
+data/commons_large/metal/commons_73535621.jpg,metal,commons large studio,metal,0.99995935,True
+data/commons_large/metal/commons_77286997.jpg,metal,commons large studio,metal,0.99968517,True
+data/commons_large/metal/commons_198987156.jpg,metal,commons large studio,metal,0.9948665,True
+data/commons_large/metal/commons_73793955.jpg,metal,commons large studio,metal,0.9999064,True
+data/commons_large/metal/commons_46075979.jpg,metal,commons large studio,metal,0.9893349,True
+data/commons_large/metal/commons_19486611.jpg,metal,commons large studio,metal,0.97033733,True
+data/commons_large/metal/commons_6948181.jpg,metal,commons large studio,metal,0.99772996,True
+data/commons_large/metal/commons_123878114.jpg,metal,commons large studio,metal,0.9810245,True
+data/commons_large/metal/commons_15280556.jpg,metal,commons large studio,metal,0.9996517,True
+data/commons_large/metal/commons_153865016.jpg,metal,commons large studio,metal,0.9999939,True
+data/commons_large/metal/commons_144712009.jpg,metal,commons large studio,metal,0.9999968,True
+data/commons_large/metal/commons_3613779.jpg,metal,commons large studio,metal,0.9999914,True
+data/commons_large/metal/commons_2792634.jpg,metal,commons large studio,metal,0.99999,True
+data/commons_large/metal/commons_33654718.jpg,metal,commons large studio,metal,0.99999917,True
+data/commons_large/metal/commons_83822750.jpg,metal,commons large studio,metal,0.9999933,True
+data/commons_large/glass/commons_52577609.jpg,glass,commons large outdoor,glass,0.6309573,True
+data/commons_large/glass/commons_46841884.jpg,glass,commons large outdoor,glass,0.5906147,True
+data/commons_large/glass/commons_158381400.jpg,glass,commons large studio,glass,0.65026784,True
+data/commons_large/glass/commons_67113776.jpg,glass,commons large studio,glass,0.59727407,True
+data/commons_large/glass/commons_3350673.jpg,glass,commons large studio,glass,0.910614,True
+data/commons_large/glass/commons_157052065.jpg,glass,commons large studio,glass,0.5097364,True
+data/commons_large/glass/commons_79266267.jpg,glass,commons large studio,glass,0.8537973,True
+data/commons_large/glass/commons_128061950.jpg,glass,commons large studio,glass,0.73354125,True
+data/commons_large/glass/commons_27802548.jpg,glass,commons large studio,metal,0.71161884,False
+data/commons_large/glass/commons_26184038.jpg,glass,commons large studio,glass,0.999908,True
+data/commons_large/glass/commons_36962074.jpg,glass,commons large studio,glass,0.997959,True
+data/commons_large/glass/commons_106219601.jpg,glass,commons large outdoor,glass,0.99970883,True
+data/commons_large/glass/commons_182832446.jpg,glass,commons large studio,glass,0.86673117,True
+data/commons_large/glass/commons_24903728.jpg,glass,commons large studio,glass,0.70056504,True
+data/commons_large/glass/commons_8964749.jpg,glass,commons large outdoor,glass,0.9796656,True
+data/commons_large/glass/commons_35418947.jpg,glass,commons large studio,glass,0.8851454,True
+data/commons_large/glass/commons_52145025.jpg,glass,commons large outdoor,glass,0.9070476,True
+data/commons_large/glass/commons_181586212.jpg,glass,commons large outdoor,glass,0.9889262,True
+data/commons_large/glass/commons_107092381.jpg,glass,commons large outdoor,metal,0.89158267,False
+data/commons_large/glass/commons_57463033.jpg,glass,commons large outdoor,glass,0.999905,True
+data/commons_large/glass/commons_11541419.jpg,glass,commons large studio,glass,0.99502486,True
+data/commons_large/glass/commons_136188495.jpg,glass,commons large studio,glass,0.99959785,True
+data/commons_large/glass/commons_63956350.jpg,glass,commons large studio,glass,0.9996989,True
+data/commons_large/glass/commons_91836140.jpg,glass,commons large outdoor,glass,0.9998876,True
+data/commons_large/glass/commons_47141590.jpg,glass,commons large outdoor,glass,0.9999708,True
+data/commons_large/glass/commons_98671314.jpg,glass,commons large studio,glass,0.99986565,True
+data/commons_large/glass/commons_18413703.jpg,glass,commons large outdoor,glass,0.9999975,True
+data/commons_large/glass/commons_149430951.jpg,glass,commons large outdoor,glass,0.9999745,True
+data/commons_large/glass/commons_134354243.jpg,glass,commons large outdoor,glass,0.99883443,True
+data/commons_large/glass/commons_154270287.jpg,glass,commons large outdoor,glass,0.99998975,True
+data/commons_large/glass/commons_10188774.jpg,glass,commons large outdoor,glass,0.9999987,True
+data/commons_large/glass/commons_202761133.jpg,glass,commons large studio,glass,0.96459997,True
+data/commons_large/glass/commons_104315799.jpg,glass,commons large outdoor,glass,0.99999547,True
+data/commons_large/trash/commons_56819145.jpg,trash,commons large studio,trash,0.47037718,True
+data/commons_large/trash/commons_4350599.jpg,trash,commons large studio,cardboard,0.99251336,False
+data/commons_large/trash/commons_133745785.jpg,trash,commons large outdoor,trash,0.61905885,True
+data/commons_large/trash/commons_8854048.jpg,trash,commons large studio,cardboard,0.98799175,False
+data/commons_large/trash/commons_17121303.jpg,trash,commons large outdoor,glass,0.6784378,False
+data/commons_large/trash/commons_70059289.jpg,trash,commons large studio,cardboard,0.86592156,False
+data/commons_large/trash/commons_116623261.jpg,trash,commons large studio,trash,0.9921435,True
+data/commons_large/trash/commons_7120245.jpg,trash,commons large studio,cardboard,0.6380891,False
+data/commons_large/trash/commons_143852591.jpg,trash,commons large studio,metal,0.35212392,False
+data/commons_large/trash/commons_81477630.jpg,trash,commons large studio,plastic,0.4376658,False
+data/commons_large/trash/commons_87951345.jpg,trash,commons large outdoor,trash,0.988395,True
+data/commons_large/trash/commons_8818842.jpg,trash,commons large studio,trash,0.56845146,True
+data/commons_large/trash/commons_26890017.jpg,trash,commons large studio,trash,0.7874172,True
+data/commons_large/trash/commons_27950227.jpg,trash,commons large outdoor,metal,0.57030237,False
+data/commons_large/trash/commons_29195735.jpg,trash,commons large studio,trash,0.84969413,True
+data/commons_large/trash/commons_86555898.jpg,trash,commons large outdoor,trash,0.9773717,True
+data/commons_large/trash/commons_40574915.jpg,trash,commons large outdoor,plastic,0.89147776,False
+data/commons_large/trash/commons_18146011.jpg,trash,commons large studio,plastic,0.51883537,False
+data/commons_large/trash/commons_7963597.jpg,trash,commons large studio,trash,0.9403735,True
+data/commons_large/trash/commons_21433228.jpg,trash,commons large studio,trash,0.88247657,True
+data/commons_large/trash/commons_37211484.jpg,trash,commons large studio,trash,0.7696682,True
+data/commons_large/trash/commons_10518974.jpg,trash,commons large outdoor,trash,0.6813429,True
+data/commons_large/plastic/commons_26821616.jpg,plastic,commons large studio,metal,0.5077904,False
+data/commons_large/plastic/commons_142657066.jpg,plastic,commons large studio,glass,0.92427105,False
+data/commons_large/plastic/commons_76894147.jpg,plastic,commons large outdoor,metal,0.50422776,False
+data/commons_large/plastic/commons_88528095.jpg,plastic,commons large studio,plastic,0.5046563,True
+data/commons_large/plastic/commons_1779820.jpg,plastic,commons large studio,glass,0.75941616,False
+data/commons_large/plastic/commons_8819151.jpg,plastic,commons large outdoor,metal,0.4417741,False
+data/commons_large/plastic/commons_8822774.jpg,plastic,commons large studio,plastic,0.55491155,True
+data/commons_large/plastic/commons_49615619.jpg,plastic,commons large studio,glass,0.46550104,False
+data/commons_large/plastic/commons_10912170.jpg,plastic,commons large studio,metal,0.84923446,False
+data/commons_large/plastic/commons_26889983.jpg,plastic,commons large studio,metal,0.6422424,False
+data/commons_large/plastic/commons_85406102.jpg,plastic,commons large studio,glass,0.5169638,False
+data/commons_large/plastic/commons_114904731.jpg,plastic,commons large studio,metal,0.9159232,False
+data/commons_large/plastic/commons_142657727.jpg,plastic,commons large studio,glass,0.90149593,False
+data/commons_large/plastic/commons_156824871.jpg,plastic,commons large studio,plastic,0.81806636,True
+data/commons_large/plastic/commons_17461433.jpg,plastic,commons large studio,metal,0.8851863,False
+data/commons_large/plastic/commons_139917632.jpg,plastic,commons large studio,glass,0.43248093,False
+data/commons_large/plastic/commons_149051296.jpg,plastic,commons large studio,metal,0.85127217,False
+data/commons_large/plastic/commons_149162160.jpg,plastic,commons large outdoor,plastic,0.7583454,True
+data/commons_large/plastic/commons_10815524.jpg,plastic,commons large studio,glass,0.7097832,False
+data/commons_large/plastic/commons_32656180.jpg,plastic,commons large studio,metal,0.9015187,False
+data/commons_large/plastic/commons_5406918.jpg,plastic,commons large outdoor,metal,0.7119131,False
+data/commons_large/plastic/commons_114904448.jpg,plastic,commons large studio,metal,0.7849286,False
+data/commons_large/plastic/commons_117302766.jpg,plastic,commons large outdoor,glass,0.98945844,False
+data/commons_large/plastic/commons_4393101.jpg,plastic,commons large studio,plastic,0.9811567,True
+data/commons_large/plastic/commons_117302765.jpg,plastic,commons large outdoor,glass,0.86248857,False
+data/commons_large/plastic/commons_100173058.jpg,plastic,commons large outdoor,plastic,0.8466785,True
+data/commons_large/plastic/commons_100173053.jpg,plastic,commons large outdoor,plastic,0.8978305,True
+data/commons_large/plastic/commons_63846574.jpg,plastic,commons large studio,glass,0.73982686,False
+data/commons_large/plastic/commons_124719680.jpg,plastic,commons large studio,glass,0.85981625,False
+data/commons_large/plastic/commons_55235280.jpg,plastic,commons large studio,glass,0.64549637,False
+data/commons_large/plastic/commons_24967757.jpg,plastic,commons large studio,metal,0.7345489,False
+data/commons_large/plastic/commons_109812675.jpg,plastic,commons large studio,glass,0.9254812,False
+data/commons_large/plastic/commons_185729518.jpg,plastic,commons large studio,plastic,0.35349214,True
+data/commons_large/plastic/commons_25924532.jpg,plastic,commons large studio,plastic,0.47661987,True
+data/commons_large/plastic/commons_108637599.jpg,plastic,commons large studio,glass,0.5818765,False
+data/commons_large/plastic/commons_57480238.jpg,plastic,commons large studio,metal,0.72102064,False
+data/commons_large/plastic/commons_106291138.jpg,plastic,commons large studio,plastic,0.61338204,True
+data/commons_large/plastic/commons_1964933.jpg,plastic,commons large studio,plastic,0.9947541,True
+data/commons_large/plastic/commons_16998541.jpg,plastic,commons large studio,plastic,0.90232426,True
+data/commons_large/plastic/commons_146721378.jpg,plastic,commons large outdoor,plastic,0.97488016,True
+data/commons_large/plastic/commons_117020237.jpg,plastic,commons large studio,plastic,0.81229913,True
+data/commons_large/plastic/commons_1198760.jpg,plastic,commons large studio,plastic,0.82596004,True
+data/commons_large/plastic/commons_45899038.jpg,plastic,commons large studio,plastic,0.9745472,True
+data/commons_large/plastic/commons_45899088.jpg,plastic,commons large studio,plastic,0.95398486,True
+data/commons_large/plastic/commons_47096564.jpg,plastic,commons large studio,plastic,0.8950481,True
+data/commons_large/plastic/commons_45899052.jpg,plastic,commons large studio,plastic,0.97847146,True
+data/commons_large/plastic/commons_68255400.jpg,plastic,commons large outdoor,plastic,0.74316573,True
+data/commons_large/plastic/commons_27695685.jpg,plastic,commons large studio,metal,0.5466088,False
+data/commons_large/plastic/commons_161531858.jpg,plastic,commons large studio,plastic,0.94351757,True
+data/commons_large/plastic/commons_25742117.jpg,plastic,commons large studio,glass,0.57098705,False
+data/commons_large/plastic/commons_6438840.jpg,plastic,commons large studio,plastic,0.98242664,True
+data/commons_large/plastic/commons_7884612.jpg,plastic,commons large studio,plastic,0.540712,True
+data/commons_large/plastic/commons_76074352.jpg,plastic,commons large outdoor,plastic,0.66497546,True
+data/commons_large/plastic/commons_45899075.jpg,plastic,commons large studio,plastic,0.9688091,True
+data/commons_large/trash/commons_165042434.jpg,trash,commons large outdoor,trash,0.993103,True
+data/commons_large/trash/commons_72889961.jpg,trash,commons large studio,trash,0.9824661,True
+data/commons_large/trash/commons_63345261.jpg,trash,commons large studio,paper,0.8332203,False
+data/commons_large/trash/commons_73365583.jpg,trash,commons large studio,paper,0.6104223,False
+data/commons_large/trash/commons_31428433.jpg,trash,commons large studio,paper,0.5613702,False
+data/commons_large/trash/commons_53666566.jpg,trash,commons large studio,paper,0.88701665,False
+data/commons_large/trash/commons_112239231.jpg,trash,commons large studio,trash,0.41527697,True
+data/commons_large/trash/commons_76497212.jpg,trash,commons large studio,paper,0.43137562,False
+data/commons_large/trash/commons_78980555.jpg,trash,commons large studio,trash,0.7596137,True
+data/commons_large/trash/commons_137490590.jpg,trash,commons large studio,trash,0.921008,True
+data/commons_large/trash/commons_71294736.jpg,trash,commons large studio,metal,0.6242086,False
+data/commons_large/trash/commons_12529767.jpg,trash,commons large studio,trash,0.9512765,True
+data/commons_large/trash/commons_102708778.jpg,trash,commons large studio,metal,0.7785763,False
+data/commons_large/trash/commons_76835060.jpg,trash,commons large studio,trash,0.6371853,True
+data/commons_large/trash/commons_54918515.jpg,trash,commons large studio,metal,0.56985474,False
+data/commons_large/trash/commons_102708768.jpg,trash,commons large studio,trash,0.91761273,True
+data/commons_large/trash/commons_143241857.jpg,trash,commons large studio,trash,0.48941132,True
+data/commons_large/trash/commons_77639161.jpg,trash,commons large studio,paper,0.51551694,False
+data/commons_large/trash/commons_117947411.jpg,trash,commons large studio,trash,0.531468,True
+data/commons_large/trash/commons_4682965.jpg,trash,commons large studio,paper,0.48565155,False
+data/commons_large/trash/commons_45172504.jpg,trash,commons large studio,metal,0.57204425,False
+data/commons_large/trash/commons_61585147.jpg,trash,commons large studio,plastic,0.44062462,False
+data/commons_large/trash/commons_81564472.jpg,trash,commons large outdoor,trash,0.6011163,True
+data/commons_large/trash/commons_78593295.jpg,trash,commons large studio,paper,0.78351265,False
+data/commons_large/trash/commons_99954885.jpg,trash,commons large outdoor,trash,0.98931515,True
+data/commons_large/trash/commons_130212336.jpg,trash,commons large studio,trash,0.7349509,True
+data/commons_large/trash/commons_39882490.jpg,trash,commons large studio,paper,0.3565909,False
+data/commons_large/trash/commons_111155425.jpg,trash,commons large studio,trash,0.9603294,True
+data/commons_large/trash/commons_37111872.jpg,trash,commons large studio,paper,0.37638992,False
+data/commons_large/trash/commons_113251894.jpg,trash,commons large studio,trash,0.59241295,True
+data/commons_large/trash/commons_745307.jpg,trash,commons large outdoor,trash,0.78634137,True
+data/commons_large/trash/commons_143624694.jpg,trash,commons large studio,trash,0.90335095,True
+data/commons_large/trash/commons_78593294.jpg,trash,commons large studio,paper,0.37593216,False
+data/commons_large/trash/commons_149458250.jpg,trash,commons large studio,plastic,0.54986846,False
+data/commons_large/trash/commons_78712400.jpg,trash,commons large studio,trash,0.61948,True
+data/commons_large/trash/commons_38472600.jpg,trash,commons large outdoor,trash,0.48509207,True
+data/commons_large/trash/commons_200622088.jpg,trash,commons large studio,trash,0.6875199,True
+data/commons_large/trash/commons_78707392.jpg,trash,commons large studio,trash,0.43597296,True
+data/commons_large/trash/commons_107284484.jpg,trash,commons large studio,trash,0.6047448,True
+data/commons_large/trash/commons_67905953.jpg,trash,commons large studio,trash,0.5682744,True
+data/commons_large/trash/commons_116289889.jpg,trash,commons large studio,metal,0.299158,False
+data/commons_large/trash/commons_158439061.jpg,trash,commons large studio,metal,0.5794632,False
+data/commons_large/trash/commons_157548127.jpg,trash,commons large studio,paper,0.60594386,False
+data/commons_large/cardboard/commons_95966781.jpg,cardboard,commons large studio,cardboard,0.9872574,True
+data/commons_large/cardboard/commons_30902297.jpg,cardboard,commons large studio,cardboard,0.5096868,True
+data/commons_large/cardboard/commons_163270013.jpg,cardboard,commons large studio,cardboard,0.8020257,True
+data/commons_large/cardboard/commons_30902298.jpg,cardboard,commons large studio,cardboard,0.68129593,True
+data/commons_large/cardboard/commons_100398688.jpg,cardboard,commons large studio,cardboard,0.9996916,True
+data/commons_large/cardboard/commons_25362283.jpg,cardboard,commons large studio,cardboard,0.99988735,True
+data/commons_large/cardboard/commons_11912337.jpg,cardboard,commons large studio,cardboard,0.999861,True
+data/commons_large/cardboard/commons_15059063.jpg,cardboard,commons large studio,cardboard,0.999977,True
+data/commons_large/cardboard/commons_194587699.jpg,cardboard,commons large studio,cardboard,0.9885379,True
+data/commons_large/cardboard/commons_2080193.jpg,cardboard,commons large studio,cardboard,0.99983764,True
+data/commons_large/cardboard/commons_153830914.jpg,cardboard,commons large studio,cardboard,0.99065465,True
+data/commons_large/plastic/commons_18691840.jpg,plastic,commons large studio,metal,0.46334514,False
+data/commons_large/plastic/commons_4029442.jpg,plastic,commons large studio,paper,0.66372293,False
+data/commons_large/plastic/commons_18942654.jpg,plastic,commons large studio,metal,0.62224114,False
+data/commons_large/plastic/commons_88415120.jpg,plastic,commons large outdoor,trash,0.8350228,False
+data/commons_large/plastic/commons_104998437.jpg,plastic,commons large studio,plastic,0.9644489,True
+data/commons_large/plastic/commons_18942660.jpg,plastic,commons large studio,plastic,0.6173916,True
+data/commons_large/plastic/commons_4069079.jpg,plastic,commons large studio,metal,0.55503905,False
+data/commons_large/plastic/commons_7204439.jpg,plastic,commons large studio,metal,0.3927212,False
+data/commons_large/plastic/commons_147950044.jpg,plastic,commons large studio,plastic,0.43650103,True
+data/commons_large/plastic/commons_148389733.jpg,plastic,commons large studio,cardboard,0.54705644,False
+data/commons_large/plastic/commons_544807.jpg,plastic,commons large studio,metal,0.5087768,False
+data/commons_large/plastic/commons_108746205.jpg,plastic,commons large outdoor,plastic,0.9655258,True
+data/commons_large/plastic/commons_99504096.jpg,plastic,commons large outdoor,plastic,0.9225116,True
+data/commons_large/plastic/commons_108746279.jpg,plastic,commons large outdoor,glass,0.44250074,False
+data/commons_large/plastic/commons_119342650.jpg,plastic,commons large outdoor,plastic,0.6129132,True
+data/commons_large/plastic/commons_102396410.jpg,plastic,commons large outdoor,plastic,0.9864281,True
+data/commons_large/plastic/commons_98793661.jpg,plastic,commons large outdoor,plastic,0.77652884,True
+data/commons_large/plastic/commons_93881466.jpg,plastic,commons large outdoor,trash,0.37669542,False
+data/commons_large/plastic/commons_89572290.jpg,plastic,commons large outdoor,plastic,0.9819473,True
+data/commons_large/plastic/commons_90959402.jpg,plastic,commons large outdoor,trash,0.99587667,False
+data/commons_large/plastic/commons_112933489.jpg,plastic,commons large outdoor,plastic,0.9007955,True
+data/commons_large/plastic/commons_90106338.jpg,plastic,commons large outdoor,plastic,0.695094,True
+data/commons_large/plastic/commons_95509986.jpg,plastic,commons large outdoor,trash,0.9497697,False
+data/commons_large/plastic/commons_90106341.jpg,plastic,commons large outdoor,plastic,0.8636555,True
+data/commons_large/plastic/commons_124385101.jpg,plastic,commons large outdoor,metal,0.53883725,False
+data/commons_large/plastic/commons_95509920.jpg,plastic,commons large outdoor,trash,0.9958722,False
+data/commons_large/plastic/commons_108868357.jpg,plastic,commons large outdoor,plastic,0.47206122,True
+data/commons_large/plastic/commons_90106343.jpg,plastic,commons large outdoor,trash,0.83616817,False
+data/commons_large/plastic/commons_95509913.jpg,plastic,commons large outdoor,plastic,0.60222137,True
+data/commons_large/plastic/commons_95509914.jpg,plastic,commons large outdoor,plastic,0.5868609,True
+data/commons_large/plastic/commons_108868338.jpg,plastic,commons large outdoor,trash,0.7743064,False
+data/commons_large/plastic/commons_95509957.jpg,plastic,commons large outdoor,plastic,0.7767062,True
+data/commons_large/plastic/commons_88740379.jpg,plastic,commons large outdoor,glass,0.8314056,False
+data/commons_large/plastic/commons_105012611.jpg,plastic,commons large outdoor,glass,0.9025757,False
+data/commons_large/plastic/commons_95509996.jpg,plastic,commons large outdoor,plastic,0.8176627,True
+data/commons_large/plastic/commons_94494803.jpg,plastic,commons large outdoor,plastic,0.9753817,True
+data/commons_large/plastic/commons_95509970.jpg,plastic,commons large outdoor,trash,0.7421544,False
+data/commons_large/plastic/commons_89197684.jpg,plastic,commons large outdoor,plastic,0.99206454,True
+data/commons_large/plastic/commons_92056073.jpg,plastic,commons large outdoor,trash,0.7943288,False
+data/commons_large/plastic/commons_98357856.jpg,plastic,commons large outdoor,plastic,0.7543524,True
+data/commons_large/plastic/commons_97392567.jpg,plastic,commons large outdoor,plastic,0.9439454,True
+data/commons_large/plastic/commons_93881313.jpg,plastic,commons large outdoor,plastic,0.75016737,True
+data/commons_large/plastic/commons_112760662.jpg,plastic,commons large outdoor,trash,0.7737844,False
+data/commons_large/plastic/commons_88740376.jpg,plastic,commons large outdoor,trash,0.53597134,False
+data/commons_large/plastic/commons_95509939.jpg,plastic,commons large outdoor,trash,0.6377065,False
+data/commons_large/plastic/commons_112934277.jpg,plastic,commons large outdoor,plastic,0.7552327,True
+data/commons_large/plastic/commons_108868369.jpg,plastic,commons large outdoor,plastic,0.51409495,True
+data/commons_large/trash/commons_52052961.jpg,trash,commons large outdoor,glass,0.44991392,False
+data/commons_large/trash/commons_23218106.jpg,trash,commons large studio,cardboard,0.9457759,False
+data/commons_large/metal/commons_17172418.jpg,metal,commons large outdoor,metal,0.9990595,True
+data/commons_large/paper/commons_123037472.jpg,paper,commons large outdoor,paper,0.96404856,True
+data/commons_large/trash/commons_30537458.jpg,trash,commons large outdoor,trash,0.72278976,True
+data/commons_large/plastic/commons_166878348.jpg,plastic,commons large outdoor,glass,0.59116405,False
+data/commons_large/glass/commons_27560174.jpg,glass,commons large outdoor,glass,0.99991643,True
+data/commons_large/metal/commons_110352337.jpg,metal,commons large outdoor,metal,0.90042055,True
+data/commons_large/metal/commons_57357617.jpg,metal,commons large outdoor,metal,0.9633925,True
+data/commons_large/trash/commons_73696649.jpg,trash,commons large outdoor,metal,0.34768948,False
+data/commons_large/plastic/commons_146233854.jpg,plastic,commons large outdoor,glass,0.53367424,False
+data/commons_large/glass/commons_968606.jpg,glass,commons large outdoor,glass,0.99997556,True
+data/commons_large/plastic/commons_138439437.jpg,plastic,commons large outdoor,metal,0.365112,False
+data/commons_large/plastic/commons_122344231.jpg,plastic,commons large outdoor,glass,0.48150092,False
+data/commons_large/paper/commons_91813491.jpg,paper,commons large outdoor,trash,0.9302092,False
+data/commons_large/trash/commons_87411360.jpg,trash,commons large outdoor,trash,0.98948497,True
+data/commons_large/plastic/commons_50693674.jpg,plastic,commons large outdoor,metal,0.7884328,False
+data/commons_large/cardboard/commons_106335015.jpg,cardboard,commons large outdoor,cardboard,0.99899286,True
+data/commons_large/cardboard/commons_18754276.jpg,cardboard,commons large outdoor,cardboard,0.9266998,True
+data/commons_large/trash/commons_87335432.jpg,trash,commons large outdoor,trash,0.39166263,True
+data/commons_large/paper/commons_97330935.jpg,paper,commons large outdoor,glass,0.3853695,False
+data/commons_large/trash/commons_90040749.jpg,trash,commons large outdoor,trash,0.543501,True
+data/commons_large/paper/commons_87381848.jpg,paper,commons large outdoor,trash,0.9934824,False
+data/commons_large/plastic/commons_86893177.jpg,plastic,commons large outdoor,trash,0.9759,False
+data/commons_large/plastic/commons_106334390.jpg,plastic,commons large outdoor,trash,0.667483,False
+data/commons_large/paper/commons_13446935.jpg,paper,commons large outdoor,trash,0.81748605,False
+data/commons_large/cardboard/commons_106334819.jpg,cardboard,commons large outdoor,cardboard,0.9620996,True
+data/commons_large/paper/commons_88237115.jpg,paper,commons large outdoor,trash,0.9055646,False
+data/commons_large/trash/commons_113131397.jpg,trash,commons large outdoor,metal,0.92735803,False
+data/commons_large/trash/commons_39746200.jpg,trash,commons large outdoor,trash,0.92303675,True
+data/commons_large/trash/commons_72726613.jpg,trash,commons large outdoor,metal,0.6387576,False
+data/commons_large/metal/commons_72927310.jpg,metal,commons large outdoor,metal,0.99851626,True
+data/commons_large/metal/commons_87540097.jpg,metal,commons large outdoor,trash,0.885389,False
+data/commons_large/trash/commons_32043046.jpg,trash,commons large outdoor,trash,0.706348,True
+data/commons_large/plastic/commons_88365933.jpg,plastic,commons large outdoor,glass,0.54231644,False
+data/commons_large/trash/commons_97330957.jpg,trash,commons large outdoor,trash,0.8175123,True
+data/commons_large/plastic/commons_184734633.jpg,plastic,commons large outdoor,glass,0.4094383,False
+data/commons_large/trash/commons_11672902.jpg,trash,commons large outdoor,trash,0.652677,True
+data/commons_large/glass/commons_89392771.jpg,glass,commons large outdoor,glass,0.9721318,True
+data/commons_large/trash/commons_88237061.jpg,trash,commons large outdoor,trash,0.96012795,True
+data/commons_large/trash/commons_93226780.jpg,trash,commons large outdoor,trash,0.9002817,True
+data/commons_large/trash/commons_88237015.jpg,trash,commons large outdoor,trash,0.9990728,True
+data/commons_large/metal/commons_88365921.jpg,metal,commons large outdoor,metal,0.99849594,True
+data/commons_large/metal/commons_98589639.jpg,metal,commons large outdoor,metal,0.99563223,True
+data/commons_large/metal/commons_88365898.jpg,metal,commons large outdoor,metal,0.9993044,True
+data/commons_large/glass/commons_37373214.jpg,glass,commons large outdoor,glass,0.97720873,True
+data/commons_large/plastic/commons_88039943.jpg,plastic,commons large outdoor,trash,0.5558173,False
+data/commons_large/trash/commons_74832252.jpg,trash,commons large outdoor,glass,0.7094535,False
+data/commons_large/trash/commons_113055925.jpg,trash,commons large outdoor,trash,0.9206219,True
+data/commons_large/plastic/commons_14229781.jpg,plastic,commons large outdoor,plastic,0.90695417,True
+data/commons_large/metal/commons_1649690.jpg,metal,commons large studio,metal,0.9163549,True
+data/commons_large/metal/commons_25438384.jpg,metal,commons large outdoor,metal,0.9966102,True
+data/commons_large/glass/commons_14574213.jpg,glass,commons large outdoor,glass,0.9923844,True
+data/commons_large/plastic/commons_92100351.jpg,plastic,commons large outdoor,trash,0.5063668,False
+data/commons_large/plastic/commons_87485653.jpg,plastic,commons large outdoor,glass,0.4321819,False
+data/commons_large/plastic/commons_98663609.jpg,plastic,commons large outdoor,metal,0.9507722,False
+data/commons_large/plastic/commons_384748.jpg,plastic,commons large outdoor,trash,0.78706497,False
+data/commons_large/metal/commons_53207461.jpg,metal,commons large outdoor,metal,0.99468285,True
+data/commons_large/plastic/commons_88365901.jpg,plastic,commons large outdoor,glass,0.42224327,False
+data/commons_large/trash/commons_127013755.jpg,trash,commons large outdoor,glass,0.6106801,False
+data/commons_large/trash/commons_95731011.jpg,trash,commons large studio,trash,0.7210641,True
+data/commons_large/metal/commons_86572604.jpg,metal,commons large outdoor,metal,0.9899003,True

@@ -177,6 +177,7 @@ python train_mixed.py                 # trashnet + RealWaste + TACO -> models/re
 python train_mixed.py --arch resnet18 # any model from ARCHS in common.py
 python probe_siglip.py                # SigLIP encoder frozen, head only -> models/siglip_base_probe.pth
 python probe_siglip.py --zero-shot-weight 0.5   # half probe, half zero-shot head -> models/siglip_base_probe_zs50.pth
+python probe_siglip.py --arch siglip_large --zero-shot-weight dev   # SigLIP-large -> models/siglip_large_probe_zsdev.pth
 
 # Evaluation
 python benchmark.py models/resnet50_mixed.pth
@@ -199,9 +200,9 @@ Models (`--arch`): `resnet18`, `resnet50` (default), `efficientnet_b0`, `convnex
 torchvision, and `dinov2_small`, `dinov2_base` from Hugging Face (Apache 2.0, safetensors weights; train them with
 a lower rate, e.g. `--lr 2e-5`). Checkpoints store their architecture, so `benchmark.py` and `predict.py`
 work out the model to build by themselves.
-`siglip_base` (SigLIP's image encoder, Apache 2.0) has its own preprocessing, a 224 × 224 resize with no crop, and
-is trained by `probe_siglip.py` rather than `train_mixed.py`: the encoder stays frozen and only its head learns. The
-probe encodes each image once and caches the features in `models/features_siglip_base.pt`, so a second run only
+`siglip_base` and `siglip_large` (SigLIP's image encoders, Apache 2.0) have their own preprocessing, a square
+resize with no crop (224 and 256 px), and are trained by `probe_siglip.py` rather than `train_mixed.py`: the encoder stays frozen and only its head learns. The
+probe encodes each image once and caches the features in `models/features_<arch>.pt`, so a second run only
 encodes new images. `--zero-shot-weight W` blends the trained head with the zero-shot one of `zero_shot.py` (also a
 linear head on the same features): W is fixed beforehand, or chosen on the development set with
 `--zero-shot-weight dev`, never tuned on the test sets. `--limit N` checks that the

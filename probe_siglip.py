@@ -17,7 +17,8 @@ the encoder over the images plus a small logistic regression.
 4. Save the encoder with its new head to models/<arch>_probe.pth, which benchmark.py and predict.py can load, and
    score every test set from the cached features: results/benchmark_<arch>_probe.csv, in benchmark.py's format.
 
-usage: python probe_siglip.py [--zero-shot-weight 0.5 | dev] [--limit N]
+usage: python probe_siglip.py [--arch siglip_large] [--zero-shot-weight 0.5 | dev] [--limit N]
+--arch: siglip_base (default) or siglip_large, from ARCHS in common.py; each has its own feature cache.
 --zero-shot-weight W: outputs end in _zs<W x 100>, e.g. models/siglip_base_probe_zs50.pth; with `dev`, in _zsdev.
 W is never tuned on the test sets; the validation sets come from the training sources and would always favour W = 0.
 --limit N uses only N images per source and split, to check that the script runs; its outputs end in _limitN.
@@ -38,7 +39,6 @@ from common import (ARCHS, CLASSES, CLASS_TO_IDX, DEVICE, NUM_WORKERS, TrashData
 from train_mixed import BATCH_MIX
 from zero_shot import SCALE, text_head
 
-ARCH = "siglip_base"
 C_GRID = [1, 3, 10, 30, 100, 300, 1000]  # features have length 1, so the head needs little regularisation
 DEV = Path("data/commons_dev/sources.csv")
 DEV_WEIGHTS = [0, 0.25, 0.33, 0.5, 0.67, 0.75, 1]
@@ -76,11 +76,13 @@ def source_weights(sources):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--arch", default="siglip_base", choices=[a for a in ARCHS if a.startswith("siglip")])
     parser.add_argument("--zero-shot-weight", default="0",
                         help="weight of the zero-shot head in the blend, from 0 (probe only) to 1 (zero-shot only), "
                              "or `dev` to choose it on the development set")
     parser.add_argument("--limit", type=int, help="only N images per source and split, to check the script runs")
     args = parser.parse_args()
+    ARCH = args.arch
     choose = args.zero_shot_weight == "dev"
     w = None if choose else float(args.zero_shot_weight)
     suffix = ("_zsdev" if choose else f"_zs{round(w * 100)}" if w else "") + (f"_limit{args.limit}" if args.limit else "")
