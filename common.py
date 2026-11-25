@@ -39,8 +39,9 @@ ARCHS = {
     # DINOv2 (Apache 2.0) from Hugging Face, weights in safetensors only: self-supervised, strong on unfamiliar photos
     "dinov2_small": "facebook/dinov2-small",                                        # 22M params
     "dinov2_base": "facebook/dinov2-base",                                          # 86M params
-    # SigLIP's image encoder (Apache 2.0): its own preprocessing (SIGLIP_TF). probe_siglip.py trains its head only
+    # SigLIP's image encoder (Apache 2.0): its own preprocessing (siglip_transform). probe_siglip.py trains its head only
     "siglip_base": "google/siglip-base-patch16-224",                                # 93M params
+    "siglip_large": "google/siglip-large-patch16-256",                              # 316M params, 256 x 256 images
 }
 DEFAULT_ARCH = "resnet50"
 
@@ -64,12 +65,14 @@ EVAL_TF = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
 ])
 
-# SigLIP's own preprocessing: a 224 x 224 resize with no crop, pixel values scaled to [-1, 1]
-SIGLIP_TF = transforms.Compose([
-    transforms.Resize((224, 224), interpolation=transforms.InterpolationMode.BICUBIC),
-    transforms.ToTensor(),
-    transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
-])
+def siglip_transform(size):
+    """SigLIP's own preprocessing: a size x size resize with no crop, pixel values scaled to [-1, 1]."""
+    return transforms.Compose([
+        transforms.Resize((size, size), interpolation=transforms.InterpolationMode.BICUBIC),
+        transforms.ToTensor(),
+        transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
+    ])
+
 
 
 def eval_transform(model):
@@ -109,7 +112,6 @@ class DinoClassifier(nn.Module):
 
 class SiglipClassifier(nn.Module):
     """SigLIP's image encoder with a 6-class head on its image embedding, scaled to length 1 as in zero_shot.py."""
-    transform = SIGLIP_TF
 
     def __init__(self, name, pretrained=True):
         super().__init__()
@@ -117,6 +119,7 @@ class SiglipClassifier(nn.Module):
         self.backbone = (SiglipVisionModel.from_pretrained(name, use_safetensors=True) if pretrained
                          else SiglipVisionModel(SiglipVisionConfig.from_pretrained(name)))
         self.head = nn.Linear(self.backbone.config.hidden_size, len(CLASSES))
+        self.transform = siglip_transform(self.backbone.config.image_size)
 
     def features(self, x):
         return F.normalize(self.backbone(pixel_values=x).pooler_output, dim=-1)

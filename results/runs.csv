@@ -22,3 +22,8 @@ date,script,model,outcome,duration_s,hardware,energy_kwh,emissions_gco2e,locatio
 2026-11-24T11:13:57Z,probe_siglip.py,models/siglip_base_probe_zs50.pth,done,23,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000082,0.045,AUS
 2026-11-24T11:14:30Z,probe_siglip.py,models/siglip_base_probe_zsdev.pth,done,24,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000087,0.048,AUS
 2026-11-25T07:21:30Z,probe_siglip.py,models/siglip_base_probe_zsdev.pth,done,94,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000399,0.219,AUS
+2026-11-25T07:30:35Z,probe_siglip.py,models/siglip_large_probe_limit5.pth,failed,164,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000744,0.408,AUS
+2026-11-25T07:33:39Z,probe_siglip.py,models/siglip_large_probe_limit20.pth,discarded,167,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000761,0.417,AUS
+2026-11-25T09:16:36Z,probe_siglip.py,models/siglip_large_probe_zsdev.pth,done,6155,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.028171,15.457,AUS
+2026-11-25T09:18:08Z,probe_siglip.py,models/siglip_large_probe.pth,done,55,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000199,0.109,AUS
+2026-11-25T09:18:55Z,probe_siglip.py,models/siglip_large_probe_zs100.pth,done,39,Intel(R) Core(TM) i5-8279U CPU @ 2.40GHz,0.000141,0.077,AUS
