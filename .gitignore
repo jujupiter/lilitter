@@ -16,3 +16,6 @@ models/
 data/commons_candidates/img/
 # training logs
 results/*.log
+# our own photos (#15): only the CSVs are kept, the photos stay local
+data/own_candidates/img/
+data/own_photos/*/

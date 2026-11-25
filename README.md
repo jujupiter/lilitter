@@ -34,7 +34,8 @@ with no class far below the others. Every test set is still reported, including 
 | `zero_shot.py` | Score a CLIP or SigLIP model on every test set with no training: it picks the class whose description fits best | splits files, `data/commons_*` | `results/benchmark_zeroshot_<model>.csv` |
 | `predict.py` | Classify your own images (top 3) | a checkpoint | |
 | `collect_commons.py` | Collect candidate photos from Commons by J-code: product categories for the test set, litter searches (`--queries`) for the development set | `data/commons_queries.csv` or `data/commons_dev_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
-| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/`, `data/commons_dev/` |
+| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/`, `data/commons_dev/`; with `--own`, `data/own_photos/` |
+| `prepare_own_photos.py` | Prepare our own photos (#15) for review: upright, scaled-down copies with no metadata (no GPS), the country given by hand | a local folder of photos | `data/own_candidates/` |
 | `.github/workflows/photo-reminder.yml` | Comment on #15 every morning, as a reminder to photograph litter | | a comment on #15 |
 
 ## Data
@@ -82,6 +83,11 @@ python review_commons.py --rejected # look through the rejected photos again, to
 python collect_commons.py --queries data/commons_dev_queries.csv
 python review_commons.py --dev
 python review_commons.py --export
+
+# our own photos (#15): the originals stay in a local folder, out of the repository
+python prepare_own_photos.py ~/path/to/photos --country Australia
+python review_commons.py --own            # same page and keys
+python review_commons.py --own --export   # -> data/own_photos/
 ```
 
 `data/commons_queries.csv` lists Commons categories by product ("Beverage cans"): Commons files a photo there for

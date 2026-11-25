@@ -29,12 +29,16 @@ photos used to choose settings, such as the zero-shot weight of probe_siglip.py,
 belongs to the set it was first reviewed for (the `set` column of labels.csv: dev, or empty for the test set), so
 the test set never changes.
 
+With --own, the same page reviews our own photos (#15) instead, prepared by prepare_own_photos.py in
+data/own_candidates/; --own --export writes them to data/own_photos/.
+
 With --rejected, the page shows the photos already rejected, to mark the litter scenes with several materials
 (m) for the detection phase (#10): many were rejected as x before m was used for them. Each keeps its set.
 
 usage: python review_commons.py            open the review page on http://127.0.0.1:8765
        python review_commons.py --multiple confirm the photos suggested as several materials
        python review_commons.py --dev      review photos for the development set
+       python review_commons.py --own      review our own photos (--own --export to export them)
        python review_commons.py --rejected look through the rejected photos again for several materials
        python review_commons.py --export   write the accepted photos to data/commons_large/ (test set) and
                                            data/commons_dev/ (development set)
@@ -58,6 +62,7 @@ CANDIDATES = DIR / "candidates.csv"
 LABELS = DIR / "labels.csv"
 SUGGESTIONS = DIR / "suggestions.csv"
 EXPORT = {"": Path("data/commons_large"), "dev": Path("data/commons_dev")}  # by the `set` column of labels.csv
+OWN_DIR, OWN_EXPORT = Path("data/own_candidates"), {"": Path("data/own_photos")}  # with --own
 LABEL_COLUMNS = ["id", "status", "label", "jcode", "setting", "reviewed_at", "set"]
 PORT = 8765
 FOCUS = ""  # "multiple" with --multiple: only the photos Claude suggested with that status; "dev" with --dev
@@ -151,7 +156,7 @@ def export_set(cands, labels, folder):
         shutil.copyfile(c.path, dest)
         rows.append(dict(path=str(dest), label=r.label, jcode=r.jcode, setting=r.setting, title=c.title,
                          license=c.license, artist=c.artist, source=c.source, image_url=c.image_url,
-                         commons_sha1=c.commons_sha1, sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),
+                         commons_sha1=c.commons_sha1, country=c.get("country", ""), sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),
                          processing="original"))
     out = pd.DataFrame(rows)
     out.to_csv(folder / "sources.csv", index=False)
@@ -169,7 +174,12 @@ def main():
     mode.add_argument("--multiple", action="store_true", help="only show the photos suggested as several materials")
     mode.add_argument("--dev", action="store_true", help="review photos for the development set")
     mode.add_argument("--rejected", action="store_true", help="look through the rejected photos again")
+    parser.add_argument("--own", action="store_true", help="our own photos, from prepare_own_photos.py")
     args = parser.parse_args()
+    if args.own:
+        global DIR, CANDIDATES, LABELS, SUGGESTIONS, EXPORT
+        DIR, EXPORT = OWN_DIR, OWN_EXPORT
+        CANDIDATES, LABELS, SUGGESTIONS = DIR / "candidates.csv", DIR / "labels.csv", DIR / "suggestions.csv"
     if args.export:
         return export()
     global FOCUS
