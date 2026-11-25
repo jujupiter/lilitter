@@ -33,8 +33,8 @@ with no class far below the others. Every test set is still reported, including 
 | `probe_siglip.py` | Train a 6-class head on SigLIP's frozen image encoder (linear probe), then score every test set from the cached features | splits files, `data/commons_*` | `models/features_siglip_base.pt` (cache), `models/siglip_base_probe.pth`, `results/benchmark_siglip_base_probe.csv` |
 | `zero_shot.py` | Score a CLIP or SigLIP model on every test set with no training: it picks the class whose description fits best | splits files, `data/commons_*` | `results/benchmark_zeroshot_<model>.csv` |
 | `predict.py` | Classify your own images (top 3) | a checkpoint | |
-| `collect_commons.py` | Collect candidate photos from Commons for a large test set, by J-code | `data/commons_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
-| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/` |
+| `collect_commons.py` | Collect candidate photos from Commons by J-code: product categories for the test set, litter searches (`--queries`) for the development set | `data/commons_queries.csv` or `data/commons_dev_queries.csv`, `data/jlist.csv` | `data/commons_candidates/` |
+| `review_commons.py` | Review those candidates in the browser (class, J-code, studio or outdoor), then export them | `data/commons_candidates/` (with `suggestions.csv` if present) | `labels.csv`, `data/commons_large/`, `data/commons_dev/` |
 | `.github/workflows/photo-reminder.yml` | Comment on #15 every morning, as a reminder to photograph litter | | a comment on #15 |
 
 ## Data
@@ -47,6 +47,7 @@ with no class far below the others. Every test set is still reported, including 
 | `data/commons_studio/` | 20 product-style photos from Wikimedia Commons | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 | `data/commons_outdoor/` | 20 outdoor photos from Wikimedia Commons | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 | `data/commons_large/` | 537 reviewed Commons photos (345 studio, 192 outdoor), with class, J-code and setting | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
+| `data/commons_dev/` | Development set: more reviewed Commons photos, used to choose settings (never to train or test) | per photo, in `sources.csv` | `sources.csv` only, `download_commons.py` |
 
 Every source has its own train/val/test split. TACO crops from the same photo stay in the same split.
 The Commons sets are only used for testing, never for training.
@@ -72,9 +73,25 @@ The 20-photo Commons sets are too small to compare models (one photo = 5 points)
 ```bash
 python collect_commons.py      # ~2,000 candidates from Commons categories listed per J-code, freely licensed only
 python review_commons.py       # check each photo in the browser, ~3 s per photo; stop and resume any time
-python review_commons.py --export   # accepted photos -> data/commons_large/sources.csv
+python review_commons.py --export   # accepted photos -> data/commons_large/ (test) and data/commons_dev/ (development)
 python review_commons.py --multiple # confirm the photos suggested as several materials (for detection, #10)
+python review_commons.py --dev      # review every photo not reviewed yet, for the development set
+python review_commons.py --rejected # look through the rejected photos again, to mark scenes with several materials (m)
+
+# development set: litter searches rather than product categories
+python collect_commons.py --queries data/commons_dev_queries.csv
+python review_commons.py --dev
+python review_commons.py --export
 ```
+
+`data/commons_queries.csv` lists Commons categories by product ("Beverage cans"): Commons files a photo there for
+what it shows, not because it is litter, so many candidates were products in shops. `data/commons_dev_queries.csv`
+feeds the development set: searches for litter (`"discarded can"`, `"plastic bottle" litter`), the "Littering by
+country" categories, then searches for one item where it lies (`"crumpled paper"`, `"cardboard box" street`) and more
+product photos for the classes it lacks. A row has either a `category` or a `search`. Searches match words in a
+photo's title and description; keep each one a plain query (words and "phrases"), as `OR` does not combine with other
+words the way one would expect, and add `-word` to leave out what comes with crowds and heaps (`-cleanup -pile`).
+`max_files` is a total per query: raise it and run again to top a query up.
 
 `data/commons_candidates/suggestions.csv` holds a first pass by Claude (accept or reject, class, J-code, setting,
 reason). When it exists, the review page only shows the photos it suggests accepting, pre-filled (`a` shows them all).
@@ -83,7 +100,17 @@ whether to keep each one, and on every class where both accepted it; most of the
 now in the page (several items of one material are accepted; several materials are kept for detection).
 
 `benchmark.py` scores the exported set as two benchmarks, `commons large studio` and `commons large outdoor`.
-Its 16 photos with no class (drink cartons, food waste) have a J-code only and are left out until phase 2.
+Its 3 photos with no class (food waste) have a J-code only and are left out until phase 2.
+
+Classes are by material, with one exception: **trash** also takes what would contaminate its material's recycling.
+Foam, plastic film and wrappers go to trash rather than plastic, and so do paper cups (J244), drink cartons
+(J150, J151) and cigarette packets (J152): paper lined with plastic or foil, which councils treat differently (#40).
+The J-code keeps them apart for phase 2. `benchmark.py` scores saved results against the current labels.
+
+The **development set** (`data/commons_dev/`, #40) chooses settings that the validation sets cannot: they come from
+the training sources, while the settings in question are about unfamiliar photos (e.g. the zero-shot weight of
+`probe_siglip.py`). It is never a test set. `labels.csv` records which set each photo was first reviewed for, in its
+`set` column (`dev`, or empty for the test set); a photo never moves, so the test set stays the same.
 
 ## Energy
 
@@ -163,7 +190,9 @@ three datasets. Their results stay in `results/` for comparison: `benchmark_resn
 
 The data scripts only download what is missing, so they are safe to run again. Both splits files are
 committed, so every machine trains and tests on the same images: `split.py` and `prepare_extra_data.py`
-keep them unless given `--force` / `--resplit`. Images listed in a split that could not be downloaded
+keep them unless given `--force` / `--resplit`. `prepare_extra_data.py --add-categories` adds the TACO categories newly listed in
+`TACO_CLASSES` (paper cups and drink cartons, as trash, #40) without changing any existing row: a crop from a photo
+already in the split joins that photo's split, and new photos are split 70/15/15. Images listed in a split that could not be downloaded
 (e.g. a TACO photo that was taken off Flickr) are skipped by training and benchmarking, with a message.
 
 Models (`--arch`): `resnet18`, `resnet50` (default), `efficientnet_b0`, `convnext_tiny` with ImageNet weights from
@@ -174,7 +203,8 @@ work out the model to build by themselves.
 is trained by `probe_siglip.py` rather than `train_mixed.py`: the encoder stays frozen and only its head learns. The
 probe encodes each image once and caches the features in `models/features_siglip_base.pt`, so a second run only
 encodes new images. `--zero-shot-weight W` blends the trained head with the zero-shot one of `zero_shot.py` (also a
-linear head on the same features): W is fixed beforehand, never tuned on the test sets. `--limit N` checks that the
+linear head on the same features): W is fixed beforehand, or chosen on the development set with
+`--zero-shot-weight dev`, never tuned on the test sets. `--limit N` checks that the
 script runs on N images per source and split. The first ResNet-18 checkpoints (`models/best_model*.pth`, saved
 before this) are plain weights and load as ResNet-18.
 

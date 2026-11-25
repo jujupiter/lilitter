@@ -1,14 +1,23 @@
 """Collect candidate photos from Wikimedia Commons for a large test set, to be checked by hand with review_commons.py.
 
-For each row of data/commons_queries.csv (a J-code and a Commons category), list the photos in the category
-(and its subcategories, down to `depth`), keep those whose licence allows reuse, and download a thumbnail.
-Rows without a J-code are general litter categories: their photos are labelled from scratch during review.
+For each row of a queries file (a J-code, and a Commons category or a search), list the photos in the category
+(and its subcategories, down to `depth`) or those the search finds, keep those whose licence allows reuse, and
+download a thumbnail. Rows without a J-code are general litter queries: their photos are labelled from scratch
+during review.
+
+data/commons_queries.csv lists product categories ("Beverage cans"): they gave the test set. Commons files a photo
+there for what it shows, not because it is litter, so most were products in shops. data/commons_dev_queries.csv
+searches for litter instead (`discarded "plastic bottle"`): it finds photos by the words of their title and
+description (CirrusSearch syntax: "phrases", -word; OR does not combine with other words as expected). It feeds the
+development set (#40), with more product categories for the classes it lacks.
 
 Writes data/commons_candidates/candidates.csv (one row per photo, with the suggested class and J-code) and the
-thumbnails in data/commons_candidates/img/ (not in git). Safe to run again: photos already collected are kept.
+thumbnails in data/commons_candidates/img/ (not in git). Safe to run again: photos already collected are kept, and
+max_files is a total per query, so a second run only tops a query up (e.g. after raising its max_files).
 
 usage: python collect_commons.py               collect up to max_files photos per query row
-       python collect_commons.py --dry-run     only count what each category would give
+       python collect_commons.py --queries data/commons_dev_queries.csv
+       python collect_commons.py --dry-run     only count what each query would give
 """
 import argparse
 import hashlib
@@ -37,12 +46,12 @@ SKIP_TITLE = re.compile(r"logo|icon|diagram|map\b|poster|advert|label|chart|draw
 MIN_SIDE = 400  # px, original size
 
 # Suggested trashnet class for a J-code, consistent with TACO_CLASSES in prepare_extra_data.py: foam, film,
-# wrappers, cigarettes, hygiene items, textiles, rubber, wood and food are "trash"; paper cups, drink cartons
-# and cigarette packets are ambiguous and get no class.
+# wrappers, cigarettes, hygiene items, textiles, rubber, wood and food are "trash". So are paper cups, drink cartons
+# and cigarette packets (MIXED): paper with a plastic or foil lining, which would contaminate paper recycling (#40).
 TRASH_PLASTIC = {"J25", "J27", "J30", "J40", "J41", "J49", "J58", "J82", "J83", "J95", "J96", "J98", "J101", "J144",
                  "J211", "J224", "J226", "J236", "J237", "J239", "J240", "J242", "J252", "J253", "J256", "J257"}
 CARDBOARD = {"J148", "J245", "J247"}
-NO_CLASS = {"J150", "J151", "J152", "J244"}
+MIXED = {"J150", "J151", "J152", "J244"}
 MATERIAL_CLASS = {"plastic": "plastic", "metal": "metal", "glass/ceramics": "glass", "paper": "paper"}
 
 
@@ -51,9 +60,7 @@ def suggested_label(jcodes, materials):
         return ""
     labels = set()
     for code in jcodes.split():
-        if code in NO_CLASS:
-            return ""
-        if code in TRASH_PLASTIC:
+        if code in TRASH_PLASTIC or code in MIXED:
             labels.add("trash")
         elif code in CARDBOARD:
             labels.add("cardboard")
@@ -91,6 +98,20 @@ def category_files(category, depth):
     return files
 
 
+def search_files(text):
+    """{page id: title} of the files a Commons search finds (at most 10,000: the search's own limit)."""
+    files = {}
+    params = dict(action="query", list="search", srsearch=text, srnamespace=6, srlimit=500, srprop="")
+    while True:
+        r = api(**params)
+        for m in r.get("query", {}).get("search", []):
+            files[m["pageid"]] = m["title"][5:]
+        if "continue" not in r:
+            return files
+        params.update(r["continue"])
+        time.sleep(0.2)
+
+
 def plain(text):
     return html.unescape(re.sub(r"<[^>]+>", "", text or "")).strip()
 
@@ -120,12 +141,14 @@ def usable(info):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dry-run", action="store_true", help="only count the usable photos per category")
+    parser.add_argument("--dry-run", action="store_true", help="only count the usable photos per query")
+    parser.add_argument("--queries", default=QUERIES, type=Path, help="queries file (default: %(default)s)")
     args = parser.parse_args()
 
     jlist = pd.read_csv(JLIST)
     materials = dict(zip(jlist.jcode, jlist.material))
-    queries = pd.read_csv(QUERIES, dtype=str).fillna("")
+    queries = pd.read_csv(args.queries, dtype=str).reindex(columns=["jcode", "category", "search", "depth",
+                                                                     "max_files"]).fillna("")
     csv = OUT / "candidates.csv"
     old = pd.read_csv(csv, dtype=str).fillna("") if csv.exists() else pd.DataFrame(columns=["title"])
     taken = set(old.title)
@@ -134,20 +157,26 @@ def main():
 
     rows = []
     for q in queries.itertuples():
-        files = {i: t for i, t in category_files(q.category, int(q.depth)).items() if t not in taken}
+        name = q.category or f"search: {q.search}"
+        need = int(q.max_files) - (old.query_category == name).sum() if "query_category" in old else int(q.max_files)
+        if need <= 0:
+            print(f"{q.jcode or '(any)':<10} {name[:55]:<55} already has {q.max_files}")
+            continue
+        found = category_files(q.category, int(q.depth or 0)) if q.category else search_files(q.search)
+        files = {i: t for i, t in found.items() if t not in taken}
         # a fixed pseudo-random order, so that a large category is not sampled alphabetically
         ids = sorted(files, key=lambda i: hashlib.md5(files[i].encode()).hexdigest())
         infos = []
         for i in range(0, len(ids), 50):
             infos += [x for x in file_infos(ids[i:i + 50]) if usable(x)]
-            if len(infos) >= int(q.max_files):
+            if len(infos) >= need:
                 break
             time.sleep(0.2)
-        infos = sorted(infos, key=lambda x: hashlib.md5(x["title"].encode()).hexdigest())[:int(q.max_files)]
-        print(f"{q.jcode or '(any)':<10} {q.category:<55} {len(files):>5} files, {len(infos):>3} kept")
+        infos = sorted(infos, key=lambda x: hashlib.md5(x["title"].encode()).hexdigest())[:need]
+        print(f"{q.jcode or '(any)':<10} {name[:55]:<55} {len(files):>5} files, {len(infos):>3} kept")
         for x in infos:
             taken.add(x["title"])
-            rows.append(dict(x, query_category=q.category, suggested_jcode=q.jcode,
+            rows.append(dict(x, query_category=name, suggested_jcode=q.jcode,
                              suggested_label=suggested_label(q.jcode, materials)))
 
     if args.dry_run:

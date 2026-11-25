@@ -2,7 +2,8 @@
 description best matches each photo. A reference point for #5: how far general knowledge alone goes.
 
 The descriptions below follow our labelling conventions (README) and were written before any result was seen:
-tuning them on the test photos would turn the test sets into training data.
+tuning them on the test photos would turn the test sets into training data. They changed once, with the convention
+(#40): paper cups, drink cartons and cigarette packets moved from paper to trash.
 
 usage: python zero_shot.py [--model google/siglip-base-patch16-224]
        python zero_shot.py --model openai/clip-vit-base-patch32
@@ -22,9 +23,10 @@ DESCRIPTIONS = {
     "cardboard": "a photo of cardboard, such as a cardboard box, an egg carton or a pizza box",
     "glass": "a photo of glass, such as a glass bottle, a jar or a piece of broken glass",
     "metal": "a photo of metal, such as a drink can, a food tin, a bottle cap or aluminium foil",
-    "paper": "a photo of paper, such as a paper bag, a paper cup, a newspaper or a paper wrapper",
+    "paper": "a photo of paper, such as a paper bag, a newspaper, a sheet of paper or a paper wrapper",
     "plastic": "a photo of plastic, such as a plastic bottle, a plastic bag, a plastic cup, a straw or a face mask",
-    "trash": "a photo of non-recyclable trash, such as a cigarette butt, a snack wrapper, polystyrene foam or a wet wipe",
+    "trash": "a photo of non-recyclable trash, such as a cigarette butt, a snack wrapper, polystyrene foam, a wet wipe, "
+             "a paper cup, a drink carton or a cigarette packet",
 }
 BATCH = 32
 SCALE = 100  # cosine similarity -> class score. SigLIP learned 117; any value near it gives the same predictions

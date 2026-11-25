@@ -28,7 +28,7 @@ from pathlib import Path
 import pandas as pd
 from PIL import Image
 
-FOLDERS = ["data/commons_studio", "data/commons_outdoor", "data/commons_large"]
+FOLDERS = ["data/commons_studio", "data/commons_outdoor", "data/commons_large", "data/commons_dev"]
 # Wikimedia refuses requests whose user agent has no contact information
 USER_AGENT = "lilitter/0.1 (https://github.com/jujupiter/lilitter)"
 API = "https://commons.wikimedia.org/w/api.php"
@@ -138,6 +138,8 @@ def main():
     missing = []
     for folder in FOLDERS:
         csv = Path(folder, "sources.csv")
+        if not csv.exists():  # e.g. the development set before its first export (review_commons.py --dev)
+            continue
         df = pd.read_csv(csv)
         for col in ["image_url", "commons_sha1", "sha256", "processing"]:
             if col not in df:
